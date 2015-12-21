@@ -1,97 +1,98 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Zagatskiy_home</title>
-
-    <style>
-
-        html, body, div, span, applet, object, iframe,
-        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-        a, abbr, acronym, address, big, cite, code,
-        del, dfn, em, img, ins, kbd, q, s, samp,
-        small, strike, strong, sub, sup, tt, var,
-        b, u, i, center,
-        dl, dt, dd, ol, ul, li,
-        fieldset, form, label, legend,
-        table, caption, tbody, tfoot, thead, tr, th, td,
-        article, aside, canvas, details, embed,
-        figure, figcaption, footer, header, hgroup,
-        menu, nav, output, ruby, section, summary,
-        time, mark, audio, video {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            font-size: 100%;
-            font: inherit;
-            vertical-align: baseline;
-        }
-        /* HTML5 display-role reset for older browsers */
-        article, aside, details, figcaption, figure,
-        footer, header, hgroup, menu, nav, section, div {
-            display: block;
-            box-sizing: border-box;
-        }
-        body {
-            line-height: 1;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        blockquote, q {
-            quotes: none;
-        }
-        blockquote:before, blockquote:after,
-        q:before, q:after {
-            content: '';
-            content: none;
-        }
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        html {
-            height: 100%;
-        }
-
-
-        body {
-            background: #d6dced;
-            height: 100%;
-        }
-        .container {
-            width: 960px;
-            margin: 0 auto;
-            padding-bottom: 50px;
-            background: #fff;
-            height: 100%;
-        }
-        .header {
-            height: 70px;
-            background: green;
-        }
-
-        .naw li a {
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #000;
-            font: bold 18px/26px Arial;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>Zagatskiy</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="header">
-            <p>Header</p>
+<div class="start-screen-wrap">
+    <div class="beta"><span>This page is currently being edited</span>
+        <div id="floatingCirclesG">
+            <div class="f_circleG" id="frotateG_01"></div>
+            <div class="f_circleG" id="frotateG_02"></div>
+            <div class="f_circleG" id="frotateG_03"></div>
+            <div class="f_circleG" id="frotateG_04"></div>
+            <div class="f_circleG" id="frotateG_05"></div>
+            <div class="f_circleG" id="frotateG_06"></div>
+            <div class="f_circleG" id="frotateG_07"></div>
+            <div class="f_circleG" id="frotateG_08"></div>
         </div>
-        <ul class="naw">
-            <li><a href="stem/index.html">ДЮСШОР</a></li>
-            <li><a href="jewel/index.html">Jewelery</a></li>
-            <li><a href="activ/index.html">Active Box</a></li>
-        </ul>
     </div>
+    <section class="start-screen container">
+
+
+        <div class="st-image">
+            <img src="img/dev.png" alt="photo">
+        </div>
+        <div class="st-info">
+            <h1>Alex Zagatskiy</h1>
+            <h2>HTML / CSS coder</h2>
+            <ul class="nav">
+                <li><a href="#works">works</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contacts">contact</a></li>
+            </ul>
+        </div>
+    </section>
+</div>
+<div id="works" class="works-wrap">
+    <section class="works">
+        <ul class="works-list">
+            <li class="stem">
+                <a href="stem/index.html">view project</a>
+                <div class="describe">
+
+                </div>
+            </li>
+            <li class="jewelery">
+                <a href="jewel/index.html">view project</a>
+                <div class="describe">
+
+                </div>
+            </li>
+            <li class="active-box">
+                <a href="activ/index.html">view project</a>
+                <div class="describe">
+
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
+<div id="about" class="about-wrap">
+    <section  class="about container">
+        <div class="about-info">
+            <h3>About</h3>
+            <img src="img/my_photo.png" alt="it's me">
+            <p>Для меня, разработка сайтов и верстка – это хобби, которым я всецело увлечен, это любимая работа, на которую я не жалею времени и с удовольствием иду, это мой основной интерес, в котором я постоянно открываю для себя новые нюансы, решения, технологии.</p>
+            <p>Стремясь постоянно реализовывать собственный рабочий потенциал я с особой хваткой берусь за любой новый проект.</p>
+        </div>
+        <div class="about-skills">
+            <h3>SkillSet</h3>
+            <ul class="skills-set">
+                <li>HTML<span>4</span>, HTML<span>5</span><span class="stars"></span></li>
+                <li>CSS<span>3</span><span class="stars"></span></li>
+                <li>Photoshop<span class="stars"></span></li>
+                <li>JQuery<span class="stars"></span></li>
+                <li>Stylus<span class="stars"></span></li>
+                <li>Gulp<span class="stars"></span></li>
+                <li>GIT<span class="stars"></span></li>
+            </ul>
+
+        </div>
+    </section>
+</div>
+<div id="contacts" class="contacts-wrap">
+    <section class="contacts container">
+        <span>095-567-33-18</span>
+        <span>Skype: ZagatskiyAlex</span>
+        <span>sprinter-kharkiv@gmail.com</span>
+
+    </section>
+</div>
+
 
 </body>
 </html>
