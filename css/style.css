@@ -380,7 +380,7 @@
 }
 @media screen and (max-width: 460px)  {
     .contacts-wrap span{
-        font: bold 12px/28px Verdana;
+        font: bold 16px/32px Verdana;
         padding: 0;
         color: #fff;
     }
