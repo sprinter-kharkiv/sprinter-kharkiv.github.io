@@ -5,6 +5,7 @@
     margin: 0 auto;
 }
 .start-screen-wrap {
+    background: -webkit-linear-gradient(#b3b9c6, #7c8290);
     background: linear-gradient(#b3b9c6, #7c8290);
 }
 .start-screen {
@@ -48,6 +49,7 @@
     text-decoration: none;
     color: #585858;
     font: bold 18px/38px Verdana;
+    background: -webkit-linear-gradient(#fdfdfb, #cacaca);
     background: linear-gradient(#fdfdfb, #cacaca);
     padding: 0 20px 0 35px;
     border-right: 2px solid #c6c6c6;
@@ -56,10 +58,12 @@
     border-right: none;
 }
 .nav a:hover {
+    background: -webkit-linear-gradient(#cacaca, #fdfdfb);
     background: linear-gradient(#cacaca, #fdfdfb);
 }
 .nav a:active {
-    background: linear-gradient(#cacaca, #cacaca);
+    background: -webkit-linear-gradient(#cacaca, #cacaca);
+    background: linear-gradient(#cacaca, #fdfdfb);
 }
 
 
