@@ -144,15 +144,16 @@ body {
     background: #5cbcf8;
     padding: 0;
 }
-.vis-menu li{
+
+.vis-menu li {
     display: block;
     background: #5cbcf8;
     border-bottom: 1px solid #3f627e;
 }
-.vis-menu a:active{
+
+.vis-menu a:active {
     background: #56b0e8;
 }
-
 
 /*--------------------------------------
               3. banner
@@ -177,6 +178,7 @@ body {
 .banner_text h2 {
     font: normal 45px/50px Verdana, sans-serif;
 }
+
 .banner_text .banner_btn {
     margin-top: 50px;
     display: inline-block;
@@ -184,11 +186,13 @@ body {
     color: #fff;
     background: transparent;
 }
+
 .banner_text .banner_btn:hover {
     border: 2px solid #f8970e;
     color: #fff;
     background: #f8970e;
 }
+
 .banner_background__image {
     display: block;
     min-width: 100%;
@@ -236,7 +240,7 @@ body {
     right: 42px;
     top: -38px;
     width: 41%;
-    min-width: 300px;
+    min-width: 385px;
     padding: 45px;
     border-radius: 15px;
     background: #3f627e;
@@ -269,7 +273,7 @@ body {
 
 .button {
     display: block;
-    padding: 0 80px;
+    padding: 0 10px;
     border-radius: 20px;
     background: #fff;
     color: #3f627e;
@@ -281,6 +285,7 @@ body {
     cursor: pointer;
     transition: background 0.5s ease, color 0.5s ease;
 }
+
 .small-btn {
     line-height: 65px;
     font-size: 26px;
@@ -293,6 +298,78 @@ body {
 
 .button:active {
     transform: translate(2px, 2px);
+}
+
+@media screen and (max-width: 1200px) {
+    .card-title {
+        margin-top: 25px;
+        font: bold 28px/28px Arial, sans-serif;
+    }
+
+    .content_block__text p {
+        width: 45%;
+    }
+
+    .product-description {
+        min-height: 130px;
+        margin-top: 36px;
+        font: normal 20px/28px Arial, sans-serif;
+    }
+
+    .product-price {
+        font: bold 20px/24px Arial, sans-serif;
+    }
+
+    .button {
+        border-radius: 15px;
+        font: bold 30px/65px Verdana, sans-serif;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .content_block {
+        margin-bottom: 40px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .content_block__text p {
+        margin-bottom: 30px;
+        font: normal 18px/24px Verdana, sans-serif;
+    }
+
+    .wow {
+        animation: none !important;
+    }
+
+    .content_block__text {
+        min-height: auto;
+        padding: 17px 10px 20px;
+    }
+
+    .content_block__text p {
+        width: 100%;
+    }
+
+    .content_block__card {
+        position: static;
+        width: 100%;
+        min-width: auto;
+        border-radius: 0;
+        padding: 5px 40px 25px;
+    }
+
+    .product-description {
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    .product-price {
+        margin: 30px 0 20px;
+    }
+
+    .scroll-bg {
+        background-position: 50% 50% !important;
+    }
 }
 
 /*---------------------------------
@@ -312,6 +389,7 @@ body {
     height: 550px;
     background: #3f627e;
 }
+
 .delivery_title {
     margin-bottom: 5px;
     font: bold 34px/75px Verdana, sans-serif;
@@ -319,13 +397,13 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+
 .delivery_slogan {
     color: #fff;
     font: normal 58px/260px Verdana, sans-serif;
     text-align: center;
     /*text-shadow: 22px 14px 6px rgba(0, 14, 55, 0.6);*/
 }
-
 
 /*---------------------------------
     7. footer
@@ -436,7 +514,45 @@ body {
     transition: color 0.5s ease;
 }
 
-
 .footer_social .top-button:hover {
     color: #3f627e;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer_form fieldset {
+        width: 100%;
+    }
+
+    .message_block {
+        width: 100%;
+        float: none;
+    }
+
+    .footer_form fieldset input:last-child {
+        margin-bottom: 24px;
+    }
+
+    .footer_social {
+        height: 90px;
+    }
+
+    .footer_social .top-button {
+        line-height: 90px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .footer {
+        padding: 50px 20px 40px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer_title {
+        font: bold 28px/40px Verdana, sans-serif;
+    }
+    .footer_contact {
+        font: 17px/70px Verdana, sans-serif;
+        letter-spacing: 0;
+    }
+
 }
