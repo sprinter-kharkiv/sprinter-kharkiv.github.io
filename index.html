@@ -1,13 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Безопасная химия для вашего бассейна">
     <title>Oчистка воды</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" href="#" type="image/x-icon">
 </head>
 <body>
 <section id="start-screen">
@@ -15,7 +17,7 @@
         <ul class="header_nav container">
             <li><a href="#start-screen">Главная</a></li>
             <li><a href="#shop">Магазин</a></li>
-            <li><a href="#shop">О нас</a></li>
+            <li><a href="#delivery">О нас</a></li>
             <li><a href="#footer">Контакты</a></li>
         </ul>
         <span class="menu-trigger" id="trig">Меню</span>
@@ -32,12 +34,13 @@
             <h2>Соль универсальная</h2>
 
             <h2>Ортофосфорная кислота</h2>
+            <a href="#shop" class="banner_btn button small-btn">перейти в магазин</a>
 
 
         </div>
     </div>
 </section>
-<section id="shop" class="main-content scroll-bg" data-speed="40">
+<section id="shop" class="main-content">
     <div class="container">
         <div class="content_block item-1">
             <div class=" content_block__text">
@@ -195,26 +198,32 @@
             </div>
         </div>
 
-        <div class="content_slogan">Безопасно недорого и просто!</div>
+
     </div>
+</section>
+<section id="delivery" class="scroll-bg" data-speed="20">
+    <div class="delivery">
+        <h2 class="delivery_title">О нас</h2>
+
+        <div class="delivery_slogan">Безопасно недорого и просто!</div>
+    </div>
+
 </section>
 <section id="footer" class="footer_wrap">
     <div class="footer container">
-        <p class="footer_title">Отправте заказ прямо сейчас<br>
-            и мы немедленно свяжемся с Вами!</p>
+        <h2 class="footer_title">Обращайтесь</h2>
 
-        <p class="footer_contact">Вы можете позвонить нам прямо сейчас по номеру:<br>
-            <span>+ (929) 55 00 555</span> мы работаем без выходных!</p>
+        <p class="footer_contact">+(929) 55 00 555 / yuvic@mail.ru</p>
 
-        <form action="#" class="footer_form clearfix">
+        <form id="contact" action="mail.php" method="post" class="footer_form clearfix">
             <fieldset>
-                <input type="text" placeholder="Ваш телефон?" required/>
-                <input type="text" placeholder="Ваше имя?" required/>
-                <input type="email" placeholder="Ваш электронный адрес?" required/>
+                <input type="text" name="phone" placeholder="Ваш телефон?" required/>
+                <input type="text" name="name" placeholder="Ваше имя?" required/>
+                <input type="email" name="email" placeholder="Ваш электронный адрес?" required/>
             </fieldset>
             <div class="message_block">
                 <textarea name="message" id="message" title="" placeholder="Сообщение"></textarea>
-                <input type="submit" value="отправить" class="button"/>
+                <input type="submit" value="отправить" class="button small-btn"/>
             </div>
         </form>
 
@@ -223,7 +232,6 @@
     <div class="footer_social">
         <a class="top-button" href="#start-screen">наверх</a>
     </div>
-
 </section>
 
 <script src="js/jquery.js"></script>
@@ -233,3 +241,7 @@
 
 </body>
 </html>
+
+
+
+
