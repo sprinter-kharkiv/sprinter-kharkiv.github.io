@@ -152,7 +152,7 @@ body {
 ---------------------------------------*/
 .banner {
     position: relative;
-    background: url("../images/banner_1.jpg") no-repeat 50% 50%;
+    background: url("../images/banner_1.jpg") no-repeat 0 0;
     background-size: cover;
 }
 
