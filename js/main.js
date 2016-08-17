@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Created by Admin on 25.11.2015.
  */
 $(document).ready(function() {
@@ -6,6 +6,9 @@ $(document).ready(function() {
     // Mobile menu
     $('#trig').on('click', function () {
         $('.header_nav').toggleClass('vis-menu')
+    });
+    $('.header_nav').on('click', function () {
+        $('.header_nav').removeClass('vis-menu')
     });
 
     // init WOW
@@ -32,5 +35,25 @@ $(document).ready(function() {
             $bgobj.css(
                 "background-position" , coords);
         })
-    })
+    });
+
+
+    // form submit
+    $("#contact").submit(function() {
+        var str = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: str,
+            success: function(msg) {
+                if(msg == 'OK') {
+                    result = '<div class="ok">Сообщение отправлено</div>';
+
+                }
+                else {result = msg;}
+                $('#note').html(result);
+            }
+        });
+        return false;
+    });
 });
