@@ -1,16 +1,16 @@
 /*
 
-
-2. common styles
+1. common styles
+2. header
 3. banner
-4. intro
-5. gallery
+4. shop
+5. delivery
 6. footer
 
 */
 
 /*------------------------------
-        2. common styles
+        1. common styles
 -------------------------------*/
 .clearfix:before,
 .clearfix:after {
@@ -37,7 +37,6 @@ body {
     background: #fff;
 }
 
-
 .container {
     max-width: 1280px;
     min-width: 320px;
@@ -48,11 +47,6 @@ body {
 /*--------------------------------------
               2. header
 ---------------------------------------*/
-#start-screen {
-    position: relative;
-    background: #5cbcf8;
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -89,33 +83,98 @@ body {
     color: #3f627e;
 }
 
-.menu-trigger {
-    display: none;
-    color: #fff;
-    float: right;
-    font: bold 20px/76px Verdana, sans-serif;
-    padding: 0 30px;
-    cursor: pointer;
-    position: relative;
-    z-index: 2;
-}
-
-/* 	FIXED NAV*/
+/*    fixed menu     */
 #start-screen .fixed {
     height: 72px;
     padding-top: 0;
     background: #5cbcf8;
 }
 
+/*   visibility mobyle menu  */
+ .vis-menu .header_nav  {
+    height: 100vh;
+    display: block;
+    background: #5cbcf8;
+    padding: 60px 0 0;
+}
+
+.vis-menu li {
+    display: block;
+    background: #5cbcf8;
+    border-bottom: 1px solid #3f627e;
+}
+.vis-menu li:first-child {
+    border-top: 1px solid #3f627e;
+}
+
+.vis-menu a:active {
+    background: #56b0e8;
+}
+
 @media screen and (max-width: 960px) {
     .header {
         padding-top: 0;
-        height: 72px;
+        height: 60px;
     }
 
-    .menu-trigger {
-        display: block;
+    #start-screen .fixed {
+        height: 60px;
     }
+
+    /*     menu gamburger   */
+    .menu-trigger {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 18px 7px;
+        cursor: pointer;
+        z-index: 5;
+
+
+    }
+    .menu-trigger span{
+        display: block;
+        width: 27px;
+        height: 4px;
+        background: #3f627e;
+        position: relative;
+    }
+
+    .menu-trigger span:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 27px;
+        height: 4px;
+        background: #3f627e;
+        transition: transform 0.3s ease;
+
+    }
+
+    .menu-trigger span:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 27px;
+        height: 4px;
+        background: #3f627e;
+        transition: transform 0.3s ease;
+    }
+
+    .vis-menu .menu-trigger span{
+        background: transparent;
+    }
+
+    .vis-menu .menu-trigger span:before {
+        transform: translateY(8px) rotateZ(-225deg);
+    }
+
+    .vis-menu .menu-trigger span:after {
+        transform: translateY(-8px) rotateZ(225deg);
+    }
+    /*    end menu gamburger   */
 
     .header_nav {
         display: none;
@@ -124,27 +183,10 @@ body {
     .nav_item {
         float: left;
     }
+
     .header_nav li {
         font: bold 18px/72px Verdana, sans-serif;
     }
-}
-
-/* visibility mobyle menu*/
-.header .vis-menu {
-    height: 100vh;
-    display: block;
-    background: #5cbcf8;
-    padding: 0;
-}
-
-.vis-menu li {
-    display: block;
-    background: #5cbcf8;
-    border-bottom: 1px solid #3f627e;
-}
-
-.vis-menu a:active {
-    background: #56b0e8;
 }
 
 /*--------------------------------------
@@ -152,7 +194,7 @@ body {
 ---------------------------------------*/
 .banner {
     position: relative;
-    background: url("../images/banner_1.jpg") no-repeat 0 0;
+    background: #5cbcf8 url("../images/banner_1.jpg") no-repeat 50% 50%;
     background-size: cover;
 }
 
@@ -196,36 +238,40 @@ body {
     .banner_text {
 
     }
+
     .banner_text h1 {
         font: bold 28px/32px Verdana, sans-serif;
     }
+
     .banner_text h2 {
-        font: 24px/36px Verdana,sans-serif;
+        font: 24px/36px Verdana, sans-serif;
     }
 }
+
 @media screen and (max-width: 740px) {
     .banner_text h2 {
         display: none;
     }
+
     .banner_text h1 {
         font: bold 24px/32px Verdana, sans-serif;
     }
+
     .banner_text .banner_btn {
         font-size: 19px;
         line-height: 40px;
         margin: 50px 0 50px;
     }
 }
+
 @media screen and (max-width: 540px) {
     .banner_text .banner_btn {
         margin-top: 20px;
     }
-    .banner_text {
-
-    }
 }
+
 /*--------------------------------------
-              3. shop
+              4. shop
 ---------------------------------------*/
 .main-content {
     padding-top: 60px;
@@ -357,17 +403,14 @@ body {
         border-radius: 20px;
         overflow: hidden;
     }
+
     .content_block__text p {
         margin-bottom: 30px;
         font: normal 18px/24px Verdana, sans-serif;
     }
 
-    .wow {
-        animation: none !important;
-    }
-
     .content_block__text {
-        min-height: auto;
+        min-height: inherit;
         padding: 17px 10px 20px;
     }
 
@@ -378,13 +421,13 @@ body {
     .content_block__card {
         position: static;
         width: 100%;
-        min-width: auto;
+        min-width: inherit;
         border-radius: 0;
         padding: 5px 40px 25px;
     }
 
     .product-description {
-        min-height: auto;
+        min-height: inherit;
         margin-top: 20px;
     }
 
@@ -396,17 +439,19 @@ body {
         background-position: 50% 50% !important;
     }
 }
+
 @media screen and (max-width: 540px) {
     .product-price {
         font-size: 18px;
     }
-    .product-price span{
+
+    .product-price span {
         font-size: 22px;
     }
 }
 
 /*---------------------------------
-    6. delivery
+    5. delivery
 ----------------------------------*/
 #delivery {
     padding: 145px 0 315px;
@@ -435,26 +480,29 @@ body {
     color: #fff;
     font: normal 58px/260px Verdana, sans-serif;
     text-align: center;
-    /*text-shadow: 22px 14px 6px rgba(0, 14, 55, 0.6);*/
 }
+
 @media screen and (max-width: 1024px) {
     .delivery_slogan {
         font: 48px/260px Verdana, sans-serif;
     }
 }
+
 @media screen and (max-width: 740px) {
     .delivery_slogan {
         font: 30px/60px Verdana, sans-serif;
     }
 }
+
 @media screen and (max-width: 540px) {
     .delivery_slogan {
         padding: 0 15px;
         font: 26px/30px Verdana, sans-serif;
     }
 }
+
 /*---------------------------------
-    7. footer
+    6. footer
 ----------------------------------*/
 .footer_wrap {
     background: #fff;
@@ -511,7 +559,7 @@ body {
 .footer_form textarea:active,
 .footer_form fieldset input:focus,
 .footer_form textarea:focus {
-    box-shadow: inset 0 0 10px 3px #5cbcf8;
+    box-shadow: inset 0 0 25px -4px #5cbcf8;
     outline: none;
 }
 
@@ -537,7 +585,6 @@ body {
 .footer_form input[type="submit"] {
     width: 100%;
     margin-top: 20px;
-
     background: #3f627e;
     color: #fff;
 }
@@ -594,13 +641,42 @@ body {
         padding: 50px 20px 40px;
     }
 }
+
 @media screen and (max-width: 640px) {
+    .footer_form fieldset input {
+        height: 40px;
+        margin-bottom: 24px;
+        padding: 0 15px;
+        border-radius: 10px;
+        font: italic 18px/40px Verdana, sans-serif;
+    }
+
+    .footer_form textarea {
+        padding: 15px;
+        font: italic 18px/24px Verdana, sans-serif;
+    }
+
     .footer_title {
         font: bold 28px/40px Verdana, sans-serif;
     }
+
     .footer_contact {
         font: 17px/70px Verdana, sans-serif;
         letter-spacing: 0;
+    }
+
+    .footer_form input[type="submit"] {
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .footer_social {
+        height: 60px;
+    }
+
+    .footer_social .top-button {
+        line-height: 60px;
+        font-size: 20px;
     }
 
 }
