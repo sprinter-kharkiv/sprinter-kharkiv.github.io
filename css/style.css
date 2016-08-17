@@ -1,6 +1,6 @@
 /*
 
-1. variables
+
 2. common styles
 3. banner
 4. intro
@@ -8,9 +8,7 @@
 6. footer
 
 */
-/*--------------------------
-       1. variables
-----------------------------*/
+
 /*------------------------------
         2. common styles
 -------------------------------*/
@@ -25,8 +23,6 @@
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -34,24 +30,17 @@ html,
 body,
 .wrap {
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 body {
-    background: main-bg-color;
+    background: #fff;
 }
 
-.wrap {
-    background: main-bg-color;
-    height: auto;
-    min-height: 100%;
-    margin: 0 auto;
-    padding-bottom: 230px;
-}
 
 .container {
     max-width: 1280px;
-    min-width: 300px;
+    min-width: 320px;
     margin: 0 auto;
     padding: 0 12px;
 }
@@ -61,7 +50,7 @@ body {
 ---------------------------------------*/
 #start-screen {
     position: relative;
-    background: #ff2c2a;
+    background: #5cbcf8;
 }
 
 .header {
@@ -135,6 +124,9 @@ body {
     .nav_item {
         float: left;
     }
+    .header_nav li {
+        font: bold 18px/72px Verdana, sans-serif;
+    }
 }
 
 /* visibility mobyle menu*/
@@ -160,19 +152,19 @@ body {
 ---------------------------------------*/
 .banner {
     position: relative;
+    background: url("../images/banner_1.jpg") no-repeat 50% 50%;
+    background-size: cover;
 }
 
 .banner_text {
-    position: absolute;
-    bottom: 200px;
-    left: 0;
-    width: 100%;
+    padding-top: 250px;
     text-align: center;
     color: #fff;
 }
 
 .banner_text h1 {
     font: bold 55px/55px Verdana, sans-serif;
+    padding: 0 20px;
 }
 
 .banner_text h2 {
@@ -180,7 +172,8 @@ body {
 }
 
 .banner_text .banner_btn {
-    margin-top: 50px;
+    margin: 50px 0 150px;
+    padding: 0 25px;
     display: inline-block;
     border: 2px solid #f8970e;
     color: #fff;
@@ -199,6 +192,38 @@ body {
     max-width: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+    .banner_text {
+
+    }
+    .banner_text h1 {
+        font: bold 28px/32px Verdana, sans-serif;
+    }
+    .banner_text h2 {
+        font: 24px/36px Verdana,sans-serif;
+    }
+}
+@media screen and (max-width: 740px) {
+    .banner_text h2 {
+        display: none;
+    }
+    .banner_text h1 {
+        font: bold 24px/32px Verdana, sans-serif;
+    }
+    .banner_text .banner_btn {
+        font-size: 19px;
+        line-height: 40px;
+        margin: 50px 0 50px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .banner_text .banner_btn {
+        margin-top: 20px;
+    }
+    .banner_text {
+
+    }
+}
 /*--------------------------------------
               3. shop
 ---------------------------------------*/
@@ -371,6 +396,14 @@ body {
         background-position: 50% 50% !important;
     }
 }
+@media screen and (max-width: 540px) {
+    .product-price {
+        font-size: 18px;
+    }
+    .product-price span{
+        font-size: 22px;
+    }
+}
 
 /*---------------------------------
     6. delivery
@@ -386,8 +419,8 @@ body {
 }
 
 .delivery {
-    height: 550px;
     background: #3f627e;
+    padding: 20px 0 40px;
 }
 
 .delivery_title {
@@ -404,7 +437,22 @@ body {
     text-align: center;
     /*text-shadow: 22px 14px 6px rgba(0, 14, 55, 0.6);*/
 }
-
+@media screen and (max-width: 1024px) {
+    .delivery_slogan {
+        font: 48px/260px Verdana, sans-serif;
+    }
+}
+@media screen and (max-width: 740px) {
+    .delivery_slogan {
+        font: 30px/60px Verdana, sans-serif;
+    }
+}
+@media screen and (max-width: 540px) {
+    .delivery_slogan {
+        padding: 0 15px;
+        font: 26px/30px Verdana, sans-serif;
+    }
+}
 /*---------------------------------
     7. footer
 ----------------------------------*/
