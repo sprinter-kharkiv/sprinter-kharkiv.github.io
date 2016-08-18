@@ -91,7 +91,7 @@ body {
 }
 
 /*   visibility mobyle menu  */
- .vis-menu .header_nav  {
+.vis-menu .header_nav {
     height: 100vh;
     display: block;
     background: #5cbcf8;
@@ -103,6 +103,7 @@ body {
     background: #5cbcf8;
     border-bottom: 1px solid #3f627e;
 }
+
 .vis-menu li:first-child {
     border-top: 1px solid #3f627e;
 }
@@ -132,9 +133,9 @@ body {
         cursor: pointer;
         z-index: 10;
 
-
     }
-    .menu-trigger span{
+
+    .menu-trigger span {
         display: block;
         width: 27px;
         height: 4px;
@@ -143,7 +144,8 @@ body {
         transition: background 0.3s ease;
 
     }
-    .fixed .menu-trigger span, .vis-menu .menu-trigger span{
+
+    .fixed .menu-trigger span, .vis-menu .menu-trigger span {
         background: #3f627e;
     }
 
@@ -168,7 +170,7 @@ body {
         transition: transform 0.3s ease;
     }
 
-    .vis-menu .menu-trigger span{
+    .vis-menu .menu-trigger span {
         width: 0;
     }
 
@@ -183,8 +185,8 @@ body {
         transform: translateY(-8px) rotateZ(225deg);
         background: inherit;
     }
-    /*    end menu gamburger   */
 
+    /*    end menu gamburger   */
     .header_nav {
         display: none;
     }
@@ -258,9 +260,6 @@ body {
 }
 
 @media screen and (max-width: 740px) {
-    .banner {
-        background: #5cbcf8 url("../images/banner_2_mobile.jpg") no-repeat 50% 50%;
-    }
     .banner_text h2 {
         display: none;
     }
@@ -407,6 +406,7 @@ body {
         border-radius: 15px;
         font: bold 30px/65px Verdana, sans-serif;
     }
+
 }
 
 @media screen and (max-width: 960px) {
@@ -423,7 +423,7 @@ body {
 
     .content_block__text {
         min-height: inherit;
-        padding: 17px 10px 20px;
+        padding: 17px 15px 20px;
     }
 
     .content_block__text p {
@@ -453,12 +453,45 @@ body {
 }
 
 @media screen and (max-width: 540px) {
+    .main-content {
+        padding-top: 30px;
+    }
+
     .product-price {
         font-size: 18px;
     }
 
+    .content_block__text p {
+        margin-bottom: 20px;
+        font: normal 16px/22px Verdana, sans-serif;
+    }
+
+    .content_block__text .product-name {
+        font: bold 22px/26px Arial, sans-serif;
+    }
+
+    .product-description {
+        min-height: 80px;
+        margin-top: 20px;
+        font: normal 16px/22px Arial, sans-serif;
+    }
+
+    .card-title {
+        margin-top: 20px;
+        font: bold 22px/26px Arial, sans-serif;
+    }
+
+    .product-price {
+        margin: 5px 0 20px;
+    }
+
     .product-price span {
         font-size: 22px;
+    }
+
+    .button {
+        border-radius: 15px;
+        font: bold 20px/40px Verdana, sans-serif;
     }
 }
 
@@ -466,7 +499,8 @@ body {
     5. delivery
 ----------------------------------*/
 #delivery {
-    padding: 145px 0 315px;
+    padding: 120px 0 200px;
+
 }
 
 .scroll-bg {
@@ -476,21 +510,55 @@ body {
 }
 
 .delivery {
-    background: #3f627e;
     padding: 20px 0 40px;
+    color: #fff;
+    background: #3f627e;
 }
 
 .delivery_title {
     margin-bottom: 5px;
     font: bold 34px/75px Verdana, sans-serif;
-    color: #fff;
     text-align: center;
     text-transform: uppercase;
 }
 
+.delivery h4 {
+    font: normal 22px/50px Verdana, sans-serif;
+}
+
+.delivery h4 span {
+    font-size: 1.1em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.delivery_district {
+    font-size: 20px;
+    line-height: 28px;
+}
+.delivery_district__block {
+    margin-top: 10px;
+    width: 50%;
+    float: left;
+}
+.delivery_district__block:last-child {
+    width: 100%;
+    float: none;
+}
+
+.delivery_district h3 {
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.delivery_district h5 {
+    font-weight: bold;
+    font-style: italic;
+}
+
 .delivery_slogan {
     color: #fff;
-    font: normal 58px/260px Verdana, sans-serif;
+    font: normal 50px/140px Verdana, sans-serif;
     text-align: center;
 }
 
@@ -499,19 +567,40 @@ body {
         font: 48px/260px Verdana, sans-serif;
     }
 }
+@media screen and (max-width: 960px) {
+    .delivery_district__block {
+        margin-top: 10px;
+        width: 100%;
+        float: none;
+    }
+}
 
 @media screen and (max-width: 740px) {
-    .scroll-bg {
-        background: url("../images/bg_mobile.jpg") no-repeat fixed 50% 0;
+    .delivery_title {
+        margin-bottom: 5px;
+        font: bold 28px/40px Verdana, sans-serif;
     }
+
     .delivery_slogan {
         font: 30px/60px Verdana, sans-serif;
     }
 }
 
 @media screen and (max-width: 540px) {
+    #delivery {
+        padding: 60px 0 60px;
+    }
+    .delivery h4 {
+        font: normal 17px/24px Verdana, sans-serif;
+        margin-bottom: 8px;
+    }
+    .delivery_district {
+        font-size: 16px;
+        line-height: 22px;
+    }
     .delivery_slogan {
         padding: 0 15px;
+        margin-top: 10px;
         font: 26px/30px Verdana, sans-serif;
     }
 }
@@ -676,7 +765,7 @@ body {
     }
 
     .footer_contact {
-        font: 17px/70px Verdana, sans-serif;
+        font: 17px/35px Verdana, sans-serif;
         letter-spacing: 0;
     }
 
