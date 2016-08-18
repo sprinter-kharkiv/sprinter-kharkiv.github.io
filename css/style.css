@@ -168,10 +168,12 @@ body {
     }
 
     .vis-menu .menu-trigger span:before {
+        -webkit-transform: translateY(8px) rotateZ(-225deg);
         transform: translateY(8px) rotateZ(-225deg);
     }
 
     .vis-menu .menu-trigger span:after {
+        -webkit-transform: translateY(-8px) rotateZ(225deg);
         transform: translateY(-8px) rotateZ(225deg);
     }
     /*    end menu gamburger   */
