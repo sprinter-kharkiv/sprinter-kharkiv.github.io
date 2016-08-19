@@ -212,7 +212,8 @@ body {
 .banner_text {
     padding-top: 250px;
     text-align: center;
-    color: #3f627e;
+    color: #f8970e;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .banner_text h1 {
