@@ -54,7 +54,7 @@ body {
     height: 96px;
     width: 100%;
     padding-top: 24px;
-    background: rgba(92, 188, 248, 0.5);
+    background: rgba(92, 188, 248, 0.7);
     border-bottom: 2px solid #3f627e;
     color: #fff;
     z-index: 4;
@@ -68,8 +68,9 @@ body {
 
 .header_nav li {
     display: table-cell;
-    font: bold 26px/72px Verdana, sans-serif;
+    font: bold 26px/72px OenSans-Bold, sans-serif;
     text-align: center;
+    letter-spacing: .06em;
 }
 
 .header_nav li a {
@@ -212,17 +213,17 @@ body {
 .banner_text {
     padding-top: 250px;
     text-align: center;
-    color: #f8970e;
+    color: #fff;
     background: rgba(0, 0, 0, 0.4);
 }
 
 .banner_text h1 {
-    font: bold 55px/55px Verdana, sans-serif;
+    font: bold 55px/55px OenSans-Bold, sans-serif;
     padding: 0 20px;
 }
 
 .banner_text h2 {
-    font: normal 45px/50px Verdana, sans-serif;
+    font: normal 45px/50px OenSans-Light, sans-serif;
 }
 
 .banner_text .banner_btn {
@@ -252,11 +253,11 @@ body {
     }
 
     .banner_text h1 {
-        font: bold 28px/32px Verdana, sans-serif;
+        font: bold 28px/32px OenSans-Bold, sans-serif;
     }
 
     .banner_text h2 {
-        font: 24px/36px Verdana, sans-serif;
+        font: 24px/36px OenSans-Light, sans-serif;
     }
 }
 
@@ -266,7 +267,7 @@ body {
     }
 
     .banner_text h1 {
-        font: bold 24px/32px Verdana, sans-serif;
+        font: bold 24px/32px OenSans-Light, sans-serif;
     }
 
     .banner_text .banner_btn {
@@ -305,7 +306,7 @@ body {
 .content_block__text p {
     width: 53%;
     margin-bottom: 30px;
-    font: normal 22px/28px Verdana, sans-serif;
+    font: normal 22px/28px OenSans-Light, sans-serif;
     color: #3f627e;
 }
 
@@ -315,7 +316,7 @@ body {
 
 .content_block__text .product-name {
     color: #fff;
-    font: bold 26px/30px Arial, sans-serif;
+    font: bold 26px/30px OenSans-Bold, sans-serif;
 }
 
 .content_block__card {
@@ -332,18 +333,18 @@ body {
 
 .card-title {
     margin-top: 37px;
-    font: bold 35px/35px Arial, sans-serif;
+    font: bold 35px/35px OenSans-Bold, sans-serif;
 }
 
 .product-description {
     min-height: 130px;
     margin-top: 36px;
-    font: normal 25px/35px Arial, sans-serif;
+    font: normal 25px/35px OenSans-Light, sans-serif;
 }
 
 .product-price {
     margin: 67px 0 55px;
-    font: bold 24px/28px Arial, sans-serif;
+    font: bold 24px/28px OenSans-Bold, sans-serif;
 }
 
 .product-price p {
@@ -360,7 +361,7 @@ body {
     border-radius: 20px;
     background: #fff;
     color: #3f627e;
-    font: bold 41px/80px Verdana, sans-serif;
+    font: bold 41px/80px OenSans-Bold, sans-serif;
     letter-spacing: 0.05em;
     text-align: center;
     text-decoration: none;
@@ -386,7 +387,7 @@ body {
 @media screen and (max-width: 1200px) {
     .card-title {
         margin-top: 25px;
-        font: bold 28px/28px Arial, sans-serif;
+        font: bold 28px/28px OenSans-Bold, sans-serif;
     }
 
     .content_block__text p {
@@ -396,16 +397,16 @@ body {
     .product-description {
         min-height: 130px;
         margin-top: 36px;
-        font: normal 20px/28px Arial, sans-serif;
+        font: normal 20px/28px OenSans-Light, sans-serif;
     }
 
     .product-price {
-        font: bold 20px/24px Arial, sans-serif;
+        font: bold 20px/24px OenSans-Bold, sans-serif;
     }
 
     .button {
         border-radius: 15px;
-        font: bold 30px/65px Verdana, sans-serif;
+        font: bold 30px/65px OenSans-Bold, sans-serif;
     }
 
 }
@@ -419,7 +420,7 @@ body {
 
     .content_block__text p {
         margin-bottom: 30px;
-        font: normal 18px/24px Verdana, sans-serif;
+        font: normal 18px/24px OenSans-Light, sans-serif;
     }
 
     .content_block__text {
@@ -464,22 +465,22 @@ body {
 
     .content_block__text p {
         margin-bottom: 20px;
-        font: normal 16px/22px Verdana, sans-serif;
+        font: normal 16px/22px OenSans-Light, sans-serif;
     }
 
     .content_block__text .product-name {
-        font: bold 22px/26px Arial, sans-serif;
+        font: bold 22px/26px OenSans-Bold, sans-serif;
     }
 
     .product-description {
         min-height: 80px;
         margin-top: 20px;
-        font: normal 16px/22px Arial, sans-serif;
+        font: normal 16px/22px OenSans-Light, sans-serif;
     }
 
     .card-title {
         margin-top: 20px;
-        font: bold 22px/26px Arial, sans-serif;
+        font: bold 22px/26px OenSans-Bold, sans-serif;
     }
 
     .product-price {
@@ -492,7 +493,7 @@ body {
 
     .button {
         border-radius: 15px;
-        font: bold 20px/40px Verdana, sans-serif;
+        font: bold 20px/40px OenSans-Bold, sans-serif;
     }
 }
 
@@ -518,13 +519,13 @@ body {
 
 .delivery_title {
     margin-bottom: 5px;
-    font: bold 34px/75px Verdana, sans-serif;
+    font: bold 34px/75px OenSans-Bold, sans-serif;
     text-align: center;
     text-transform: uppercase;
 }
 
 .delivery h4 {
-    font: normal 22px/50px Verdana, sans-serif;
+    font: normal 22px/50px OenSans-Light, sans-serif;
 }
 
 .delivery h4 span {
@@ -559,13 +560,13 @@ body {
 
 .delivery_slogan {
     color: #fff;
-    font: normal 50px/140px Verdana, sans-serif;
+    font: normal 50px/140px OenSans-Light, sans-serif;
     text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
     .delivery_slogan {
-        font: 48px/260px Verdana, sans-serif;
+        font: 48px/260px OenSans-Light, sans-serif;
     }
 }
 @media screen and (max-width: 960px) {
@@ -579,11 +580,11 @@ body {
 @media screen and (max-width: 740px) {
     .delivery_title {
         margin-bottom: 5px;
-        font: bold 28px/40px Verdana, sans-serif;
+        font: bold 28px/40px OenSans-Bold, sans-serif;
     }
 
     .delivery_slogan {
-        font: 30px/60px Verdana, sans-serif;
+        font: 30px/60px OenSans-Light, sans-serif;
     }
 }
 
@@ -592,7 +593,7 @@ body {
         padding: 60px 0 60px;
     }
     .delivery h4 {
-        font: normal 17px/24px Verdana, sans-serif;
+        font: normal 17px/24px OenSans-Light, sans-serif;
         margin-bottom: 8px;
     }
     .delivery_district {
@@ -602,7 +603,7 @@ body {
     .delivery_slogan {
         padding: 0 15px;
         margin-top: 10px;
-        font: 26px/30px Verdana, sans-serif;
+        font: 26px/30px OenSans-Light, sans-serif;
     }
 }
 
@@ -620,14 +621,14 @@ body {
 
 .footer_title {
     margin-bottom: 5px;
-    font: bold 34px/50px Verdana, sans-serif;
+    font: bold 34px/50px OenSans-Bold, sans-serif;
     color: #5cbcf8;
     text-align: center;
     text-transform: uppercase;
 }
 
 .footer_contact {
-    font: normal 26px/80px Verdana, sans-serif;
+    font: normal 26px/80px OenSans-Light, sans-serif;
     letter-spacing: 0.08em;
     color: #5cbcf8;
     text-align: center;
@@ -650,7 +651,7 @@ body {
     padding: 0 30px;
     border-radius: 10px;
     border: 1px solid #7c7c7c;
-    font: normal 20px/65px Verdana, sans-serif;
+    font: normal 20px/65px OenSans-Light, sans-serif;
     font-style: italic;
     color: #7c7c7c;
     transition: box-shadow 0.5s ease;
@@ -681,7 +682,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     border: 1px solid #7c7c7c;
-    font: normal 20px/26px Verdana, sans-serif;
+    font: normal 20px/26px OenSans-Light, sans-serif;
     font-style: italic;
     color: #7c7c7c;
     transition: box-shadow 0.5s ease;
@@ -708,7 +709,7 @@ body {
     width: 200px;
     margin: 0 auto;
     color: #fff;
-    font: bold 28px/130px Verdana, sans-serif;
+    font: bold 28px/130px OenSans-Bold, sans-serif;
     text-decoration: none;
     text-align: center;
     transition: color 0.5s ease;
@@ -753,20 +754,20 @@ body {
         margin-bottom: 24px;
         padding: 0 15px;
         border-radius: 10px;
-        font: italic 18px/40px Verdana, sans-serif;
+        font: italic 18px/40px OenSans-Light, sans-serif;
     }
 
     .footer_form textarea {
         padding: 15px;
-        font: italic 18px/24px Verdana, sans-serif;
+        font: italic 18px/24px OenSans-Light, sans-serif;
     }
 
     .footer_title {
-        font: bold 28px/40px Verdana, sans-serif;
+        font: bold 28px/40px OenSans-Bold, sans-serif;
     }
 
     .footer_contact {
-        font: 17px/35px Verdana, sans-serif;
+        font: 17px/35px OenSans-Light, sans-serif;
         letter-spacing: 0;
     }
 
