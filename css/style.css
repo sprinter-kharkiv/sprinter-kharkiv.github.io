@@ -30,7 +30,7 @@ html,
 body,
 .wrap {
     height: 100%;
-    font-family: Verdana, sans-serif;
+    font-family: OenSans-Light, sans-serif;
 }
 
 body {
@@ -42,6 +42,74 @@ body {
     min-width: 320px;
     margin: 0 auto;
     padding: 0 12px;
+}
+
+.thanks_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -280px;
+    padding: 0 10px;
+    background: #5cbcf8;
+    width: 560px;
+    height: 300px;
+    text-align: center;
+    color: #fff;
+    z-index: 15;
+    animation: Hidd 2s 1;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.thanks_message h2 {
+    margin-top: 70px;
+    font: bold 24px/24px OenSans-Bold, sans-serif;
+}
+
+.thanks_message h3 {
+    margin-top: 50px;
+    font: bold 20px/24px OenSans-Bold, sans-serif;
+}
+
+@-webkit-keyframes Hidd {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes Hidd {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .thanks_message {
+        margin-top: -110px;
+        margin-left: -160px;
+        background: #5cbcf8;
+        width: 320px;
+        height: 200px;
+    }
+
+    .thanks_message h2 {
+        margin-top: 45px;
+        font: bold 20px/24px OenSans-Bold, sans-serif;
+    }
+
+    .thanks_message h3 {
+        margin-top: 35px;
+        font: bold 18px/24px OenSans-Bold, sans-serif;
+    }
+
 }
 
 /*--------------------------------------
@@ -197,7 +265,7 @@ body {
     }
 
     .header_nav li {
-        font: bold 18px/72px Verdana, sans-serif;
+        font: bold 18px/72px OenSans-Bold, sans-serif;
     }
 }
 
@@ -539,11 +607,13 @@ body {
     font-size: 20px;
     line-height: 28px;
 }
+
 .delivery_district__block {
     margin-top: 10px;
     width: 50%;
     float: left;
 }
+
 .delivery_district__block:last-child {
     width: 100%;
     float: none;
@@ -554,6 +624,7 @@ body {
     font-size: 1.1em;
     font-weight: bold;
 }
+
 .delivery_district h5 {
     font-weight: bold;
     font-style: italic;
@@ -570,6 +641,7 @@ body {
         font: 48px/260px OenSans-Light, sans-serif;
     }
 }
+
 @media screen and (max-width: 960px) {
     .delivery_district__block {
         margin-top: 10px;
@@ -593,14 +665,17 @@ body {
     #delivery {
         padding: 60px 0 60px;
     }
+
     .delivery h4 {
         font: normal 17px/24px OenSans-Light, sans-serif;
         margin-bottom: 8px;
     }
+
     .delivery_district {
         font-size: 16px;
         line-height: 22px;
     }
+
     .delivery_slogan {
         padding: 0 15px;
         margin-top: 10px;
