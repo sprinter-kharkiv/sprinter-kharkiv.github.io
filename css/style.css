@@ -332,6 +332,7 @@ body {
 }
 
 .card-title {
+    min-height: 70px;
     margin-top: 37px;
     font: bold 35px/35px OenSans-Bold, sans-serif;
 }
@@ -343,7 +344,7 @@ body {
 }
 
 .product-price {
-    margin: 67px 0 55px;
+    margin: 20px 0 55px;
     font: bold 24px/28px OenSans-Bold, sans-serif;
 }
 
