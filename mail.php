@@ -1,7 +1,7 @@
 <?php
 // ----------------------------конфигурация-------------------------- // 
  
-$adminemail=test@gmail.com";  // e-mail админа 
+$adminemail="test@gmail.com";  // e-mail админа 
  
  
 $date=date("d.m.y"); // число.месяц.год 
