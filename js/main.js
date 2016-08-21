@@ -1,6 +1,4 @@
-/**
- * Created by Admin on 25.11.2015.
- */
+
 $(document).ready(function() {
 
     // Mobile menu
