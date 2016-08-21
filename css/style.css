@@ -78,6 +78,7 @@ body {
     }
     100% {
         visibility: hidden;
+        opacity: 0;
     }
 }
 
