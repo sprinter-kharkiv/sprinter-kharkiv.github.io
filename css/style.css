@@ -770,6 +770,7 @@ body {
     margin-top: 20px;
     background: #3f627e;
     color: #fff;
+    outline: none;
 }
 
 .footer_form input[type="submit"]:hover {
