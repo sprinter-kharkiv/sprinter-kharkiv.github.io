@@ -56,8 +56,10 @@ body {
     height: 300px;
     text-align: center;
     color: #fff;
+    border: 6px solid #5cbcf8;
+    box-shadow: inset 0 0 0 2px #fff;
     z-index: 15;
-    animation: Hidd 2s 1;
+animation: Hidd 2s 1;
     animation-delay: 3s;
     animation-fill-mode: forwards;
 }
@@ -129,10 +131,28 @@ body {
     z-index: 4;
     transition: all 0.5s ease;
 }
+.header_contact {
+    display: none;
+    padding: 0 20px;
+    font: bold 20px/60px OenSans-Bold, sans-serif;
+    letter-spacing: .06em;
+    text-decoration: none;
+    color: #fff;
+}
+.header_contact:hover {
+    text-decoration: underline;
+}
+.fixed .header_contact {
+    color: #3f627e;
+}
+.vis-menu .header_contact {
+    display: none;
+}
 
 .header_nav {
     display: table;
     width: 100%;
+
 }
 
 .header_nav li {
@@ -260,6 +280,9 @@ body {
     .header_nav {
         display: none;
     }
+    .header_contact {
+        display: inline-block;
+    }
 
     .nav_item {
         float: left;
@@ -296,7 +319,7 @@ body {
 }
 
 .banner_text .banner_btn {
-    margin: 50px 0 150px;
+    margin: 50px 0 170px;
     padding: 0 25px;
     display: inline-block;
     border: 2px solid #f8970e;
@@ -322,7 +345,7 @@ body {
     }
 
     .banner_text h1 {
-        font: bold 28px/32px OenSans-Bold, sans-serif;
+        font: bold 40px/40px OenSans-Bold, sans-serif;
     }
 
     .banner_text h2 {
@@ -342,13 +365,16 @@ body {
     .banner_text .banner_btn {
         font-size: 19px;
         line-height: 40px;
-        margin: 50px 0 50px;
+        margin: 50px 0 170px;
     }
 }
 
 @media screen and (max-width: 540px) {
+    .banner_text {
+        padding-top: 180px;
+    }
     .banner_text .banner_btn {
-        margin-top: 20px;
+        margin: 50px 0 100px;
     }
 }
 
@@ -368,8 +394,9 @@ body {
 
 .content_block__text {
     min-height: 480px;
-    padding: 17px 40px 20px;
+    padding: 25px 40px 20px;
     background: #5cbcf8;
+    text-align: justify;
 }
 
 .content_block__text p {
@@ -463,7 +490,7 @@ body {
     }
 
     .content_block__text p {
-        width: 45%;
+        width: 52%;
     }
 
     .product-description {
@@ -587,6 +614,7 @@ body {
     padding: 20px 0 40px;
     color: #fff;
     background: #3f627e;
+    text-align: center;
 }
 
 .delivery_title {
@@ -600,10 +628,15 @@ body {
     font: normal 22px/50px OenSans-Light, sans-serif;
 }
 
-.delivery h4 span {
+.delivery h4 a {
     font-size: 1.1em;
     font-weight: bold;
     white-space: nowrap;
+    text-decoration: none;
+    color: #fff;
+}
+.delivery h4 a:hover {
+    text-decoration: underline;
 }
 
 .delivery_district {
@@ -705,14 +738,20 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
-
 .footer_contact {
+    text-align: center;
+    font: normal 26px/80px OenSans-Light, sans-serif;
+    color: #5cbcf8;
+}
+.footer_contact__link {
     font: normal 26px/80px OenSans-Light, sans-serif;
     letter-spacing: 0.08em;
     color: #5cbcf8;
-    text-align: center;
+    text-decoration: none;
 }
-
+.footer_contact__link:hover {
+    text-decoration: underline;
+}
 .footer_form {
     padding: 12px 0;
 }
@@ -758,7 +797,7 @@ body {
     width: 100%;
     height: 155px;
     resize: none;
-    padding: 30px;
+    padding: 15px 30px;
     border-radius: 10px;
     border: 1px solid #7c7c7c;
     font: normal 20px/26px OenSans-Light, sans-serif;
@@ -769,9 +808,10 @@ body {
 
 .footer_form input[type="submit"] {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px auto;
     background: #3f627e;
     color: #fff;
+    max-width: 320px;
 }
 
 .footer_form input[type="submit"]:hover {
