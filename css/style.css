@@ -139,9 +139,7 @@ animation: Hidd 2s 1;
     text-decoration: none;
     color: #fff;
 }
-.header_contact:hover {
-    text-decoration: underline;
-}
+
 .fixed .header_contact {
     color: #3f627e;
 }
@@ -635,32 +633,24 @@ animation: Hidd 2s 1;
     text-decoration: none;
     color: #fff;
 }
-.delivery h4 a:hover {
-    text-decoration: underline;
-}
-
 .delivery_district {
     font-size: 20px;
     line-height: 28px;
 }
-
 .delivery_district__block {
     margin-top: 10px;
     width: 50%;
     float: left;
 }
-
 .delivery_district__block:last-child {
     width: 100%;
     float: none;
 }
-
 .delivery_district h3 {
     margin-top: 10px;
     font-size: 1.1em;
     font-weight: bold;
 }
-
 .delivery_district h5 {
     font-weight: bold;
     font-style: italic;
@@ -748,9 +738,6 @@ animation: Hidd 2s 1;
     letter-spacing: 0.08em;
     color: #5cbcf8;
     text-decoration: none;
-}
-.footer_contact__link:hover {
-    text-decoration: underline;
 }
 .footer_form {
     padding: 12px 0;
