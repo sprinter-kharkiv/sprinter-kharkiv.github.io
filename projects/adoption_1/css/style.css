@@ -1,0 +1,417 @@
+/*
+
+1. common styles
+2. header
+3. banner
+4. shop
+5. delivery
+6. footer
+
+*/
+
+/*------------------------------
+        1. common styles
+-------------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrap {
+    height: 100%;
+    font-family: OenSans-Light, sans-serif;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+body {
+    background: #fff;
+}
+
+.container {
+    max-width: 768px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*--------------------------------------
+              2. header
+---------------------------------------*/
+.start-screen_header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: #fff;
+    color: #000;
+}
+
+.logo-wrap {
+    margin: 5px 0 0 3px;
+    display: inline-block;
+}
+.logo {
+    display: inline-block;
+    text-decoration: none;
+}
+.logo img{
+    display: inline-block;
+}
+.logo p {
+    display: inline-block;
+    font: normal 8px/10px BradobreiRegular, serif;
+    padding: 7px 3px;
+    vertical-align: top;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #4f4e4e;
+}
+#start-screen .logo p {
+    color: #4f4e4e;
+}
+
+
+.phone-block {
+    display: inline-block;
+    height: 50px;
+    margin-left: 20px;
+    padding-top: 10px;
+    vertical-align: top;
+}
+
+.phone-block_title {
+    font: normal 10px/10px Roboto-Light, sans-serif;
+}
+
+.phone-block_number {
+    position: relative;
+    font: bold 13px/16px Roboto-Bold, sans-serif;
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 0 0 20px;
+}
+
+.phone-block_number:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 12px;
+    height: 12px;
+    background: url("../images/phone_sprites.png");
+}
+
+.header_nav li {
+    font: bold 14px/50px Roboto-Bold, sans-serif;
+    text-align: center;
+    letter-spacing: .06em;
+}
+
+.header_nav li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.5s ease;
+}
+
+.header_nav li a:hover {
+    background: rgba(178, 180, 246, 0.25);
+}
+
+
+/*   visibility mobyle menu  */
+.vis-menu .header_nav {
+    position: relative;
+    height: 100vh;
+    display: block;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 0;
+    z-index: 5;
+}
+
+.vis-menu li {
+    display: block;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.vis-menu li:first-child {
+    border-top: 1px solid #ccc;
+}
+
+.vis-menu .header_nav a:active {
+    background: #b2b4f6;
+}
+
+    /*     menu gamburger   */
+    .menu-trigger {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        padding: 18px 7px;
+        cursor: pointer;
+        z-index: 10;
+
+    }
+
+    .menu-trigger span {
+        display: block;
+        width: 27px;
+        height: 4px;
+        background: #000;
+        position: relative;
+        transition: background 0.3s ease;
+
+    }
+
+
+    .menu-trigger span:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        width: 27px;
+        height: 4px;
+        background: inherit;
+        transition: transform 0.3s ease;
+
+    }
+
+    .menu-trigger span:after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        width: 27px;
+        height: 4px;
+        background: inherit;
+        transition: transform 0.3s ease;
+    }
+
+    .vis-menu .menu-trigger span {
+        width: 0;
+    }
+
+    .vis-menu .menu-trigger span:before {
+        -webkit-transform: translateY(8px) rotateZ(-225deg);
+        transform: translateY(8px) rotateZ(-225deg);
+        background: inherit;
+    }
+
+    .vis-menu .menu-trigger span:after {
+        -webkit-transform: translateY(-8px) rotateZ(225deg);
+        transform: translateY(-8px) rotateZ(225deg);
+        background: inherit;
+    }
+
+    /*    end menu gamburger   */
+    .header_nav {
+        display: none;
+    }
+
+    .header_contact {
+        display: inline-block;
+    }
+
+    .nav_item {
+        float: left;
+    }
+
+
+
+/*--------------------------------------
+              3. banner
+---------------------------------------*/
+.start-screen_banner {
+    position: relative;
+    max-height: 420px;
+    margin-bottom: 17px;
+    padding-bottom: 92%;
+    background: #7f7ef8 url("../images/bg_banner.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.banner-info {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    margin-top: 20px;
+}
+
+.banner-info_text {
+    color: #fff;
+    overflow: hidden;
+}
+
+.banner-info_text p {
+    font: normal 12px/14px Roboto-Light, sans-serif;
+}
+
+.banner-info_text h2 {
+    font: bold 26px/38px Roboto-Bold, sans-serif;
+    text-transform: uppercase;
+    border-top: 2px solid #fff;
+    letter-spacing: 0.07em;
+    float: left;
+}
+
+.banner-info_button__wrap {
+    float: left;
+    width: 46%;
+    height: 42px;
+    margin: 0 4% 4% 0;
+    background: #dddbe9;
+    border-radius: 3px;
+    border: 1px solid #a4a4b0;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.64);
+}
+
+.banner-info_button__wrap:nth-child(2n) {
+    margin: 0 0 4% 0;
+}
+
+.banner-info_button__wrap:hover {
+    background: #bfbeca;
+}
+
+.banner-info_button__wrap:active {
+    transform: translate(1px, 1px);
+}
+
+.banner-info_button__wrap a {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    text-decoration: none;
+    color: #000;
+    font: normal 12px/12px Roboto-Light, sans-serif;
+}
+
+.banner-info_button__wrap a p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*
+@media screen and (max-width: 540px) {
+    .banner_text {
+        padding-top: 180px;
+    }
+
+    .banner_text .banner_btn {
+        margin: 50px 0 100px;
+    }
+}
+*/
+.video {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.button {
+    display: block;
+    padding: 0 10px;
+    background: #fed034;
+    color: #fff;
+    font: normal 12px/40px OenSans-Bold, sans-serif;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease;
+    outline: none;
+}
+
+.button:hover {
+    background: #efc134;
+    color: #fff;
+}
+
+.button:active {
+    transform: translate(1px, 1px);
+    outline: none;
+}
+
+
+/*---------------------------------
+    6. form
+----------------------------------*/
+.contact-form{
+    padding: 22px 0 34px;
+    background: url("../images/bg_contact-form.jpg");
+    background-size: cover;
+}
+
+.contact-form__title {
+    font: bold 16px/36px OenSans-Bold, sans-serif;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact-form__inpuut {
+    display: block;
+    height: 47px;
+    width: 100%;
+    margin-bottom: 7px;
+    padding: 0 25px;
+    border: none;
+    background: rgba(255, 255, 255, 0.6);
+    font: normal 12px/47px OenSans-Light, sans-serif;
+    color: #000;
+    transition: box-shadow 0.5s ease;
+}
+
+.contact-form__inpuut:hover,
+.contact-form__inpuut:hover {
+    background: #fff;
+}
+.contact-form__inpuut:active,
+.contact-form__inpuut:focus {
+    background: #fff;
+    box-shadow: inset 0 0 15px -4px #5cbcf8;
+    outline: none;
+}
+
+#contact input[type="submit"] {
+    width: 100%;
+    background: #fed034;
+    color: #fff;
+}
+
+#contact input[type="submit"]:hover {
+    background: #e8bd31
+}
+
+
+
+/*---------------------------------
+    6. footer
+----------------------------------*/
+#footer {
+    background: #151422;
+    color: #fff;
+    height: 52px;
+}
+#footer .logo p {
+    color: #fff;
+}
+#footer .phone-block_number:before {
+    background-position: -14px 0;
+}
