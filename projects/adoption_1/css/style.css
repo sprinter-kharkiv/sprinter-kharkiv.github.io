@@ -3,9 +3,12 @@
 1. common styles
 2. header
 3. banner
-4. shop
-5. delivery
-6. footer
+4. image-block
+5. video
+6. story block
+7. testimonials
+8. contact form
+9. footer
 
 */
 
@@ -45,6 +48,44 @@ body {
     margin: 0 auto;
     padding: 0 10px;
 }
+.section_title {
+    background: #7e7cbb;
+    color: #fff;
+    font: bold 16px/38px Roboto-Bold, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button {
+    display: block;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    background: #fed034;
+    color: #fff;
+    font: bold 14px/40px Roboto-Bold, sans-serif;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s ease, color 0.5s ease;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.button:hover {
+    background: #efc134;
+    color: #fff;
+}
+
+.button:active {
+    transform: translate(1px, 1px);
+    outline: none;
+}
+
 
 /*--------------------------------------
               2. header
@@ -58,48 +99,51 @@ body {
 }
 
 .logo-wrap {
-    margin: 5px 0 0 3px;
+    margin: 9px 0 0 3px;
     display: inline-block;
 }
+
 .logo {
     display: inline-block;
     text-decoration: none;
 }
-.logo img{
+
+.logo img {
     display: inline-block;
 }
+
 .logo p {
     display: inline-block;
-    font: normal 8px/10px BradobreiRegular, serif;
+    font: normal 9px/10px BradobreiRegular, serif;
     padding: 7px 3px;
     vertical-align: top;
     text-transform: uppercase;
     text-decoration: none;
     color: #4f4e4e;
 }
+
 #start-screen .logo p {
     color: #4f4e4e;
 }
-
 
 .phone-block {
     display: inline-block;
     height: 50px;
     margin-left: 20px;
-    padding-top: 10px;
+    padding-top: 6px;
     vertical-align: top;
 }
 
 .phone-block_title {
-    font: normal 10px/10px Roboto-Light, sans-serif;
+    font: normal 10px/16px Roboto-Light, sans-serif;
 }
 
 .phone-block_number {
     position: relative;
-    font: bold 13px/16px Roboto-Bold, sans-serif;
+    font: bold 14px/18px Roboto-Bold, sans-serif;
     color: inherit;
     text-decoration: none;
-    padding: 5px 0 0 20px;
+    padding: 8px 0 0 20px;
 }
 
 .phone-block_number:before {
@@ -107,7 +151,7 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
-    margin-top: -6px;
+    margin-top: -3px;
     width: 12px;
     height: 12px;
     background: url("../images/phone_sprites.png");
@@ -130,7 +174,6 @@ body {
     background: rgba(178, 180, 246, 0.25);
 }
 
-
 /*   visibility mobyle menu  */
 .vis-menu .header_nav {
     position: relative;
@@ -152,83 +195,75 @@ body {
 }
 
 .vis-menu .header_nav a:active {
-    background: #b2b4f6;
+    background: #7e7cbb;
+    color: #fff;
 }
 
-    /*     menu gamburger   */
-    .menu-trigger {
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        width: 40px;
-        height: 40px;
-        padding: 18px 7px;
-        cursor: pointer;
-        z-index: 10;
+/*     menu gamburger   */
+.menu-trigger {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 18px 7px;
+    cursor: pointer;
+    z-index: 10;
 
-    }
+}
 
-    .menu-trigger span {
-        display: block;
-        width: 27px;
-        height: 4px;
-        background: #000;
-        position: relative;
-        transition: background 0.3s ease;
+.menu-trigger span {
+    display: block;
+    width: 27px;
+    height: 4px;
+    background: #515151;
+    position: relative;
+    transition: background 0.3s ease;
 
-    }
+}
+
+.menu-trigger span:before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 27px;
+    height: 4px;
+    background: inherit;
+    transition: transform 0.3s ease;
+
+}
+
+.menu-trigger span:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    width: 27px;
+    height: 4px;
+    background: inherit;
+    transition: transform 0.3s ease;
+}
+
+.vis-menu .menu-trigger span {
+    width: 0;
+}
+
+.vis-menu .menu-trigger span:before {
+    -webkit-transform: translateY(8px) rotateZ(-225deg);
+    transform: translateY(8px) rotateZ(-225deg);
+    background: inherit;
+}
+
+.vis-menu .menu-trigger span:after {
+    -webkit-transform: translateY(-8px) rotateZ(225deg);
+    transform: translateY(-8px) rotateZ(225deg);
+    background: inherit;
+}
+/*    end menu gamburger   */
 
 
-    .menu-trigger span:before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        width: 27px;
-        height: 4px;
-        background: inherit;
-        transition: transform 0.3s ease;
-
-    }
-
-    .menu-trigger span:after {
-        content: '';
-        position: absolute;
-        top: 8px;
-        width: 27px;
-        height: 4px;
-        background: inherit;
-        transition: transform 0.3s ease;
-    }
-
-    .vis-menu .menu-trigger span {
-        width: 0;
-    }
-
-    .vis-menu .menu-trigger span:before {
-        -webkit-transform: translateY(8px) rotateZ(-225deg);
-        transform: translateY(8px) rotateZ(-225deg);
-        background: inherit;
-    }
-
-    .vis-menu .menu-trigger span:after {
-        -webkit-transform: translateY(-8px) rotateZ(225deg);
-        transform: translateY(-8px) rotateZ(225deg);
-        background: inherit;
-    }
-
-    /*    end menu gamburger   */
-    .header_nav {
-        display: none;
-    }
-
-    .header_contact {
-        display: inline-block;
-    }
-
-    .nav_item {
-        float: left;
-    }
-
+.header_nav {
+    display: none;
+}
 
 
 /*--------------------------------------
@@ -306,78 +341,59 @@ body {
     text-align: center;
     vertical-align: middle;
 }
+
+/*--------------------------------------
+              4. image-block
+---------------------------------------*/
 .image-block {
     padding: 14px 0;
 }
+
 .image-block img {
     display: block;
     width: 100%;
 }
-.image-block h2 {
-    background: #7e7cbb;
-    color: #fff;
-    font: bold 16px/34px Roboto-Bold, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-}
 
-
+/*------------------------------
+        5. video
+-------------------------------*/
 .content_block__video .title {
     font: bold 14px/36px Roboto-Light, sans-serif;
     text-transform: uppercase;
     text-align: center;
     color: #000;
 }
+
 .content_block__video .description {
     font: bold 13px/18px Roboto-Light, sans-serif;
     text-align: center;
     color: #000;
 }
+
 .content_block__video .video {
     width: 100%;
 }
 
-.button {
-    display: block;
-    padding: 0 10px;
-    background: #fed034;
-    color: #fff;
-    font: bold 12px/40px Roboto-Bold, sans-serif;
-    letter-spacing: 0.05em;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: background 0.5s ease, color 0.5s ease;
-    outline: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
-.button:hover {
-    background: #efc134;
-    color: #fff;
-}
-
-.button:active {
-    transform: translate(1px, 1px);
-    outline: none;
-}
 
 /*---------------------------------
     6. story block
 ----------------------------------*/
+.additional_content {
+    display: none;
+}
+
+.additional_content.visible {
+    display: block;
+}
+
 .content_block__story .titles {
     display: table;
     width: 100%;
 }
 
 .story_title {
-    position: relative;
     display: table-cell;
-    font: bold 12px/12px Roboto-Bold, sans-serif;
+    font: bold 12px/18px Roboto-Bold, sans-serif;
     text-transform: uppercase;
     text-align: center;
     border-right: 1px solid #ccc;
@@ -386,44 +402,105 @@ body {
     user-select: none;
     cursor: pointer;
 }
+
 .story_title:first-child {
     text-align: left;
 }
+
 .story_title:last-child {
     border-right: none;
     text-align: right;
 }
-.titles .active:after {
+
+.story_title span {
+    position: relative;
+}
+
+.story_title:hover span:after,
+.titles .active span:after {
     content: '';
-    width: 80%;
+    width: 100%;
     height: 2px;
     background: #7e7cbb;
     position: absolute;
-    bottom: -3px;
-    left: 50%;
-    margin-left: -50%;
+    bottom: -4px;
+    left: 0;
 }
+
 .story_block {
     display: none;
+    color: #000;
 }
+
+.story_block h3 {
+    font: bold 13px/30px Roboto-Light, sans-serif;
+    text-align: left;
+}
+
+.story_block p {
+    font: normal 13px/20px Roboto-Light, sans-serif;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
 .text .active {
-display: block;
+    display: block;
+    animation: opacity .8s forwards;
 }
+
+@keyframes opacity {
+    from {
+        color: transparent;
+    }
+    to {
+        color: #000;
+    }
+}
+
 /*---------------------------------
-    6. form
+    7. testimonials
 ----------------------------------*/
-.contact-form{
-    padding: 22px 0 34px;
+.testimonials-block {
+    padding-bottom: 15px;
+}
+
+.testimonial-video {
+    position: relative;
+    float: left;
+    width: 30%;
+    padding-bottom: 20%;
+    margin: 5% 5% 0 0;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.testimonial-video:last-child {
+    margin-right: 0;
+}
+
+.testimonial-video iframe {
+    position: absolute;
+}
+
+/*---------------------------------
+    8. contact form
+----------------------------------*/
+.contact-form {
+    padding: 25px 10px;
     background: url("../images/bg_contact-form.jpg");
     background-size: cover;
 }
-
+.form-wrap {
+    max-width: 400px;
+    margin: 0 auto;
+}
 .contact-form__title {
     font: bold 16px/36px OenSans-Bold, sans-serif;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.75);
     text-align: center;
     text-transform: uppercase;
 }
+
 .contact-form__inpuut {
     display: block;
     height: 47px;
@@ -432,15 +509,20 @@ display: block;
     padding: 0 25px;
     border: none;
     background: rgba(255, 255, 255, 0.6);
-    font: normal 12px/47px OenSans-Light, sans-serif;
+    font: normal 14px/47px OenSans-Light, sans-serif;
     color: #000;
     transition: box-shadow 0.5s ease;
+}
+
+input::-webkit-input-placeholder {
+    color: #000;
 }
 
 .contact-form__inpuut:hover,
 .contact-form__inpuut:hover {
     background: #fff;
 }
+
 .contact-form__inpuut:active,
 .contact-form__inpuut:focus {
     background: #fff;
@@ -458,19 +540,23 @@ display: block;
     background: #e8bd31
 }
 
-
-
 /*---------------------------------
-    6. footer
+    9. footer
 ----------------------------------*/
 #footer {
     background: #151422;
     color: #fff;
     height: 52px;
 }
+
 #footer .logo p {
     color: #fff;
 }
+
+#footer .phone-block {
+    float: right;
+}
+
 #footer .phone-block_number:before {
     background-position: -14px 0;
 }

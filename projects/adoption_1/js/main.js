@@ -9,27 +9,24 @@ $(document).ready(function() {
         $('.start-screen_header').removeClass('vis-menu')
     });
 
-
-    // Header Scroll
-    $(window).on('scroll', function () {
-        var scroll = $(window).scrollTop();
-        if (scroll >= 100) {
-            $('.header').addClass('fixed');
-        } else {
-            $('.header').removeClass('fixed');
-        }
+    // find/hidd content
+    $('.j-find-trig').on('click', function () {
+        $('.additional_content').toggleClass('visible')
     });
 
-    // parallax for background
-    $(".scroll-bg").each(function(){
-        var $bgobj = $(this);
 
-        $(window).scroll(function(){
-            var yPos = -($(window).scrollTop() /  $bgobj.data("speed"));
-            var coords = "50%" + yPos + "px";
+    // Tabs
+    $('.j-tab-btn').on('click', function(){
+        var x = $(this).index();
+        $('.j-tab-btn').each(function(){
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
 
-            $bgobj.css(
-                "background-position" , coords);
-        })
+        $('.j-tab').each(function(){
+            $(this).removeClass('active');
+            $('.j-tab').eq(x).addClass('active');
+        });
     });
+
 });

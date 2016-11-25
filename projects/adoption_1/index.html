@@ -80,9 +80,9 @@
     <div class="image-block">
         <img src="images/meet.jpg" alt="meet Jon and Jane"/>
 
-        <h2>Meet Jon & Jane</h2>
+        <h2 class="section_title">Meet Jon & Jane</h2>
     </div>
-    <h2 class="button">find out more</h2>
+    <h2 class="button j-find-trig">find out more</h2>
 
     <div class="additional_content">
         <div class="content_block__video ">
@@ -96,29 +96,73 @@
         </div>
         <div class="content_block__story">
             <div class="titles">
-                <span class="story_title ">intro</span>
-                <span class="story_title active">back story</span>
-                <span class="story_title">adopt</span>
-                <span class="story_title">our plans</span>
+                <div class="story_title j-tab-btn active"><span>intro</span></div>
+                <div class="story_title j-tab-btn"><span>back story</span></div>
+                <div class="story_title j-tab-btn"><span>adopt</span></div>
+                <div class="story_title j-tab-btn"><span>our plans</span></div>
             </div>
             <div class="text">
-                <div class="story_block active">
-                    <h3>11111Greeting</h3>
+                <div class="story_block j-tab active">
+                    <h3>Greeting</h3>
 
-                    <p>1111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur culpa deserunt
-                        distinctio
-                        dolorem, incidunt placeat possimus quia rem repudiandae sapiente sequi sint veritatis vero
-                        voluptatum. Est iste laudantium pariatur?</p>
+                    <p>Cras a maximus mauris. Quisque urna dolor, cursus ut facilisis eget, tempus eu tellus. Phasellus
+                        arcu ante, mollis id magna et, commodo aliquet leo.
+                    </p>
+
+                    <p>
+                        Mauris vestibulum, eros eget tincidunt mattis, odio ligula vehicula est, at dapibus nulla metus
+                        mattis nisi. Duis a risus nec sem faucibus malesuada eget ut urna. Sed sagittis nisl convallis,
+                        imperdiet enim ut, iaculis eros. Integer?</p>
                 </div>
-                <div class="story_block">
-                    <h3>2222Greeting</h3>
+                <div class="story_block j-tab">
+                    <h3>Mauris</h3>
 
-                    <p>2222Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur culpa deserunt
-                        distinctio
-                        dolorem, incidunt placeat possimus quia rem repudiandae sapiente sequi sint veritatis vero
-                        voluptatum. Est iste laudantium pariatur?</p>
+                    <p>
+                        Mauris vestibulum, eros eget tincidunt mattis, odio ligula vehicula est, at dapibus nulla metus
+                        mattis nisi. Duis a risus nec sem faucibus malesuada eget ut urna. Sed sagittis nisl convallis,
+                        imperdiet enim ut, iaculis eros. Integer?</p>
+
+                    <p>Cras a maximus mauris. Quisque urna dolor, cursus ut facilisis eget, tempus eu tellus. Phasellus
+                        arcu ante, mollis id magna et, commodo aliquet leo.
+                    </p>
+                </div>
+                <div class="story_block j-tab">
+                    <h3>Greeting</h3>
+
+                    <p>Cras a maximus mauris. Quisque urna dolor, cursus ut facilisis eget, tempus eu tellus. Phasellus
+                        arcu ante, mollis id magna et, commodo aliquet leo.
+                    </p>
+
+                    <p>
+                        Mauris vestibulum, eros eget tincidunt mattis, odio ligula vehicula est, at dapibus nulla metus
+                        mattis nisi. Duis a risus nec sem faucibus malesuada eget ut urna. Sed sagittis nisl convallis,
+                        imperdiet enim ut, iaculis eros. Integer?</p>
+                </div>
+                <div class="story_block j-tab">
+                    <h3>Mauris</h3>
+
+                    <p>
+                        Mauris vestibulum, eros eget tincidunt mattis, odio ligula vehicula est, at dapibus nulla metus
+                        mattis nisi. Duis a risus nec sem faucibus malesuada eget ut urna. Sed sagittis nisl convallis,
+                        imperdiet enim ut, iaculis eros. Integer?</p>
+
+                    <p>Cras a maximus mauris. Quisque urna dolor, cursus ut facilisis eget, tempus eu tellus. Phasellus
+                        arcu ante, mollis id magna et, commodo aliquet leo.
+                    </p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="testimonials-block clearfix">
+        <h2 class="section_title">testimonials</h2>
+
+        <div class="testimonial-video">
+        </div>
+        <div class="testimonial-video">
+
+        </div>
+        <div class="testimonial-video">
+
         </div>
     </div>
 </section>
@@ -126,15 +170,14 @@
 <!--                  FORM                  -->
 
 <section id="contact-form" class="contact-form">
-    <div class="container">
+    <div class="form-wrap">
         <h2 class="contact-form__title">Contact us</h2>
 
         <form id="contact" action='' method="post" class="clearfix">
             <fieldset>
-                <input class="contact-form__inpuut" type="text" name="name" placeholder="Ваше имя?" required/>
-                <input class="contact-form__inpuut" type="text" name="phone" placeholder="Ваш телефон?" required/>
-                <input class="contact-form__inpuut" type="email" name="_replyto" placeholder="Ваш электронный адрес?"
-                       required/>
+                <input class="contact-form__inpuut" type="text" name="name" placeholder="Name" required/>
+                <input class="contact-form__inpuut" type="email" name="_replyto" placeholder="Email" required/>
+                <input class="contact-form__inpuut" type="text" name="phone" placeholder="Phone" required/>
             </fieldset>
             <input type="submit" value="Отправить" class="button"/>
         </form>
