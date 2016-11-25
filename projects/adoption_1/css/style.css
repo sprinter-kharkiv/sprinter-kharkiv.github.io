@@ -237,7 +237,6 @@ body {
 .start-screen_banner {
     position: relative;
     max-height: 420px;
-    margin-bottom: 17px;
     padding-bottom: 92%;
     background: #7f7ef8 url("../images/bg_banner.jpg") no-repeat 50% 50%;
     background-size: cover;
@@ -307,21 +306,35 @@ body {
     text-align: center;
     vertical-align: middle;
 }
-
-/*
-@media screen and (max-width: 540px) {
-    .banner_text {
-        padding-top: 180px;
-    }
-
-    .banner_text .banner_btn {
-        margin: 50px 0 100px;
-    }
+.image-block {
+    padding: 14px 0;
 }
-*/
-.video {
-    width: 300px;
-    margin: 0 auto;
+.image-block img {
+    display: block;
+    width: 100%;
+}
+.image-block h2 {
+    background: #7e7cbb;
+    color: #fff;
+    font: bold 16px/34px Roboto-Bold, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.content_block__video .title {
+    font: bold 14px/36px Roboto-Light, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+.content_block__video .description {
+    font: bold 13px/18px Roboto-Light, sans-serif;
+    text-align: center;
+    color: #000;
+}
+.content_block__video .video {
+    width: 100%;
 }
 
 .button {
@@ -329,14 +342,18 @@ body {
     padding: 0 10px;
     background: #fed034;
     color: #fff;
-    font: normal 12px/40px OenSans-Bold, sans-serif;
+    font: bold 12px/40px Roboto-Bold, sans-serif;
     letter-spacing: 0.05em;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     border: none;
     cursor: pointer;
     transition: background 0.5s ease, color 0.5s ease;
     outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .button:hover {
@@ -349,7 +366,49 @@ body {
     outline: none;
 }
 
+/*---------------------------------
+    6. story block
+----------------------------------*/
+.content_block__story .titles {
+    display: table;
+    width: 100%;
+}
 
+.story_title {
+    position: relative;
+    display: table-cell;
+    font: bold 12px/12px Roboto-Bold, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.story_title:first-child {
+    text-align: left;
+}
+.story_title:last-child {
+    border-right: none;
+    text-align: right;
+}
+.titles .active:after {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: #7e7cbb;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -50%;
+}
+.story_block {
+    display: none;
+}
+.text .active {
+display: block;
+}
 /*---------------------------------
     6. form
 ----------------------------------*/
