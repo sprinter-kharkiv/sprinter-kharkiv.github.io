@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be4b5cd7-2109-49b8-bd23-39eed1246bed" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/logo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/logo_footer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/logo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/meet.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projects/adoption_1/images/phone.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/adoption_1/images/bg_banner.jpg" afterPath="$PROJECT_DIR$/projects/adoption_1/images/bg_banner.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/adoption_1/css/style.css" afterPath="$PROJECT_DIR$/projects/adoption_1/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/adoption_1/index.html" afterPath="$PROJECT_DIR$/projects/adoption_1/index.html" />
     </list>
     <ignored path="sprinter-kharkiv.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +37,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projects/adoption_1/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56">
-              <caret line="380" column="19" selection-start-line="380" selection-start-column="19" selection-end-line="380" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.78074074">
+              <caret line="412" column="23" selection-start-line="412" selection-start-column="23" selection-end-line="412" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -262,7 +253,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="1" width="1450" height="849" extended-state="1" />
+    <frame x="-4" y="1" width="1450" height="849" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25312066" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -410,8 +401,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/adoption_1/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56">
-          <caret line="380" column="19" selection-start-line="380" selection-start-column="19" selection-end-line="380" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.78074074">
+          <caret line="412" column="23" selection-start-line="412" selection-start-column="23" selection-end-line="412" selection-end-column="23" />
           <folding />
         </state>
       </provider>
