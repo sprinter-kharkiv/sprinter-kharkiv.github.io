@@ -92,10 +92,12 @@ body {
 ---------------------------------------*/
 .start-screen_header {
     position: fixed;
+    top: 0;
     height: 50px;
     width: 100%;
     background: #fff;
     color: #000;
+    z-index: 10;    
 }
 
 .logo-wrap {
@@ -179,7 +181,7 @@ body {
     position: relative;
     height: 100vh;
     display: block;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.75);
     padding: 0;
     z-index: 5;
 }
@@ -271,6 +273,7 @@ body {
 ---------------------------------------*/
 .start-screen_banner {
     position: relative;
+    margin-top: 50px;    
     max-height: 420px;
     padding-bottom: 92%;
     background: #7f7ef8 url("../images/bg_banner.jpg") no-repeat 50% 50%;
