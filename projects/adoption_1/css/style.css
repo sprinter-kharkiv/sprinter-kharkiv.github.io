@@ -91,7 +91,7 @@ body {
               2. header
 ---------------------------------------*/
 .start-screen_header {
-    position: relative;
+    position: fixed;
     height: 50px;
     width: 100%;
     background: #fff;
@@ -402,14 +402,14 @@ body {
     user-select: none;
     cursor: pointer;
 }
-
+/*
 .story_title:first-child {
     text-align: left;
 }
-
+*/
 .story_title:last-child {
     border-right: none;
-    text-align: right;
+   /* text-align: right;*/
 }
 
 .story_title span {
