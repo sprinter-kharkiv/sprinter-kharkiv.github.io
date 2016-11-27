@@ -10,8 +10,9 @@ $(document).ready(function() {
     });
 
     // find/hidd content
-    $('.j-find-trig').on('click', function () {
-        $('.additional_content').toggleClass('visible')
+    $('.j-additional-trig').on('click', function () {
+        $('.additional_content').toggleClass('visible');
+        $('.additional-title').toggleClass('hidden')
     });
 
 
@@ -27,6 +28,18 @@ $(document).ready(function() {
             $(this).removeClass('active');
             $('.j-tab').eq(x).addClass('active');
         });
+    });
+    // country code
+
+    $("#phone").intlTelInput({
+        separateDialCode: "true",
+        initialCountry: "auto",
+        geoIpLookup: function(callback) {
+            $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
+                var countryCode = (resp && resp.country) ? resp.country : "";
+                callback(countryCode);
+            });
+        }
     });
 
 });
