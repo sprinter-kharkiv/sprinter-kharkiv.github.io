@@ -1,0 +1,187 @@
+/*
+
+1. common styles
+2. header
+3. banner
+4. shop
+5. delivery
+6. footer
+
+*/
+
+/*------------------------------
+        1. common styles
+-------------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+html, body {
+    background: #aaaaaa;
+    height: 100%;
+}
+.container {
+
+ /*   box-shadow: 0 0 200px 50px #e7eaa7;*/
+}
+.wrap {
+    background: #3A3A3A;
+    color: #fff;
+    box-shadow: 0 0 200px 50px #eaeaea;
+    padding-bottom: 40px;
+}
+
+
+/*----------------------
+---------------------*/
+.logo-header {
+    display: block;
+    margin-top: 32px;
+}
+.main-title {
+    color: #fff;
+    margin: 32px 0 0 60px;
+    font: normal 28px/36px HelveticaNeue, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+.main-title span {
+    font: normal 36px/36px HelveticaNeue, Verdana, sans-serif;
+}
+
+
+
+/*----------------------
+---------------------*/
+
+.product-block {
+    margin-top: 7%;
+    margin-bottom: 2%;
+    display: flex;
+    align-content: stretch;
+}
+.first-section .product-block{
+    margin-top: 1%;
+}
+.secondary .product-block {
+    margin-top: 9%;
+}
+.product-img {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 72%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.product-text_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  /*  background: #2e6da4;*/
+    font-size: 16px;
+}
+
+.product-text_wrap p{
+    font: normal 18px/26px HelveticaNeue, Verdana, sans-serif;
+}
+.c-btn {
+    display: block;
+    width: 100%;
+    background:#808080;
+    font: bold 18px/48px HelveticaNeue, Verdana, sans-serif;
+    height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background .3s ease;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.c-btn.c-large {
+height: 100px;
+    font: bold 36px/100px HelveticaNeue, Verdana, sans-serif;
+}
+.c-btn:hover, .c-btn.c-inverse {
+    background: #ff0400;
+}
+
+.c-btn.c-inverse:hover {
+    background: #808080;
+}
+.c-btn:active {
+    transform: translate(1px, 1px);
+}
+
+
+/*----------------------
+---------------------*/
+.anchor-link {
+    position: relative;
+    padding-bottom: 72%;
+    overflow: hidden;
+}
+.anchor-link a {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 72%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .8s ease;
+}
+.anchor-link:hover a {
+    transform: scale(1.2);
+}
+
+/*----------------------
+---------------------*/
+
+.section-footer {
+    height: 5%;
+ /*   background: #ff00a5;*/
+    overflow: hidden;
+}
+.product-list {
+    list-style: none;
+    margin-bottom: 2%;
+}
+.product-list li{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 18%;
+    padding-bottom: 18%;
+    margin: 2.5% 2.5% 0 0;
+}
+.product-list li:nth-child(5n){
+    margin-right: 0;
+}
+.product-list a{
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .8s ease;
+}
+.next-btn {
+    display: block;
+    margin: 20px auto 0;
+    width: 0;
+    height: 0;
+    border: 18px solid transparent;
+    border-top: 14px solid #048689;
+    cursor: pointer;
+}

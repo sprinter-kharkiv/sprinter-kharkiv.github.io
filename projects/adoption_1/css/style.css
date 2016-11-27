@@ -588,7 +588,7 @@ body {
     border: none;
     border-radius: 0;
     background: rgba(255, 255, 255, 0.6);
-    font: normal 14px/47px OenSans-Light, sans-serif;
+    font: normal 15px/47px OenSans-Light, sans-serif;
     color: #000;
     transition: box-shadow 0.5s ease;
     -webkit-appearance: none;
