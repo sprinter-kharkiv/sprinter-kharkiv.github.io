@@ -32,7 +32,7 @@ html, body {
 }
 
 .container {
-   width: 750px;
+  /* width: 750px;*/
     padding-right: 0;
     padding-left: 0;
     /*   box-shadow: 0 0 200px 50px #e7eaa7;*/
