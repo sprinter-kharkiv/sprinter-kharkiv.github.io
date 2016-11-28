@@ -20,8 +20,8 @@
     <![endif]-->
 </head>
 <body>
-<div id="fullpage" class="wrap container">
-    <section class="section first-section">
+<div class="wrap container">
+    <section id="section-1" class="section first-section">
         <div class="row">
             <div class="col-xs-12 section-header">
                 <div class="col-xs-4 col-lg-2">
@@ -79,18 +79,18 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <span class="c-btn c-btn-mobile">contact us</span>
+                        <span class="c-btn c-btn-mobile j-contact">contact us</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 section-footer">
                 <div class="col-xs-12">
-                    <span class="next-btn"></span>
+                    <span class="next-btn j-go-to" data-section="#section-2"></span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section">
+    <section id="section-2" class="section">
         <div class="row">
             <div class="col-xs-12 product-block">
                 <div class="row">
@@ -104,7 +104,7 @@
                             From indirect to direct light passing through
                             all the intermediate
                             positions.</p>
-                        <span class="c-btn c-hidd-mobile">contact us</span>
+                        <span class="c-btn c-hidd-mobile j-contact">contact us</span>
                     </div>
                     <div class="col-xs-7 col-sm-12  anchor-block col-nopaddings">
                         <div class="col-xs-6 col-sm-6 col-lg-3">
@@ -135,18 +135,18 @@
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <span class="c-btn c-btn-mobile">contact us</span>
+                        <span class="c-btn c-btn-mobile j-contact">contact us</span>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 section-footer">
                 <div class="col-xs-12">
-                    <span class="next-btn"></span>
+                    <span class="next-btn j-go-to" data-section="#section-5"></span>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section ">
+    <section id="section-5" class="section ">
         <div class="row section-header">
             <div class="col-xs-12 col-lg-6">
                 <h1 class="main-title"><span>DISCOVER<br>
@@ -155,7 +155,7 @@
             </div>
             <div class="col-xs-2"></div>
             <div class="col-xs-8 col-lg-6">
-                <span class="c-btn c-large c-inverse">download now</span>
+                <span class="c-btn c-large c-inverse j-catalog">download now</span>
             </div>
         </div>
         <!--   product-block    -->
@@ -185,7 +185,7 @@
                     PI 08666000156 </p>
             </div>
             <div class="col-xs-6">
-                <span class="c-btn c-large">contact us</span>
+                <span class="c-btn c-large j-contact">contact us</span>
             </div>
         </div>
     </section>
@@ -193,9 +193,20 @@
 
 </div>
 
+<div id="modal_catalog">
+    <span id="modal_close">X</span>
+    download catalog
+</div>
+<div id="overlay"></div>
+<div id="modal_contact">
+    <span id="modal_close">X</span>
+    send email
+</div>
+<div id="overlay"></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
