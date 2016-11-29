@@ -89,6 +89,30 @@ body {
     outline: none;
 }
 
+/*
+font-family: 'Alex Brush', cursive;
+
+font-family: 'Allura', cursive;
+
+font-family: 'Parisienne', cursive;*/
+
+.alex_brush {
+    font-family: 'Alex Brush';
+    /*font-style: cursive;*/
+}
+
+.parisienne {
+    font-family: 'Parisienne';
+    font-style: cursive;
+}
+
+.alex_brush, .parisienne {
+    text-transform: none;
+    line-height: 38px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
 /*--------------------------------------
               2. header
 ---------------------------------------*/
@@ -398,9 +422,11 @@ body {
 .additional_content.visible {
     display: block;
 }
+
 .hidden {
     display: none;
 }
+
 .flash {
     -webkit-animation-name: flash;
     animation-name: flash;
@@ -415,7 +441,7 @@ body {
         opacity: 1;
     }
 
-     75% {
+    75% {
         opacity: 0.4;
     }
 }
@@ -429,8 +455,6 @@ body {
         opacity: 0.4;
     }
 }
-
-
 
 .content_block__story {
     margin-top: 6%;
@@ -610,7 +634,8 @@ input::-webkit-input-placeholder {
     outline: none;
 }
 
-.intl-tel-input { /* custom style of country code*/
+.intl-tel-input {
+    /* custom style of country code*/
     width: 100%;
     margin-bottom: 7px;
 }
