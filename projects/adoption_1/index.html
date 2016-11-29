@@ -65,12 +65,6 @@
                     <div class="banner-info_button__wrap">
                         <a href="http://adoptspace.com/help/transportation"><p>Transpo&shy;rtation</p></a>
                     </div>
-                    <div class="banner-info_button__wrap">
-                        <a href="http://adoptspace.com/help/medical-assistance"><p>Medical Assistance</p></a>
-                    </div>
-                    <div class="banner-info_button__wrap">
-                        <a href="http://adoptspace.com/help/living-expenses"><p>Living Expenses</p></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -83,20 +77,31 @@
     <div class="image-block">
         <img src="images/Jone_Jane.jpg" alt="meet Jon and Jane"/>
 
-        <h2 class="section_title alex_brush">Meet Jon & Jane</h2>
-        <h2 class="section_title parisienne">Meet Jon & Jane</h2>
+        <h2 class="section_title">Meet Jon & Jane</h2>
     </div>
     <div class="button j-additional-trig">
-        <h2 class="flash additional-title">Click to Expand Profile</h2>
+        <h2 class="flash additional-title"><span class="title-arrow">Click to Expand Profile</span></h2>
     </div>
 
     <div class="additional_content">
         <div class="content_block__video ">
-            <h2 class="title">Meet Jon & Jane</h2>
+            <h2 class="title alex_brush">Meet Jon & Jane</h2>
 
             <h3 class="description">Who are seeking to adopt</h3>
             <!-- http://v4e.thewikies.com/ генератор кода для вставки видео -->
-            <a href="https://www.youtube.com/embed/PqBk8v4dzDg" class="youtuber main-video"></a>
+            <div class="photo_wrap">
+                <div class="main-photo">
+                    <img src="images/meet_1.jpg" alt="">
+                </div>
+                <div class="secondary-photo_wrap">
+                    <div class="secondary-photo">
+                        <img src="images/meet_2.jpg" alt="">
+                    </div>
+                    <div class="secondary-photo">
+                        <img src="images/meet_3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="content_block__story">
             <div class="titles">
@@ -187,6 +192,8 @@
                 <input class="contact-form__inpuut" type="text" name="name" placeholder="Name"/>
                 <input class="contact-form__inpuut" type="email" name="_replyto" placeholder="Email"/>
                 <input class="contact-form__inpuut" type="tel" name="phone" id="phone" placeholder=""/>
+                <label class="radiobutton_label"><input type="radio" name="phone" value="voice" checked> Voice</label><Br>
+                <label class="radiobutton_label"><input type="radio" name="phone" value="voice_sms"> Voice + SMS</label><Br>
             </fieldset>
             <input type="submit" value="send" class="button"/>
         </form>
@@ -216,7 +223,6 @@
 <script src="js/youtuber.js"></script>
 <script src="js/intlTelInput.min.js"></script>
 <script src="js/main.js"></script>
-
 
 
 </body>

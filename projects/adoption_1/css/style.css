@@ -89,29 +89,6 @@ body {
     outline: none;
 }
 
-/*
-font-family: 'Alex Brush', cursive;
-
-font-family: 'Allura', cursive;
-
-font-family: 'Parisienne', cursive;*/
-
-.alex_brush {
-    font-family: 'Alex Brush';
-    /*font-style: cursive;*/
-}
-
-.parisienne {
-    font-family: 'Parisienne';
-    font-style: cursive;
-}
-
-.alex_brush, .parisienne {
-    text-transform: none;
-    line-height: 38px;
-    font-size: 27px;
-    margin-bottom: 20px;
-}
 
 /*--------------------------------------
               2. header
@@ -340,9 +317,9 @@ font-family: 'Parisienne', cursive;*/
     width: 46%;
     height: 42px;
     margin: 0 4% 4% 0;
-    background: #dddbe9;
+    background: rgba(221, 219, 233, 0.4);
     border-radius: 3px;
-    border: 1px solid #a4a4b0;
+    border: 1px solid rgba(164, 164, 176, 0.5);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.64);
 }
 
@@ -390,16 +367,18 @@ font-family: 'Parisienne', cursive;*/
         5. video
 -------------------------------*/
 .content_block__video .title {
-    font: bold 14px/36px Roboto-Light, sans-serif;
-    text-transform: uppercase;
+    font-family: 'Alex Brush';
+    text-transform: none;
     text-align: center;
-    color: #000;
+    line-height: 38px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
-
 .content_block__video .description {
     font: bold 13px/18px Roboto-Light, sans-serif;
     text-align: center;
     color: #000;
+    margin-bottom: 10px;
 }
 
 .main-video {
@@ -423,10 +402,41 @@ font-family: 'Parisienne', cursive;*/
     display: block;
 }
 
-.hidden {
-    display: none;
+.hidden.flash {
+    color: transparent;
+    animation-iteration-count: 1;
 }
+.hidden.flash {
+   /* color: #fed034; */
+}
+.title-arrow {
+    position: relative;
+}
+.title-arrow:after {
+    content: '';
+    position: absolute;
+    top: -44px;
+    right: -12px;
+    width: 0;
+    height: 0;
+    border: 12px solid transparent;
+    border-top: 12px solid #efc134;
+    cursor: pointer;
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 2.0s;
+    animation-duration: 2.0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 
+}
+.hidden .title-arrow:after{
+    transform: rotateZ(180deg);
+    border-top-color: #7e7cbb;
+    animation-iteration-count: 1;
+    top:-9px;
+
+}
 .flash {
     -webkit-animation-name: flash;
     animation-name: flash;
@@ -455,6 +465,46 @@ font-family: 'Parisienne', cursive;*/
         opacity: 0.4;
     }
 }
+
+.main-photo {
+    position: relative;
+    float: left;
+    width: 60%;
+    padding-bottom: 60%;
+    background: #ccc;
+    overflow: hidden;
+}
+
+.secondary-photo_wrap {
+    float: left;
+    width: 38%;
+    margin-left: 2%;
+}
+.secondary-photo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 77%;
+    margin-bottom: 5%;
+    background: #ccc;
+    overflow: hidden;
+}
+.secondary-photo img{
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.main-photo img{
+    position: absolute;
+    min-height: 100%;
+}
+
+
+
+
+
+
+
 
 .content_block__story {
     margin-top: 6%;
@@ -651,6 +701,12 @@ input::-webkit-input-placeholder {
 
 #contact input[type="submit"]:hover {
     background: #e8bd31
+}
+.radiobutton_label {
+    display: inline-block;
+    height: 24px;
+    margin-bottom: 12px;
+    cursor: pointer;
 }
 
 /*---------------------------------

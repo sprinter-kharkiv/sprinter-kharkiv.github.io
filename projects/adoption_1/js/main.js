@@ -33,7 +33,6 @@ $(document).ready(function() {
 
     $("#phone").intlTelInput({
         separateDialCode: "true",
-        initialCountry: "auto",
         geoIpLookup: function(callback) {
             $.get('http://ipinfo.io', function() {}, "jsonp").always(function(resp) {
                 var countryCode = (resp && resp.country) ? resp.country : "";
