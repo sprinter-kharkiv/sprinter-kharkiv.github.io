@@ -9,8 +9,9 @@
 
 
     $('.j-catalog').click(function (event) {
+        console.log("click download")
         event.preventDefault();
-        $('#overlay').fadeIn(400,
+        $('.overlay').fadeIn(400,
             function () {
                 $('.j-modal-catalog')
                     .css('display', 'block')
@@ -23,7 +24,7 @@
             .animate({opacity: 0, top: '45%'}, 100,
                 function () {
                     $(this).css('display', 'none');
-                    $('#overlay').fadeOut(200);
+                    $('.overlay').fadeOut(200);
                 }
             );
     });
