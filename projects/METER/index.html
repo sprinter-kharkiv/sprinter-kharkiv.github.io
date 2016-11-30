@@ -401,9 +401,11 @@
         <span></span>
     </div>
 
-    <form id="contact" action="" method="post">
+    <form id="ajaxform" action="scripts/email.php" method="post">
         <label for="email">SEND THE CATALOG TO THIS E-MAIL</label>
         <input id="email" type="email" name="email" placeholder="your e-mail" required/>
+        <input type="text" name="subject" placeholder="Title" value="Oceano catalogo 2016 low new" style="display: none">
+        <textarea cols="25" rows="10" name="message" placeholder="Message" style="display: none">Some text about Oceano</textarea>
         <span>You may check spam folder if it is not delivered to your inbox</span><br>
         <span>Add info@laudarte.it to the Safe Senders List</span>
         <input type="submit" value="Send" class=""/>
