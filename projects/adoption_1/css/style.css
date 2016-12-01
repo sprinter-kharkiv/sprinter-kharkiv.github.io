@@ -56,6 +56,9 @@ body {
     text-align: center;
     text-transform: uppercase;
 }
+.section_title.meet-title {
+    background: #fed034;
+}
 
 .button {
     display: block;
@@ -362,11 +365,22 @@ body {
     display: block;
     width: 100%;
 }
+.meet-title span {
+    font-family: 'Alex Brush';
+    text-transform: none;
+    text-align: center;
+    line-height: 38px;
+    font-size: 26px;
+}
 
 /*------------------------------
         5. video
 -------------------------------*/
-.content_block__video .title {
+.content_block__video .title{
+    text-transform: uppercase;
+    text-align: center;
+}
+.content_block__video span {
     font-family: 'Alex Brush';
     text-transform: none;
     text-align: center;
@@ -406,9 +420,8 @@ body {
     color: transparent;
     animation-iteration-count: 1;
 }
-.hidden.flash {
-   /* color: #fed034; */
-}
+
+/*
 .title-arrow {
     position: relative;
 }
@@ -436,7 +449,8 @@ body {
     animation-iteration-count: 1;
     top:-9px;
 
-}
+}*/
+
 .flash {
     -webkit-animation-name: flash;
     animation-name: flash;
