@@ -16,6 +16,9 @@
         stop = 5.7,
         brake = brake_1;
 
+
+
+
     video_1.addEventListener("timeupdate", function () {
 
         if (this.currentTime >= brake) {
