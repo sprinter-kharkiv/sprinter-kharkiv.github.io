@@ -13,15 +13,8 @@
         brake_1 = 2.2,
         brake_2 = 4.4,
         brake_3 = 6.1,
-        stop = 5.8,
+        stop = 5.7,
         brake = brake_1;
-
-    window.addEventListener('touchstart', function videoStart() {
-        video_1.play();
-        console.log('first touch');
-        // remove from the window and call the function we are removing
-        this.removeEventListener('touchstart', videoStart);
-    });
 
     video_1.addEventListener("timeupdate", function () {
 
@@ -34,7 +27,10 @@
             $('.present_link').css('display', 'table');
         }
     });
-
+    $('.present-video').click(function () {
+        video_1.play();
+        $('.trig_1').css('display', 'block');
+    });
     $('.trig_1').click(function () {
         video_1.play();
         brake = brake_2;
