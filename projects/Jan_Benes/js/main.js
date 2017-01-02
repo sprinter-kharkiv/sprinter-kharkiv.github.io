@@ -22,9 +22,9 @@
             this.pause();
         }
         else if (this.currentTime >= stop) {
-            $(this).css('opacity', '0');
+            $(this).animate({opacity:'0'}, 500);
             $('.trig_2').css('display', 'none');
-            $('.present_link').css('display', 'table');
+            $('.present_link').css('display', 'table').animate({opacity:'1'}, 500);
         }
     });
     $('.present-video').click(function () {
