@@ -12,7 +12,7 @@
     var video_1 = document.getElementById('whitebox'),
         brake_1 = 2.2,
         brake_2 = 4.4,
-        brake_3 = 6.1,
+        brake_3 = 6.0,
         stop = 5.7,
         brake = brake_1;
 
