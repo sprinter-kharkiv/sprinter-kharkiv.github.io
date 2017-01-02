@@ -15,6 +15,11 @@ $(document).ready(function() {
         $('.additional-title').toggleClass('hidden')
     });
 
+    $('.j-about').on('click', function () {
+        $('.additional_content').addClass('visible');
+        $('.additional-title').addClass('hidden')
+    });
+
 
     // Tabs
     $('.j-tab-btn').on('click', function(){
@@ -40,5 +45,6 @@ $(document).ready(function() {
             });
         }
     });
+
 
 });

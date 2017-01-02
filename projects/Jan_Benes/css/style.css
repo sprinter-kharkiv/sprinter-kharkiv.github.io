@@ -1,0 +1,124 @@
+/*
+
+1. common styles
+
+
+*/
+
+/*------------------------------
+        1. common styles
+-------------------------------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    background: #3A3A3A;
+    height: 100%;
+}
+
+.container {
+    min-width: 320px;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.wrap {
+    background: #fff;
+    height: 100%;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 767px) {
+}
+
+/*----------------------
+---------------------*/
+.video_wrap {
+    position: relative;
+    max-width: 427px;
+    height: 242px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px dotted black;
+}
+.trig_1, .trig_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -60px;
+    width: 100px;
+    height: 120px;
+    background: rgba(173, 255, 47, 0.24);
+    color: #5d8919;
+    cursor: pointer;
+    z-index: 5;
+}
+.present-video {
+    height: 240px;
+    width: 100%;
+    max-width: 427px;
+    opacity: 1;
+    transition: opacity 1s ease;
+    z-index: 1;
+}
+.present_link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    max-width: 427px;
+    height: 100%;
+    background: rgba(101, 255, 0, 0.18);
+    text-align: center;
+    z-index: 10;
+    transition: all 1.5s ease;
+}
+.present_link a {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+
+.flash {
+    -webkit-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-duration: 2.0s;
+    animation-duration: 2.0s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.4;
+    }
+}
