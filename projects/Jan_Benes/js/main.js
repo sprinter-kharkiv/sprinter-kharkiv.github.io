@@ -16,31 +16,41 @@
             $(this).animate({opacity: '0'}, 500);
             $('.trig_2').css('display', 'none');
             $('.present_link').css('display', 'table').animate({opacity: '1'}, 500);
-            $('.tooltip').css('display','none');
+            $('.tooltip').css('display', 'none');
         }
     });
 
+
     $(window).bind('scroll.once', function () {
-        show_video();
+        tooltip_animated();
     });
-    function show_video() {
+    function tooltip_animated() {
         var scroll = $(window).scrollTop(),
             h_window = $(window).height(),
             v_top = $(video_1).offset().top,
             offset = h_window + scroll;
 
         if (offset >= v_top) {
-            $('.tooltip').addClass('flash');
+            $('.tooltip').addClass('wobble');
         }
         $(window).unbind('scroll.once')
     }
 
 
+    var marker = true;
+
+    function first_start() {
+        video_1.play();
+        $('.trig_1').css('display', 'block');
+        marker = false;
+    }
+
     $('.present-video').swipe({
         //Generic swipe handler for all directions
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-            video_1.play();
-            $('.trig_1').css('display', 'block');
+            if (marker) {
+                first_start();
+            }
         }
     });
 
@@ -54,6 +64,7 @@
             $('.trig_2').css('display', 'block');
         }
     });
+
     $('.trig_2').swipe({
         //Generic swipe handler for all directions
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {

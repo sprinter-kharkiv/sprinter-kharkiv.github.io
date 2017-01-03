@@ -66,8 +66,90 @@ html, body {
     cursor: pointer;
     z-index: 10;
 }
+.wobble {
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1.0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
 
+@-webkit-keyframes wobble {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
 
+    15% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes wobble {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    15% {
+        -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30% {
+        -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+        transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45% {
+        -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+        transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60% {
+        -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+        transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+        transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
 .trig_1, .trig_2 {
     position: absolute;
     top: 0;
@@ -191,5 +273,12 @@ html, body {
 }
 
 
+.content {
+    min-height: 300px;
+    padding: 50px 15px;
+}
+.content h1{
+    font-weight: bold;
+}
 
 
