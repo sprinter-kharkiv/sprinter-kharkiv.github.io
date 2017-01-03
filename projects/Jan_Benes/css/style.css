@@ -60,6 +60,7 @@ html, body {
     text-align: center;
 }
 .tooltip {
+    position: absolute;
     width: 100%;
     text-align: center;
     cursor: pointer;
@@ -187,22 +188,6 @@ html, body {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
-}
-
-
-
-/*------------------------
-    additional style
--------------------------*/
-.content {
-    padding: 20px 15px;
-    min-height: 300px;
-    background: #eeeeee;
-}
-
-.content h1 {
-    font-weight: bold;
-    font-size: 18px;
 }
 
 
