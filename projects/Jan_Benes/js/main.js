@@ -31,6 +31,12 @@
         console.log(v_top);
 
         if (offset >= v_top) {
+            $(video_1).bind("click", function() {
+                var vid = $(this).get(0);
+                if (vid.paused) { vid.play(); }
+                else { vid.pause(); }
+            });
+
             video_1.play();
             $('.tooltip_expand').css('display', 'block');
             $('.trig_1').css('display', 'block');
