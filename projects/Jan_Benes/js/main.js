@@ -9,16 +9,17 @@
 
     video_1.addEventListener("timeupdate", function () {
 
-        if (this.currentTime >= brake) {
-            this.pause();
-        }
-        else if (this.currentTime >= stop) {
-            $(this).animate({opacity: '0'}, 500);
-            $('.trig_2').css('display', 'none');
-            $('.present_link').css('display', 'table').animate({opacity: '1'}, 500);
-            $('.tooltip').css('display', 'none');
-        }
-    });
+            if (this.currentTime >= brake) {
+                this.pause();
+            }
+            else if (this.currentTime >= stop) {
+                $(this).animate({opacity: '0'}, 500);
+                $('.trig_2').css('display', 'none');
+                $('.present_link').css('display', 'table').animate({opacity: '1'}, 500);
+                $('.tooltip').css('display', 'none');
+            }
+        }, false
+    );
 
 
     $(window).bind('scroll.once', function () {
