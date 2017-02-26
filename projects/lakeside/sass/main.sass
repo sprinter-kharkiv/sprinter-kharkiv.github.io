@@ -1,0 +1,164 @@
+@import "bourbon/bourbon"
+
+body
+  font-family: "Raleway", sans-serif
+  font-weight: normal
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  -webkit-font-smoothing: antialised
+  background: #ccc
+
+
+   //     1. common styles
+
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+
+.clearfix:after
+  clear: both
+
+
+*
+  box-sizing: border-box
+
+
+html,
+body,
+.wrap
+  height: 100%
+  font-family: Verdana, sans-serif
+
+
+body
+  background: #fff
+
+
+.container
+  max-width: 1280px
+  min-width: 320px
+  margin: 0 auto
+  padding: 0 12px
+
+
+
+.logo-wrap
+  width: 100%
+  height: 90px
+  .logo
+    display: block
+    width: 90px
+    height: 90px
+    margin: 0 auto
+
+.scroll-bg
+  background-repeat: no-repeat
+  background-position: 50% 0
+  background-attachment: fixed
+  background-size: cover
+  height: auto
+
+.header
+  height: 100vh
+  padding-top: 60px
+
+
+.top_menu
+  list-style: none
+  width: 700px
+  margin: 20px auto 0
+  background: #ccc
+.top_menu__item
+  display: inline-block
+  a
+    position: relative
+    padding: 0 15px
+    text-transform: uppercase
+    color: #fff
+    font-size: 20px
+    text-decoration: none
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -16px
+      height: 3px
+      width: 100%
+      transition: all .8s ease
+      -webkit-transition: all .8s ease
+      background: transparent
+      visibility: hidden
+    &:hover
+      color: #0000AA
+      &:after
+        visibility: visible
+        bottom: -7px
+        background: #000080
+
+.slogan
+  margin-top: 50px
+  color: #fff
+  text-transform: uppercase
+  text-align: center
+  font-size: 30px
+
+
+#about
+  border-bottom: 2px solid #000
+
+
+.about_photo
+  width: 50%
+  vertical-align: bottom
+  img
+    width: 100%
+    display: inline-block
+
+.about_text
+  float: right
+  width: 50%
+  margin-top: 200px
+  padding-left: 20px
+  .section_title
+    margin-bottom: 60px
+  p
+    padding-bottom: 15px
+    text-align: justify
+    color: #00f
+
+
+.section_title
+  display: inline-block
+  font-weight: bold
+  font-size: 25px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: -10px
+    width: 100%
+    height: 2px
+    background: #ccc
+  &:after
+    content: ''
+    position: absolute
+    left: 33%
+    bottom: -11px
+    width: 33%
+    height: 4px
+    background: #180fcc
+
+
+//-------  services
+
+.services_title
+  padding: 0 40px
+
+#services
+  height: 800px
+  background: #ccc
