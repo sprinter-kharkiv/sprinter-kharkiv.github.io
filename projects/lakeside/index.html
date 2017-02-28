@@ -33,17 +33,17 @@
             </div>
 
             <ul class="top_menu center-block">
-                <li class="top_menu__item"><a href="#Home">Home</a></li>
-                <li class="top_menu__item"><a href="#about">about us</a></li>
-                <li class="top_menu__item"><a href="#services">services</a></li>
-                <li class="top_menu__item"><a href="#portfolio">gallery</a></li>
-                <li class="top_menu__item"><a href="#contacts">contact us</a></li>
+                <li class="top_menu__item"><a href="#Home" class="j-go-to">Home</a></li>
+                <li class="top_menu__item"><a href="#about" class="j-go-to">about us</a></li>
+                <li class="top_menu__item"><a href="#services" class="j-go-to">services</a></li>
+                <li class="top_menu__item"><a href="#portfolio" class="j-go-to">gallery</a></li>
+                <li class="top_menu__item"><a href="#contacts" class="j-go-to">contact us</a></li>
             </ul>
 
             <div class="slogan">
-                <h2>welcome to</h2>
+                <h2 class="fade_1">welcome to</h2>
 
-                <h2>lakeside construction</h2>
+                <h2 class="fade_2">lakeside construction</h2>
             </div>
         </div>
     </div>
@@ -65,7 +65,7 @@
                 quisquam reiciendis ullam unde vel.</p>
         </div>
         <div class="about_photo">
-            <img src="img/main_photo.jpg" alt="">
+            <img src="img/main_photo1.jpg" alt="">
         </div>
     </div>
 </section>
@@ -124,34 +124,41 @@
 </section>
 
 <section id="contacts">
-    <div class="container">
-        <div class="form_wrap fade">
+    <div class="contact_container container">
+        <div class="form_wrap">
             <div class="title_wrap">
                 <h3 class="section_title portfolio_title">join our email list</h3>
             </div>
             <form action="" class="contact_form">
                 <div class="form-group">
-                    <span class="label-floated">NAME</span>
-                    <input type="name" class="form-control">
+                    <label for="name" class="label-floated">NAME</label>
+                    <input id="name" type="text" class="form-control has-error">
                 </div><!-- form-group -->
 
                 <div class="form-group">
-                    <span class="label-floated">EMAIL ADDRESS</span>
-                    <input type="name" class="form-control">
+                    <label for="email" class="label-floated">EMAIL ADDRESS</label>
+                    <input id="email" type="email" class="form-control" required>
                 </div><!-- form-group -->
 
                 <button type="submit" name="button" class="btn">Send</button>
             </form>
         </div><!-- tab-pane -->
     </div>
-</section>
-<section class="footer">
-    <div class="container">
-        <div>logo</div>
-        <div class="f_social">social</div>
+    <div class="footer">
+        <div class="container">
+            <ul class="f_social">
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+            </ul>
+            <div class="footer_logo">
+                <a class="logo" href="#" style="background-image: url(img/logo.jpg)"></a>
+            </div>
+        </div>
     </div>
-
 </section>
+
 
 <!--[if lt IE 9]>
 <script src="<?php bloginfo('template_url'); ?>/libs/html5shiv/es5-shim.min.js"></script>
