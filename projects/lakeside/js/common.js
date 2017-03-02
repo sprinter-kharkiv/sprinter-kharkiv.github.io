@@ -15,7 +15,7 @@ $(document).ready(function () {
     $('.j-menu-trig').on('click', function () {
         $('.header').toggleClass('vis-menu')
     });
-    $('.header_nav').on('click', function () {
+    $('.top_menu').on('click', function () {
         $('.header').removeClass('vis-menu')
     });
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
             $(this).closest('.form-group').addClass('filled');
         }
 
-        else{
+        else {
             $(this).closest('.form-group').removeClass('filled');
         }
     });
