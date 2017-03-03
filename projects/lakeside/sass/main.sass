@@ -8,7 +8,7 @@ body,
   color: #333333
   background: #fff
   font: normal 14px/22px "Lato", sans-serif
-  //-webkit-font-smoothing: antialised
+  -webkit-font-smoothing: antialiased
 
 
 //     1. common styles
@@ -56,9 +56,8 @@ $main_blue_transparent: rgba(35, 62, 134, 0.87)
 .scroll-bg
   background-repeat: no-repeat
   background-position: 50% 0
-  background-attachment: fixed
   background-size: cover
-  height: auto
+  //height: auto
 
 .top_menu
   list-style: none
@@ -191,16 +190,16 @@ $trig_color: #fff
 
 .fade_1
   font: bold 80px/90px "Lato", sans-serif
-  opacity: 0
-  -webkit-animation: fade 2s 2s ease forwards
-  animation: fade 2s 2s ease forwards
+  opacity: 1
+  //-webkit-animation: fade 2s 2s ease forwards
+  //animation: fade 2s 2s ease forwards
 .fade_2
   font: normal 60px/80px "Lato", sans-serif
-  opacity: 0
+  opacity: 1
   position: relative
-  bottom: -1px
-  -webkit-animation: fade 2s 3s ease forwards
-  animation: fade 2s 3s ease forwards
+  //bottom: -1px
+  //-webkit-animation: fade 2s 3s ease forwards
+  //animation: fade 2s 3s ease forwards
 
 
 @-webkit-keyframes fade
@@ -266,6 +265,10 @@ $trig_color: #fff
     border-radius: 2px
     background: $main_blue
 
+@media screen and (min-width: 1025px)
+  .scroll-bg
+    background-attachment: fixed
+
 @media screen and (max-width: 1025px)
   .about_text
     margin: 90px 0 20px
@@ -285,6 +288,8 @@ $trig_color: #fff
     width: 100%
     margin-top: 20px
     padding: 0
+    p
+      padding: 0 10px 15px 10px
 
 @media screen and (max-width: 641px)
   .header_mask
@@ -481,6 +486,7 @@ $input_color: #fff
 
 .form-group.filled .label-floated, .form-group.focus .label-floated
   top: 0
+  line-height: 14px
   transform: translateY(-50%)
   font-size: 12px
 
@@ -512,7 +518,7 @@ $input_color: #fff
   -ms-touch-action: manipulation
   touch-action: manipulation
   cursor: pointer
-  border: 1px solid transparent
+  border: none
   line-height: 48px
   border-radius: 25px
   -webkit-user-select: none
@@ -521,7 +527,7 @@ $input_color: #fff
   user-select: none
   outline: none
   transition: background .3s ease
-  box-shadow: inset 0 0 25px 3px lighten($main_blue, 50%)
+  box-shadow: inset 0 0 55px -10px lighten($main_blue, 50%)
   &:hover
     background: lighten($main_blue, 10%)
   &:active
