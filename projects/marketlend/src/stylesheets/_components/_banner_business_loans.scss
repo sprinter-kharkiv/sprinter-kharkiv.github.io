@@ -1,0 +1,45 @@
+.banner-wrap {
+  background: $grey-dark;
+  min-width: $min-width;
+  padding-top: $header_height;
+}
+.banner {
+  height: 605px;
+  background: $grey-dark url("../img/background/banner_bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  text-align: center;
+  .main_title {
+    margin-top: 110px;
+    color: $main-light;
+    font-size: 48px;
+    font-weight: bold;
+    @include respond-to(xs) {
+      font-size: 36px;
+    }
+    @include respond-to(xs-small) {
+      font-size: 26px;
+    }
+  }
+  .slogan {
+    width: 60%;
+    margin: 50px auto 0;
+    font-size: 20px;
+    line-height: 32px;
+    color: #fff;
+    @include respond-to(xs) {
+      width: 80%;
+      font-size: 18px;
+    }
+    @include respond-to(xs-small) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+  .btn {
+    margin-top: 60px;
+  }
+  @include respond-to(xs-small) {
+    height: auto;
+    padding-bottom: 50px;
+  }
+}

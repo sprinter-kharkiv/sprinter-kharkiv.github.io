@@ -1,0 +1,25 @@
+/* MIXINS */
+// Different devices resolutions
+
+
+@mixin respond-to($media) {
+  @if $media == xs-small {
+    @media only screen and (max-width: 450px) { @content; }
+  }
+  @if $media == xs-add {
+    @media only screen and (max-width: 500px) { @content; }
+  }
+  @if $media == xs {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: 992px) { @content; }
+  }
+  @else if $media == md-add {
+    @media only screen and (max-width: 1024px) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: 1200px) { @content; }
+  }
+}
+

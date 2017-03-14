@@ -1,0 +1,125 @@
+/*----------------------
+    responses_block
+----------------------*/
+.responses_block {
+  background: #fff;
+  .response_item {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+    @include respond-to(xs){
+      width: 100%;
+    }
+  }
+  .icon-quote {
+    display: block;
+    width: 15px;
+    margin: 0 auto;
+    color: #89a6ac;
+  }
+  .respond_text {
+    padding: 17px 0;
+    color: $grey-light;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .author_photo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 40px auto 17px;
+    border: none;
+    border-radius: 50%;
+    @include respond-to(xs){
+      margin-top: 20px;
+    }
+  }
+  .author_name {
+    display: block;
+    font-weight: bold;
+  }
+  .author_describe {
+    width: 60%;
+    margin: 8px auto 70px;
+    color: #89a6ac;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 18px;
+    @include respond-to(xs){
+      margin-bottom: 30px;
+    }
+  }
+}
+/*----------------------
+    credit_describe
+----------------------*/
+.credit_describe {
+  min-width: $min-width;
+  padding: 50px 0 75px;
+  background: #89a6ac;
+  color: #fff;
+  text-align: center;
+  .section-title {
+    margin-top: 15px;
+    font-size: 28px;
+  }
+  p{
+    width: 60%;
+    margin: 15px auto 0;
+    font-size: 16px;
+    line-height: 24px;
+    @include respond-to(xs){
+      width: 100%;
+    }
+  }
+}
+/*---------------
+    partners
+----------------*/
+.partners {
+  background: #fff;
+}
+.partners_list {
+  width: 100%;
+  padding: 50px 0 75px;
+  .partners_list__item {
+    float: left;
+    width: 25%;
+    @include respond-to(xs-add){
+      width: 50%;
+    }
+  }
+  .partners_list__link {
+    display: block;
+    text-align: center;
+    img {
+      display: inline-block;
+      border: none;
+      max-width: 100%;
+      transition: transform .1s ease;
+    }
+    &:hover {
+      img {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+/*---------------
+    get_approval
+----------------*/
+
+.get_approval {
+  padding: 65px 0 90px;
+  min-width: $min-width;
+  background: $grey-light;
+  text-align: center;
+  .section-title {
+    font-size: 28px;
+    color: #fff;
+  }
+  .btn {
+    margin-top: 60px;
+  }
+}

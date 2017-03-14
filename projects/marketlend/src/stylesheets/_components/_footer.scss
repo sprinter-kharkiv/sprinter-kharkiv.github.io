@@ -1,0 +1,46 @@
+
+.footer {
+  background-color: $grey-dark;
+  min-width: 320px;
+  .social {
+    float: right;
+    height: 40px;
+    padding-top: 12px;
+    li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .social_icon {
+      color: #b2b2b2;
+      text-decoration: none;
+      &:hover {
+        color: $main-light;
+      }
+      &:active {
+        color: darken($main-light, 20%);
+      }
+    }
+    @include respond-to(xs){
+      width: 100%;
+      text-align: right;
+      margin-bottom: 12px;
+    }
+  }
+  .copyright {
+    padding-top: 15px;
+    color: #6e6e6f;
+    font-size: 12px;
+    a {
+      color: #6e6e6f;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @include respond-to(xs){
+      width: 100%;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+  }
+}

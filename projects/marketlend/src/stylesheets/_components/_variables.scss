@@ -1,0 +1,46 @@
+/* VARIABLES */
+
+
+/*************************
+	Global size variables
+*************************/
+$max-width: 980px;
+$min-width:320px;
+
+
+/*************************
+	Global color variables
+*************************/
+
+
+$main-light: #a8d52a;
+$grey-dark: #262425;
+$grey-dark_transparent: rgba(38,36,37,0.8);
+$grey-light: #2c2c2c;
+$grey-light_pl: #3a3a3a;
+
+/*************************
+	Fonts variables
+*************************/
+$font-base: 'GothamRounded-Book';
+$font-book: 'GothamRounded-Book';
+$font-medium: 'GothamRounded-Medium';
+$font-secondary: 'PermanentMarker';
+
+
+$font-icons: 'fontello';
+.font-icon {
+  font-family: $font-icons;
+  font-style: normal;
+}
+
+/*************************
+	Body variables
+*************************/
+$body-font-family: $font-base;
+$body-font-size: 16px;
+$body-font-size-xs: 14px;
+$body-line-height: 1.5;
+
+
+
