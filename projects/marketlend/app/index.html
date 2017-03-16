@@ -20,7 +20,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="libs/_ion.rangeSlider/ion.rangeSlider.css">
     <link rel="stylesheet" href="libs/_ion.rangeSlider/ion.rangeSlider.skinFlat.css">
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+
+ 
 
 
 </head>
@@ -51,6 +54,12 @@
         <div class="container">
             <form >
                 <input type="text" id="range" name="example_name" value=""/>
+                
+                <div data-role="rangeslider">
+
+    <label for="range-1b">Rangeslider:</label>
+    <input name="range-1b" id="range-1b" min="0" max="100" value="100" type="range">
+  </div>
 
             </form>
         </div>
@@ -182,8 +191,10 @@
 <![endif]-->
 
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="libs/animate_number/jquery.animateNumber.min.js"></script>
 <script src="libs/_ion.rangeSlider/ion.rangeSlider.js"></script>
+  
 <script src="js/common.js"></script>
 
 </body>
