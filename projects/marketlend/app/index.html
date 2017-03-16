@@ -18,12 +18,10 @@
 
     <link rel="stylesheet" href="css/fonts.min.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="libs/rangeslider.js-2.3.0/rangeslider.css">
- 
+    <link rel="stylesheet" href="libs/asrange/asRange.min.css">
+
 
     <link rel="stylesheet" href="css/main.min.css">
-
- 
 
 
 </head>
@@ -52,27 +50,11 @@
     </section>
     <section class="credit_form">
         <div class="container">
-  
-<!--
-  rangeslider.js example
-  
-  https://github.com/andreruffert/rangeslider.js
-  by André Ruffert - @andreruffert
-http://codepen.io/andreruffert/pen/Ddxke
--->
-
-<div>
-   <input type="range" min="10" max="300" step="10" value="50">
-   <div class="range-output">
-       <output class="output"  name="output" for="range"></output>
-    </div>
- </div>
-<br>
-<br>
-<div>
-   <input type="range" min="10" max="300" step="10" value="100">
-   <output class="output"></output>
- </div>
+            <form action="">
+                <input class="range_summ range_input" type="text" min="0" max="10" value="5" name="points" step="1">
+                <input class="range_summ range_input" type="text" min="0" max="10" value="5" name="points" step="1">
+                <input type="submit" class="btn" value="apply now">
+            </form>
 
         </div>
     </section>
@@ -81,17 +63,20 @@ http://codepen.io/andreruffert/pen/Ddxke
             <div class="how_to__item">
                 <div class="how_to__icon"></div>
                 <h3 class="item_title">Online Application</h3>
+
                 <p class="item_describe">You complete an online application</p>
             </div>
             <div class="how_to__item">
                 <div class="how_to__icon"></div>
                 <h3 class="item_title">Online Application</h3>
+
                 <p class="item_describe">You complete an online application</p>
-            <span class="arrow"></span>
+                <span class="arrow"></span>
             </div>
             <div class="how_to__item">
                 <div class="how_to__icon"></div>
                 <h3 class="item_title">Online Application</h3>
+
                 <p class="item_describe">You complete an online application</p>
             </div>
 
@@ -101,9 +86,12 @@ http://codepen.io/andreruffert/pen/Ddxke
         <div class="container clearfix">
             <div class="invest_text">
                 <h4 class="invest_text__title">We have funded total of</h4>
+
                 <h3 class="invest_text__count">$<span id="invest_count" data-value="13443400">13,443,400</span></h3>
+
                 <div class="invest_text__registered">
                     <span>541</span>
+
                     <p>investors registered<br>and ready to invest</p>
                 </div>
                 <a class="btn" href="#">apply now</a>
@@ -204,9 +192,10 @@ http://codepen.io/andreruffert/pen/Ddxke
 
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
 <script src="libs/animate_number/jquery.animateNumber.min.js"></script>
-    <script src="libs/rangeslider.js-2.3.0/rangeslider.min.js"></script>
-<script src="libs/rangeslider.js-2.3.0/rangeslider.js"></script>
-  
+
+
+<script src="libs/asrange/jquery-asRange.min.js"></script>
+
 <script src="js/common.js"></script>
 
 </body>

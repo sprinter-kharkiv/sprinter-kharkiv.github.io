@@ -3,27 +3,19 @@
     credit_form
 ----------------------*/
 .credit_form {
-    height: 300px;
-    background: #ccc;
+    //height: 400px;
+    //background: #ccc;
     form {
+      padding: 40px 20px;
         position: relative;
         background: #89a6ac;
         width: 300px;
-        height: 150px;
+        //height: 150px;
         //margin: 0 auto;
     }        
 }
-.irs-from, .irs-to, .irs-single {
-    top: 50px;
-    &:after {
-        top: -6px;
-        border-bottom-color: #ed5565;
-        border-top-color: transparent;
-    }
-}
-.ui-slider-bg, .ui-btn-active {
-        background-color: #38c;
-    border-color: #38c;
+.asRange {
+  margin-bottom: 50px;
 }
 
 /*----------------------
