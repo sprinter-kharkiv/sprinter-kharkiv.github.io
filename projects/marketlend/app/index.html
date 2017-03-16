@@ -18,9 +18,9 @@
 
     <link rel="stylesheet" href="css/fonts.min.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="libs/_ion.rangeSlider/ion.rangeSlider.css">
-    <link rel="stylesheet" href="libs/_ion.rangeSlider/ion.rangeSlider.skinFlat.css">
-    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="libs/rangeslider.js-2.3.0/rangeslider.css">
+ 
+
     <link rel="stylesheet" href="css/main.min.css">
 
  
@@ -52,16 +52,28 @@
     </section>
     <section class="credit_form">
         <div class="container">
-            <form >
-                <input type="text" id="range" name="example_name" value=""/>
-                
-                <div data-role="rangeslider">
+  
+<!--
+  rangeslider.js example
+  
+  https://github.com/andreruffert/rangeslider.js
+  by André Ruffert - @andreruffert
+http://codepen.io/andreruffert/pen/Ddxke
+-->
 
-    <label for="range-1b">Rangeslider:</label>
-    <input name="range-1b" id="range-1b" min="0" max="100" value="100" type="range">
-  </div>
+<div>
+   <input type="range" min="10" max="300" step="10" value="50">
+   <div class="range-output">
+       <output class="output"  name="output" for="range"></output>
+    </div>
+ </div>
+<br>
+<br>
+<div>
+   <input type="range" min="10" max="300" step="10" value="100">
+   <output class="output"></output>
+ </div>
 
-            </form>
         </div>
     </section>
     <section class="how_to clearfix">
@@ -191,9 +203,9 @@
 <![endif]-->
 
 <script src="libs/jquery/jquery-1.11.2.min.js"></script>
-<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="libs/animate_number/jquery.animateNumber.min.js"></script>
-<script src="libs/_ion.rangeSlider/ion.rangeSlider.js"></script>
+    <script src="libs/rangeslider.js-2.3.0/rangeslider.min.js"></script>
+<script src="libs/rangeslider.js-2.3.0/rangeslider.js"></script>
   
 <script src="js/common.js"></script>
 
