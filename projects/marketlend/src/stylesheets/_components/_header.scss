@@ -35,6 +35,7 @@ $header_height: 80px;
   transition: all .3s ease;
   &.fixed {
     position: fixed;
+    z-index: 20;
     height: 60px;
     background: $grey-dark_transparent;
     .header_btn {

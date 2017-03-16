@@ -1,21 +1,188 @@
+/*----------------------
+    conditions
+----------------------*/
+.conditions {
+  @include respond-to(xs-add) {
+    padding-bottom: 30px;
+  }
+}
+.conditions_item {
+  width: 32%;
+  display: inline-block;
+  padding: 0 25px 60px;
+  @include respond-to(xs-add) {
+    width: 100%;
+    padding: 0 25px 20px;
+  }
+  .icon-okey {
+    width: 32px;
+    height: 32px;
+    margin-top: 45px;
+    margin-bottom: 22px;
+    font-size: 21px;
+    line-height: 32px;
+    @include respond-to(xs-add) {
+      margin-top: 25px;
+      margin-bottom: 12px;
+    }
+  }
+  .item_describe {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+    @include respond-to(sm) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    span{
+      display: block;
+    }
+  }
+}
 
 /*----------------------
     credit_form
 ----------------------*/
 .credit_form {
-    //height: 400px;
-    //background: #ccc;
-    form {
-      padding: 40px 20px;
-        position: relative;
-        background: #89a6ac;
-        width: 300px;
-        //height: 150px;
-        //margin: 0 auto;
-    }        
+  padding: 54px 20px;
+  background: #cddcff;
+  @include respond-to(xs-small) {
+    padding: 30px 0;
+  }
+  form {
+    padding: 30px 60px;
+    background: #fff;
+    max-width: 930px;
+    margin: 0 auto;
+    label {
+      font-size: 14px;
+      color: #000;
+    }
+    @include respond-to(xs) {
+      padding: 20px 15px;
+    }
+  }
+  .form-title {
+    font-size: 22px;
+    text-align: center;
+    color: #000;
+  }
+  .form-desc {
+    margin: 12px auto 45px;
+    font-size: 14px;
+    text-align: center;
+    color: #9ca7b6;
+  }
+  .text_input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    -webkit-appearance: none;
+  }
+  .calculator-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+    span {
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+  .calculator {
+    width: 47%;
+    float: right;
+    margin-bottom: 30px;
+    @include respond-to(xs) {
+      width: 100%;
+      float: none;
+    }
+    p {
+      font-size: 12px;
+      color: #9ca7b6;
+    }
+
+  }
+  .btn_wrap{
+    width: 100%;
+    text-align: center;
+
+  }
+  .btn {
+    margin-top: 40px;
+    display: inline-block;
+    &:active {
+      -webkit-appearance: none;
+    }
+  }
 }
-.asRange {
+
+.range_wrap {
+  float: left;
+  width: 47%;
   margin-bottom: 50px;
+  margin-right: 6%;
+  @include respond-to(xs) {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+}
+.range_wrap+.range_wrap {
+  margin-right: 0;
+}
+.text_input_wrap {
+  width: 47%;
+  @include respond-to(xs) {
+    width: 100%;
+  }
+}
+
+.range_input {
+  //display: inline-block!important;
+  width: 100%;
+  //visibility: hidden;
+}
+
+.asRange {
+  margin: 20px 0 50px;
+  width: 100%;
+}
+
+.asRange .asRange-selected {
+  background: $main-light;
+}
+
+.asRange .asRange-pointer:before {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.asRange .asRange-pointer:after {
+  background-color: $main-light;
+}
+
+.asRange .asRange-pointer .asRange-tip {
+
+  top: 20px;
+  left: 0;
+  width: 58px;
+  height: 20px;
+  margin-left: -25px;
+  font-size: 10px;
+  line-height: 18px;
+  background-color: $main-light;
+  border: 1px solid $main-light;
+  border-radius: 10px;
+  outline: none;
+}
+
+.asRange .asRange-pointer .asRange-tip:before {
+  background-color: $main-light;
+  top: -4px;
 }
 
 /*----------------------
@@ -24,16 +191,24 @@
 .how_to {
   padding: 150px 0;
 }
+
 .how_to__item {
   position: relative;
   float: left;
   width: 32%;
   margin-right: 2%;
   padding: 80px 5% 20px;
-  background: #eeeeee;
   text-align: center;
   &:last-child {
     margin-right: 0;
+  }
+  @include respond-to(xs-small){
+    float: none;
+    width: 60%;
+    margin: 0 auto;
+    &:last-child {
+      margin-right: auto;
+    }
   }
   .item_title {
     margin-top: 30%;
@@ -50,8 +225,12 @@
     width: 30%;
     height: 2px;
     background: #000;
+    @include respond-to(xs){
+      display: none;
+    }
   }
 }
+
 $width: 100%;
 $pb: 69%;
 .how_to__icon {
@@ -60,7 +239,14 @@ $pb: 69%;
   padding-bottom: $pb;
   margin: auto;
   border-radius: 16%;
-  background: $main-light;
+  background-color: $main-light;
+  img {
+    position: absolute;
+    top: 21%;
+    left: 26%;
+    width: 50%;
+    z-index: 5;
+  }
   &:before, &:after {
     position: absolute;
     display: block;
@@ -75,6 +261,7 @@ $pb: 69%;
     transform: rotate(-60deg);
   }
 }
+
 /*----------------------
     invest_count
 ----------------------*/
@@ -84,7 +271,7 @@ $pb: 69%;
     //padding-bottom: 50px;
     background: url("../img/background/wallet.png") no-repeat 0 0;
     @include respond-to(sm) {
-      background-size: 50% ;
+      background-size: 50%;
       //padding: 0;
     }
     @include respond-to(xs) {
@@ -134,7 +321,6 @@ $pb: 69%;
     }
   }
 }
-
 
 /*----------------------
     responses_block
@@ -259,6 +445,7 @@ $pb: 69%;
   text-align: center;
   .section-title {
     font-size: 28px;
+    line-height: 34px;
     color: #fff;
   }
   .btn {
