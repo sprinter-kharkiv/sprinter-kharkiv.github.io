@@ -1,4 +1,4 @@
-﻿$(document).ready(function() {
+$(document).ready(function() {
 
 
     $(window).on('scroll', function () {
@@ -25,11 +25,19 @@
         }
     });
 
-    //
-    //<p>World population is <span id="world-population">0</span>.</p>
+$(function () {
 
-    $(window).scroll(function () {
-
+        $("#range").ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            min: 0,
+            max: 5000,
+            from: 1000,
+            to: 4000,
+            type: 'single',
+            step: 10,
+            prefix: "$",
+        });
 
     });
 
