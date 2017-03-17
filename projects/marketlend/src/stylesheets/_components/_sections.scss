@@ -221,8 +221,8 @@
   .arrow {
     position: absolute;
     top: 40%;
-    left: -18%;
-    width: 30%;
+    left: -29%;
+    width: 52%;
     height: 2px;
     background: #000;
     @include respond-to(xs){
@@ -233,6 +233,12 @@
 
 $width: 100%;
 $pb: 69%;
+.how_to_icon__wrap {
+  width: 100%;
+  //background: #ccc;
+  padding: 0 20%;
+}
+
 .how_to__icon {
   position: relative;
   width: $width;
