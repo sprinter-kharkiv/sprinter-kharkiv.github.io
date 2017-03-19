@@ -17,7 +17,7 @@
 
 html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: $font-base, sans-serif;
 }
 
 body {
@@ -49,6 +49,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0 20px;
+  font-family: 'RobotoCondensedBold';
   line-height: 38px;
   font-size: 14px;
   transition: background .3s ease, color .3s ease;
@@ -75,4 +76,31 @@ body {
   margin: auto;
   font-size: 28px;
   line-height: 60px;
+}
+
+.section_title {
+  margin-top: 40px;
+  padding: 0 10px;
+  font-size: 30px;
+  font-family: $font-title;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  @include respond-to(xs-small){
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+}
+.section_sub-title {
+  margin-top: 15px;
+  padding: 0 10px;
+  font-family: $font-title;
+  font-size: 20px;
+  text-align: center;
+  color: #9ca7b6;
+  @include respond-to(xs-small){
+    font-size: 16px;
+    margin-top: 8px;
+  }
 }

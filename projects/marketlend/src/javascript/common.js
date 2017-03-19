@@ -29,8 +29,18 @@ $(document).ready(function() {
     $(".range_summ").asRange({
         keyboard: true,
         tip: true
-
     });
+    // when the value is changed
+
+    $(".range_summ").on('asRange::change', function (e) {
+        var summ = $('#summ').val();
+        var time = $('#time').val();
+        var monthly_repaymant = $('.monthly_repaymant');
+        var total_payable = $('.total_payable');
+        monthly_repaymant.html(summ);
+        total_payable.html(time);
+    });
+
 
 
 

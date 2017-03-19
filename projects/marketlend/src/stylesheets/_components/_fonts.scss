@@ -1,0 +1,61 @@
+/* Fonts */
+
+$font-path: '../fonts/';
+
+@font-face {
+  font-family: 'RobotoLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoLight/roboto-light-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoLight/roboto-light-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoLight/Roboto-Light.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'RobotoBlack';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoBlack/roboto-black-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoBlack/roboto-black-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoBlack/Roboto-black.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'RobotoMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoMedium/roboto-medium-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoMedium/roboto-medium-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoMedium/Roboto-medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'RobotoSlabLight';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoSlab/robotoslab-light-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoSlab/robotoslab-light-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoSlab/robotoslab-light-webfont.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'RobotoSlabRegular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoSlab/robotoslab-regular-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoSlab/robotoslab-regular-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoSlab/robotoslab-regular-webfont.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'RobotoSlabBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoSlab/robotoslab-bold-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoSlab/robotoslab-bold-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoSlab/robotoslab-bold-webfont.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'RobotoCondensedBold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoCondensedBold/robotocondensed-bold-webfont.woff2') format('woff2'),
+  url('#{$font-path}RobotoCondensedBold/robotocondensed-bold-webfont.woff') format('woff'),
+  url('#{$font-path}RobotoCondensedBold/robotocondensed-bold-webfont.ttf') format('ttf');
+}

@@ -2,33 +2,37 @@
     conditions
 ----------------------*/
 .conditions {
+  padding-top: 50px;
   @include respond-to(xs-add) {
     padding-bottom: 30px;
   }
 }
 .conditions_item {
-  width: 32%;
-  display: inline-block;
-  padding: 0 25px 60px;
+  position: relative;
+  float: left;
+  width: 33%;
+  padding: 55px 25px 60px;
   @include respond-to(xs-add) {
     width: 100%;
-    padding: 0 25px 20px;
+    padding: 55px 25px 40px;
   }
   .icon-okey {
+    position: absolute;
     width: 32px;
     height: 32px;
-    margin-top: 45px;
-    margin-bottom: 22px;
+    left: 50%;
+    top: 10px;
+    margin-left: -16px;
     font-size: 21px;
-    line-height: 32px;
+    line-height: 28px;
     @include respond-to(xs-add) {
-      margin-top: 25px;
-      margin-bottom: 12px;
+      top: 5px;
     }
   }
   .item_describe {
-    font-size: 20px;
-    line-height: 26px;
+    font-family: $font-title;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: bold;
     text-align: center;
     @include respond-to(sm) {
@@ -55,19 +59,16 @@
     background: #fff;
     max-width: 930px;
     margin: 0 auto;
+    font-family: $font-title;
     label {
-      font-size: 14px;
+      font-size: 16px;
       color: #000;
     }
     @include respond-to(xs) {
       padding: 20px 15px;
     }
   }
-  .form-title {
-    font-size: 22px;
-    text-align: center;
-    color: #000;
-  }
+
   .form-desc {
     margin: 12px auto 45px;
     font-size: 14px;
@@ -112,10 +113,10 @@
 
   }
   .btn {
-    margin-top: 40px;
-    display: inline-block;
+    margin: 40px auto 0;
+    display: block;
     &:active {
-      -webkit-appearance: none;
+      outline:none;
     }
   }
 }
@@ -124,7 +125,9 @@
   float: left;
   width: 47%;
   margin-bottom: 50px;
+  margin-top: 30px;
   margin-right: 6%;
+  padding: 0 20px;
   @include respond-to(xs) {
     width: 100%;
     margin-right: 0;
@@ -166,17 +169,20 @@
 }
 
 .asRange .asRange-pointer .asRange-tip {
-
   top: 20px;
   left: 0;
   width: 58px;
   height: 20px;
   margin-left: -25px;
-  font-size: 10px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
   background-color: $main-light;
   border: 1px solid $main-light;
   border-radius: 10px;
+  box-shadow: none;
+}
+.asRange .asRange-pointer {
+  box-shadow: none;
   outline: none;
 }
 
@@ -188,8 +194,16 @@
 /*----------------------
     how_to
 ----------------------*/
+
 .how_to {
-  padding: 150px 0;
+  padding: 20px 0;
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 20px;
+  @include respond-to(xs){
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .how_to__item {
@@ -197,7 +211,7 @@
   float: left;
   width: 32%;
   margin-right: 2%;
-  padding: 80px 5% 20px;
+  padding: 80px 1% 20px;
   text-align: center;
   &:last-child {
     margin-right: 0;
@@ -216,15 +230,17 @@
   }
   .item_describe {
     margin-top: 20px;
+    font-size: 16px;
+    line-height: 20px;
     color: #4b4b4b;
   }
   .arrow {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: -29%;
     width: 52%;
-    height: 2px;
-    background: #000;
+    height: 1px;
+    background: #ccc;
     @include respond-to(xs){
       display: none;
     }
@@ -235,8 +251,7 @@ $width: 100%;
 $pb: 69%;
 .how_to_icon__wrap {
   width: 100%;
-  //background: #ccc;
-  padding: 0 20%;
+  padding: 0 30%;
 }
 
 .how_to__icon {
@@ -248,9 +263,9 @@ $pb: 69%;
   background-color: $main-light;
   img {
     position: absolute;
-    top: 21%;
-    left: 26%;
-    width: 50%;
+    top: 30%;
+    left: 28%;
+    width: 44%;
     z-index: 5;
   }
   &:before, &:after {
@@ -274,11 +289,9 @@ $pb: 69%;
 .invest_count {
   background-color: $grey-dark;
   .container {
-    //padding-bottom: 50px;
     background: url("../img/background/wallet.png") no-repeat 0 0;
     @include respond-to(sm) {
       background-size: 50%;
-      //padding: 0;
     }
     @include respond-to(xs) {
       background-size: 80%;
@@ -290,6 +303,7 @@ $pb: 69%;
     float: right;
     text-align: center;
     padding: 0 15px 50px;
+    font-family: $font-title;
     @include respond-to(xs) {
       width: 100%;
       background: rgba(0, 0, 0, 0.65);
@@ -391,7 +405,9 @@ $pb: 69%;
   background: #89a6ac;
   color: #fff;
   text-align: center;
+  font-family: $font-title;
   .section-title {
+    font-weight: bold;
     margin-top: 15px;
     font-size: 28px;
   }
@@ -450,8 +466,9 @@ $pb: 69%;
   background: $grey-light;
   text-align: center;
   .section-title {
+    font-family: $font-title;
     font-size: 28px;
-    line-height: 34px;
+    line-height: 38px;
     color: #fff;
   }
   .btn {
