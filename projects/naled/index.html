@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <title>Home page</title>
-    <link rel="stylesheet" href="assets/stylesheets/main.css">
+
+    <title>Nailed</title>
 </head>
 
 <body>
-
-<a href="dist/about.html">about</a><br>
-<a href="dist/contact.html">contact</a><br>
-<a href="dist/services.html">services</a><br>
-<a href="dist/home.html">home</a><br>
+<style>
+    a {
+        position: relative;
+        display: inline-block;
+        width: 24%;
+        padding-bottom: 30%;
+        margin: 5% 0.5% 5% 0;
+        background: #ccc;
+        background-size: cover;
+        background-position: 50% 0;
+        text-align: center;
+        vertical-align: middle;
+    }
+    a>span {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-left: -50%;
+        background: rgba(204, 204, 204, 0.44);
+        color: #0a00ff;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    @media screen and (max-width: 650px) {
+        a {
+            width: 48%;
+            padding-bottom: 60%;
+            margin: 5% 1.2% 5% 0;
+        }
+    }
+</style>
+<a href="dist/about.html" style="background-image: url(about.jpg)"><span>about</span></a>
+<a href="dist/contact.html" style="background-image: url(contact.jpg)"><span>contact</span></a>
+<a href="dist/services.html" style="background-image: url(services.jpg)"><span>services</span></a>
+<a href="dist/home.html" style="background-image: url(home.jpg)"><span>home</span></a>
 
 </body>
 </html>

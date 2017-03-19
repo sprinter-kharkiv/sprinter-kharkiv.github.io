@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-touch-icon-114x114.png">
+
     <title>Home page</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
 </head>
@@ -41,10 +45,10 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">about us</a></li>
-                <li><a href="#">servises</a></li>
-                <li><a href="#">poducts</a></li>
-                <li><a href="#">contact us</a></li>
+                <li><a href="about.html">about us</a></li>
+                <li><a href="services.html">servises</a></li>
+                <li class="active"><a href="home.html">our studio</a></li>
+                <li><a  href="contact.html">contact us</a></li>
             </ul><!-- navbar-nav -->
         </div><!-- /.navbar-collapse -->
 
@@ -234,11 +238,11 @@
 </main><!-- content-holder -->
 
 
-<section class="contact_block">
+<section id="contact" >
+    <div class="section-title">contact us</div>
+    <div class="contact_block">
     <div class="container">
         <div class="add-margin clearfix">
-            <div class="section-title">contact us</div>
-
             <div class="contact_block__wrap">
                 <div class="clearfix">
                     <div class="contact_block__map">
@@ -271,6 +275,7 @@
             </div>
         </div>
     </div><!-- container -->
+    </div><!-- contact_block -->
 </section>
 
 <section class="bottom_nav__wrap">
