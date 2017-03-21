@@ -7,6 +7,7 @@
     padding-bottom: 30px;
   }
 }
+
 .conditions_item {
   position: relative;
   float: left;
@@ -39,7 +40,7 @@
       font-size: 16px;
       line-height: 20px;
     }
-    span{
+    span {
       display: block;
     }
   }
@@ -50,7 +51,7 @@
 ----------------------*/
 .credit_form {
   padding: 54px 20px;
-  background: #cddcff;
+  background: $form-bg;
   @include respond-to(xs-small) {
     padding: 30px 0;
   }
@@ -84,6 +85,12 @@
     border: 1px solid #ccc;
     box-shadow: none;
     -webkit-appearance: none;
+    &.checked {
+      border-color: $main-light;
+    }
+    &.has_error {
+      border-color: red;
+    }
   }
   .calculator-title {
     font-size: 14px;
@@ -103,28 +110,43 @@
     }
     p {
       font-size: 12px;
-      color: #9ca7b6;
+      line-height: 18px;
+      color: darken($form-bg, 30%);
+    }
+    .messenger {
+      font-size: 16px;
+      line-height: 22px;
+      color: red;
+      font-weight: bold;
     }
 
   }
-  .btn_wrap{
+  .btn_wrap {
     width: 100%;
     text-align: center;
 
   }
   .btn {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
     display: block;
     &:active {
-      outline:none;
+      outline: none;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      background-color: lighten($main-light, 20%);
     }
   }
+}
+
+.calculator_text.hidden {
+  display: none;
 }
 
 .range_wrap {
   float: left;
   width: 47%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: 30px;
   margin-right: 6%;
   padding: 0 20px;
@@ -134,9 +156,11 @@
     float: none;
   }
 }
-.range_wrap+.range_wrap {
+
+.range_wrap + .range_wrap {
   margin-right: 0;
 }
+
 .text_input_wrap {
   width: 47%;
   @include respond-to(xs) {
@@ -153,6 +177,7 @@
 .asRange {
   margin: 20px 0 50px;
   width: 100%;
+  background-color: $form-bg;
 }
 
 .asRange .asRange-selected {
@@ -171,16 +196,22 @@
 .asRange .asRange-pointer .asRange-tip {
   top: 20px;
   left: 0;
-  width: 58px;
-  height: 20px;
-  margin-left: -25px;
-  font-size: 13px;
+  width: 68px;
+  height: 22px;
+  margin-left: -30px;
+  font-size: 16px;
   line-height: 20px;
   background-color: $main-light;
   border: 1px solid $main-light;
-  border-radius: 10px;
+  border-radius: 11px;
   box-shadow: none;
 }
+
+.range_wrap.time .asRange .asRange-tip {
+  width: 40px;
+  margin-left: -16px;
+}
+
 .asRange .asRange-pointer {
   box-shadow: none;
   outline: none;
@@ -200,7 +231,7 @@
   font-family: $font-title;
   font-size: 16px;
   line-height: 20px;
-  @include respond-to(xs){
+  @include respond-to(xs) {
     font-size: 14px;
     line-height: 18px;
   }
@@ -216,16 +247,27 @@
   &:last-child {
     margin-right: 0;
   }
-  @include respond-to(xs-small){
+  &:nth-last-child(2) {
+    .how_to__icon img {
+      top: 19%;
+      left: 25%;
+    }
+  }
+  @include respond-to(xs) {
     float: none;
     width: 60%;
     margin: 0 auto;
+    padding: 40px 1% 20px;
     &:last-child {
       margin-right: auto;
+    }
+    .item_title {
+      margin-top: 15%;
     }
   }
   .item_title {
     margin-top: 30%;
+    font-size: 16px;
     font-weight: bold;
   }
   .item_describe {
@@ -241,7 +283,22 @@
     width: 52%;
     height: 1px;
     background: #ccc;
-    @include respond-to(xs){
+    &:before, &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      background: #ccc;
+      height: 1px;
+      width: 9px;
+      transform-origin: 100% 0;
+      transform: rotateZ(26deg);
+    }
+    &:after {
+      transform: rotateZ(-26deg);
+      transform-origin: 100% 100%;
+    }
+    @include respond-to(xs) {
       display: none;
     }
   }
@@ -250,8 +307,32 @@
 $width: 100%;
 $pb: 69%;
 .how_to_icon__wrap {
+  position: relative;
   width: 100%;
   padding: 0 30%;
+  .item_number {
+    position: absolute;
+    left: 35%;
+    top: -27%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    z-index: 15;
+    @include respond-to(xs-small){
+      left: 34%;
+      top: -29%;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
+}
 }
 
 .how_to__icon {

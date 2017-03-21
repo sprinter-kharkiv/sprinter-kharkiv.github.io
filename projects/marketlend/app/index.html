@@ -52,14 +52,17 @@
         <div class="container clearfix">
             <div class="conditions_item">
                 <span class="icon-ok-2 icon-okey"></span>
+
                 <p class="item_describe">Loans from<br>$5,000 – $250,000</p>
             </div>
             <div class="conditions_item">
                 <span class="icon-ok-2 icon-okey"></span>
+
                 <p class="item_describe">Standard rate<br>of 1.0% a fortnight </p>
             </div>
             <div class="conditions_item">
                 <span class="icon-ok-2 icon-okey"></span>
+
                 <p class="item_describe">Approval and funding<br>within 24 hours</p>
             </div>
 
@@ -67,7 +70,7 @@
     </section>
     <section class="credit_form">
         <div class="container">
-            <form action="">
+            <form action="" class="credit_form">
                 <h2 class="section_title">Get an Instant Quote</h2>
 
                 <h3 class="section_sub-title">How much Trade Credit Costs</h3>
@@ -76,31 +79,38 @@
                     <div class="range_wrap ">
 
                         <label for="summ">How much Trade Credit do you need</label>
-                        <input id="summ" class="range_summ range_input" type="text" min="100" max="1000000"
+                        <input id="summ" class="range_summ range_input" type="text" min="10000" max="5000000"
                                value="500000"
-                               name="summ" step="100">
+                               name="summ" step="1000">
                     </div>
-                    <div class="range_wrap ">
+                    <div class="range_wrap time">
                         <label for="time">How Many Mounths</label>
-                        <input id="time" class="range_summ range_input" type="text" min="0" max="72" value="24"
+                        <input id="time" class="range_summ range_input" type="text" min="3" max="60" value="24"
                                name="points"
                                step="1">
                     </div>
                 </div>
-                <div class="calculator">
-                    <h3 class="calculator-title">Monthly Repayment: <span>$<span class="monthly_repaymant">5000</span></span></h3>
+                <div class="clearfix">
+                    <div class="calculator">
+                        <div class="calculator_text hidden">
+                            <h3 class="calculator-title">Monthly Repayment: <span>$<span
+                                    class="monthly_repaymant"></span></span></h3>
 
-                    <h3 class="calculator-title">Total Amount Payable: <span>$<span class="total_payable">5000</span></span></h3>
+                            <h3 class="calculator-title">Total Amount Payable: <span>$<span
+                                    class="total_payable"></span></span></h3>
 
-                    <p>The calculation of Monthly Repayments and Total Amount payable is based on a 97%likeihood of
-                        repayment risk? and interest only payments.</p>
-                </div>
-                <div class="text_input_wrap">
-                    <input class="text_input" type="email" placeholder="Your email" required>
-                    <input class="text_input" type="text" placeholder="Phone number" required>
+                            <p>The calculation of Monthly Repayment and Total Amount payable is based on a 97%
+                                likelihood of
+                                repayment risk, and interest only payments.</p>
+                        </div>
+                    </div>
+                    <div class="text_input_wrap">
+                        <input class="text_input" id="email" type="email" placeholder="Your email" required>
+                        <input class="text_input" id="phone" type="text" placeholder="Phone number" required>
+                    </div>
                 </div>
                 <div class="btn_wrap">
-                    <input type="submit" class="btn" value="apply now">
+                    <input type="submit" class="btn form_btn disabled" value="apply now">
                 </div>
             </form>
 
@@ -109,10 +119,12 @@
     <section class="how_to clearfix">
         <div class="container">
             <h2 class="section_title">How to get a business loan</h2>
+
             <h3 class="section_sub-title">3 quick steps</h3>
 
             <div class="how_to__item">
                 <div class="how_to_icon__wrap">
+                    <div class="item_number">1</div>
                     <div class="how_to__icon">
                         <img src="img/step_icon_1.png" alt="">
                     </div>
@@ -124,26 +136,28 @@
 
             <div class="how_to__item">
                 <div class="how_to_icon__wrap">
+                    <div class="item_number">2</div>
                     <div class="how_to__icon">
                         <img src="img/step_icon_2.png" alt="">
                     </div>
                 </div>
-                <h3 class="item_title">Online Application</h3>
+                <h3 class="item_title">Marketlend support</h3>
 
-                <p class="item_describe">Your application is risk assessedand supported by Marketlend</p>
+                <p class="item_describe">Your application is risk assessed and supported by Marketlend</p>
                 <span class="arrow"></span>
 
             </div>
 
             <div class="how_to__item">
                 <div class="how_to_icon__wrap">
+                    <div class="item_number">3</div>
                     <div class="how_to__icon">
                         <img src="img/step_icon_3.png" alt="">
                     </div>
                 </div>
-                <h3 class="item_title">Online Application</h3>
+                <h3 class="item_title">Access to Marketplace</h3>
 
-                <p class="item_describe">Your application is listedin the marketplace for bidding</p>
+                <p class="item_describe">Your application is listed in the marketplace for bidding</p>
                 <span class="arrow"></span>
 
             </div>
@@ -205,7 +219,6 @@
             <p>We are a marketplace that gives you direct access to investors who give trade credit to businesses. By
                 giving you direct access to investors, you get trade credit for your business in as short as a few
                 days.</p>
-
 
         </div>
     </section>
