@@ -17,6 +17,7 @@
 
 html,
 body {
+  height: 100%;
   font-family: $font-base, sans-serif;
 }
 
@@ -25,8 +26,18 @@ body {
 }
 .wrap {
   position: relative;
+  width: 100%;
+  display: table;
+  height: 100%;
 }
-
+.content {
+  height: 100%;
+  display: table-row;
+  //padding-bottom: 40px;
+  //@include respond-to(xs){
+    //padding-bottom: 76px;
+  //}
+}
 .container {
   max-width: $max-width;
   min-width: $min-width;

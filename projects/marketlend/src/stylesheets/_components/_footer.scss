@@ -2,6 +2,11 @@
 .footer {
   background-color: $grey-dark;
   min-width: 320px;
+  height: 40px;
+  @include respond-to(xs){
+    height: 76px;
+  }
+
   .social {
     float: right;
     height: 40px;

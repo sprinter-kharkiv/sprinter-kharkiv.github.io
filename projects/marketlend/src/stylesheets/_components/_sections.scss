@@ -323,7 +323,7 @@ $pb: 69%;
     color: #fff;
     background: #000;
     z-index: 15;
-    @include respond-to(xs-small){
+    @include respond-to(xs-small) {
       left: 34%;
       top: -29%;
       width: 20px;
@@ -332,7 +332,6 @@ $pb: 69%;
       font-size: 12px;
     }
   }
-}
 }
 
 .how_to__icon {
@@ -554,5 +553,38 @@ $pb: 69%;
   }
   .btn {
     margin-top: 60px;
+  }
+}
+
+/*-----------------------------
+    errors page
+ -----------------------------*/
+.message_page {
+  background: $form-bg;
+  text-align: center;
+  min-height: 100%;
+  padding-top: 190px;
+  font-family: $font-title;
+  font-size: 24px;
+  line-height: 34px;
+  h3 {
+    color: $main-light;
+  }
+  .err_number {
+    color: $grey-dark_transparent;
+    font-weight: bold;
+    font-size: 85px;
+    letter-spacing: 18px;
+    margin: 70px 0;
+  }
+  @include respond-to(xs) {
+    padding-top: 120px;
+    font-size: 18px;
+    line-height: 24px;
+    .err_number {
+      font-size: 55px;
+      letter-spacing: 10px;
+      margin: 50px 0;
+    }
   }
 }
