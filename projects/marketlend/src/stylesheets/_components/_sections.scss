@@ -86,10 +86,15 @@
     box-shadow: none;
     -webkit-appearance: none;
     &.checked {
-      border-color: $main-light;
+      border-color: $main-light!important;
     }
     &.has_error {
-      border-color: red;
+      border-color: red!important;
+    }
+    &:focus {
+      border-color: lighten($main-light, 20%);
+      -webkit-outline: none;
+      outline: none;
     }
   }
   .calculator-title {
@@ -130,12 +135,33 @@
     margin: 20px auto 0;
     display: block;
     &:active {
+      -webkit-outline: none;
       outline: none;
     }
     &.disabled {
       cursor: not-allowed;
       background-color: lighten($main-light, 20%);
     }
+  }
+}
+
+.message_block {
+  font-size: 14px;
+  line-height: 38px;
+  border-radius: 6px;
+  padding: 0 15px;
+  color: #404040;
+  h3 {
+    min-height: 38px;
+  }
+  &.errors {
+    background: rgba(255, 0, 0, 0.15);
+  }
+  &.success {
+    background: rgba(168, 213, 42, 0.4);
+  }
+  &.hidden {
+    display: none;
   }
 }
 

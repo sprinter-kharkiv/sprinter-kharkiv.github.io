@@ -41,11 +41,11 @@ $(document).ready(function () {
             risk_band_interest_rate = 1.3 / 100,
             facility_fee = 0.42 / 100,
 
-            monthly_repaymant_sum = (invoice_value*risk_band_interest_rate)+(limit-invoice_value)*facility_fee,
-            total_payable_sum = ((invoice_value*risk_band_interest_rate) +((limit-invoice_value)*facility_fee))*term;
+            monthly_repaymant_sum = (invoice_value * risk_band_interest_rate) + (limit - invoice_value) * facility_fee,
+            total_payable_sum = ((invoice_value * risk_band_interest_rate) + ((limit - invoice_value) * facility_fee)) * term;
 
-        monthly_repaymant.html(monthly_repaymant_sum.toFixed(2));
-        total_payable.html(total_payable_sum.toFixed(2));
+        monthly_repaymant.html('$' + monthly_repaymant_sum.toFixed(2));
+        total_payable.html('$' + total_payable_sum.toFixed(2));
     });
     //mzonthly_repaymant = $('.monthly_repaymant'),
     // Функция проверки полей формы
@@ -53,7 +53,7 @@ $(document).ready(function () {
     var phone = $('#phone');
     var input = $('.text_input');
 
-    phone.focusout(function () {
+    phone.mouseleave(function () {
         var re = /^\d[\d\(\)\ -]{4,14}\d$/;
         var myPhone = phone.val();
         var valid = re.test(myPhone);
@@ -70,7 +70,7 @@ $(document).ready(function () {
         }
     });
 
-    email.focusout(function () {
+    email.mouseleave(function () {
         console.log('lost');
         var re = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
         var myMail = email.val();
@@ -87,13 +87,56 @@ $(document).ready(function () {
             $(this).removeClass('has_error');
         }
     });
-    input.focusout(function () {
+    input.mouseleave(function () {
         if (email.hasClass('checked') && phone.hasClass('checked')) {
             $('.calculator_text').removeClass('hidden');
             $('.form_btn').removeClass('disabled');
+            $('.errors').addClass('hidden');
         }
 
-    })
+    });
+
+
+    $(".credit_form").submit(function () {
+        var form = $(this);
+        var error = false;
+
+        form.find('input, textarea').each(function () {
+            if ($(this).val() == '') {
+                $('.errors').html('<h3>Type, please your "' + $(this).attr('placeholder') + '"!</h3>');
+                error = true;
+            }
+        });
+        if (!error) {
+            var data = form.serialize();
+            $.ajax({
+                type: 'POST',
+                url: '/ctrl/mail.php',
+                dataType: 'json',
+                data: data,
+                beforeSend: function (data) {
+                    form.find('input[type="submit"]').attr('disabled', 'disabled');
+                },
+                success: function (data) {
+                    if (data['error']) {
+                        alert(data['error']);
+                    } else {
+                        $('.calculator_text').addClass('hidden');
+                        $('.success').html('<h3>Thanks, your message has been sent.</h3>')
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                },
+                complete: function (data) {
+                    form.find('input[type="submit"]').prop('disabled', false);
+                }
+
+            });
+        }
+        return false;
+    });
 
 
 });
