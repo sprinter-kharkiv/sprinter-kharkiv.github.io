@@ -231,6 +231,9 @@
   border: 1px solid $main-light;
   border-radius: 11px;
   box-shadow: none;
+  cursor: pointer;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .range_wrap.time .asRange .asRange-tip {
@@ -241,6 +244,7 @@
 .asRange .asRange-pointer {
   box-shadow: none;
   outline: none;
+  cursor: pointer;
 }
 
 .asRange .asRange-pointer .asRange-tip:before {
