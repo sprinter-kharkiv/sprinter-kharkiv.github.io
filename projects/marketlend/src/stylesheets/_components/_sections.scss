@@ -138,7 +138,7 @@
       -webkit-outline: none;
       outline: none;
     }
-    &.disabled {
+    &:disabled {
       cursor: not-allowed;
       background-color: lighten($main-light, 20%);
     }
@@ -165,6 +165,9 @@
   }
 }
 
+.calculation_message {
+  display: none;
+}
 .calculator_text.hidden {
   display: none;
 }
