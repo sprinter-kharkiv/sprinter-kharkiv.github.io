@@ -64,6 +64,7 @@
     label {
       font-size: 16px;
       color: #000;
+      font-weight: bold;
     }
     @include respond-to(xs) {
       padding: 20px 15px;
@@ -100,6 +101,7 @@
   .calculator-title {
     font-size: 14px;
     margin-bottom: 15px;
+    font-weight: bold;
     span {
       font-size: 15px;
       font-weight: bold;
@@ -124,11 +126,6 @@
       color: red;
       font-weight: bold;
     }
-
-  }
-  .btn_wrap {
-    width: 100%;
-    text-align: center;
 
   }
   .btn {
@@ -204,8 +201,8 @@
 }
 
 .asRange {
-  margin: 20px 0 50px;
-  width: 100%;
+  margin: 20px auto 50px;
+  width: 94%;
   background-color: $form-bg;
 }
 
@@ -224,8 +221,8 @@
 
 .asRange .asRange-pointer .asRange-tip {
   top: 20px;
-  left: 0;
-  width: 68px;
+  left: -7px;
+  width: 82px;
   height: 22px;
   margin-left: -30px;
   font-size: 16px;
@@ -241,7 +238,7 @@
 
 .range_wrap.time .asRange .asRange-tip {
   width: 40px;
-  margin-left: -16px;
+  margin-left: -9px;
 }
 
 .asRange .asRange-pointer {
@@ -260,7 +257,7 @@
 ----------------------*/
 
 .how_to {
-  padding: 20px 0;
+  padding: 20px 0 80px;
   font-family: $font-title;
   font-size: 16px;
   line-height: 20px;
@@ -275,7 +272,7 @@
   float: left;
   width: 32%;
   margin-right: 2%;
-  padding: 80px 1% 20px;
+  padding: 80px 1% 50px;
   text-align: center;
   &:last-child {
     margin-right: 0;
@@ -307,7 +304,7 @@
     margin-top: 20px;
     font-size: 16px;
     line-height: 20px;
-    color: #4b4b4b;
+    color: #668681;
   }
   .arrow {
     position: absolute;
@@ -620,4 +617,85 @@ $pb: 69%;
       margin: 50px 0;
     }
   }
+}
+/*-----------------------------
+    admin page
+ -----------------------------*/
+ .admin_page {
+   .admin_wrapper {
+     overflow: hidden;
+     background-color: $grey-dark;
+   }
+  background: #fff;
+  min-height: 100%;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  text-align: center;
+  .button_block {
+    width: 30%;
+    float: left;
+    padding-top: 20px;
+    .btn {
+      margin-top: 15px;
+    }
+  }
+   #image_preview {
+     width: 100%;
+   }
+   .input_block {
+     padding: 20px 25px;
+     width: 70%;
+     float: right;
+     background-color: $form-bg;
+     .del_btn {
+       float: right;
+       background: #e44b37;
+       border-color: #e44b37;
+     }
+     input[type='text'] {
+       display: block;
+       width: 300px;
+       padding: 0 10px;
+       margin-top: 5px;
+       height: 32px;
+       line-height: 32px;
+       font-size: 16px;
+       border-radius: 8px;
+       &:focus {
+         outline: none;
+       }
+     }
+     textarea {
+       display: block;
+       width: 100%;
+       padding: 10px;
+       margin-top: 5px;
+       min-height: 80px;
+       font-size: 14px;
+       line-height: 20px;
+       border-radius: 8px;
+       resize: none;
+       &:focus {
+         outline: none;
+       }
+     }
+     label {
+       display: block;
+       margin-top: 20px;
+       font-weight: bold;
+       text-align: left;
+     }
+     .preview_block {
+       width: 150px;
+       height: 100px;
+       overflow: hidden;
+     }
+     .submit {
+       margin-top: 50px;
+     }
+     .input-group {
+       padding: 20px 0 20px;
+       border-bottom: 1px solid #ccc;
+     }
+   }
 }

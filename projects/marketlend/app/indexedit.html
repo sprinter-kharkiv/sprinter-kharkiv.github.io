@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Marketlend</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="libs/asrange/asRange.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+<div class="wrap clearfix">
+    <div class="content">
+        <div class="header">
+            <div class="container">
+                <a class="header_btn btn" href="#">apply now</a>
+                <div class="logo-wrap">
+                    <a class="logo" href="#"></a>
+                </div>
+            </div>
+        </div>
+
+        <section class="admin_page">
+            <div class="container">
+                <div class="admin_wrapper">
+                    <div class="button_block">
+                        <a class="btn" href="edit">new page 1</a>
+                        <a class="btn" href="edit">new page 1</a>
+                        <a class="btn" href="edit">new page 2</a>
+                        <a class="btn" href="edit">new page</a>
+                    </div>
+                    <div class="input_block">
+                        <form action="save_changes" method="POST" enctype="multipart/form-data">
+                            <div class="input-group">
+                                <label for="page_URL">URL address of page:</label>
+                                <input type="text" ID='page_URL' name='page_URL' value="<?= $page_link ?>"
+                                       placeholder='Page URL'
+                                       required>
+                                <label for="page_name">Name of page:</label>
+                                <input type="text" ID='page_name' name='page_name' value="<?= $page_name ?>">
+                                <label for="main_title">Title for banner:</label>
+                                <input type="text" ID="main_title" name='main_title' value="<?= $main_title ?>">
+                                <label for="main_bg_img">Choose image for banner:</label>
+                                <input type="file" id="main_bg_img" name='filename' value="">
+
+                                <div class="preview_block">
+                                    <!--
+                                    <?php if($page_link):?>
+                                    <img src="<?= $main_bg_image ?>" style='width: 50px;'>
+                                    <?php else: ?>  -->
+                                    <img alt="" id="image_preview"
+                                         src="img/imagenotfound.jpg">
+                                    <?php endif ?>
+                                </div>
+                                <?php echo 'file' . $_FILES["filename"]["tmp_name"]; ?>
+                                <label for="slogan">Slogan for banner:</label>
+                                <textarea name="slogan" id="slogan"><?= $slogan ?></textarea>
+                            </div>
+                            <div class="input-group">
+                                <label for="page_URL1">URL address of page:</label>
+                                <input type="text" ID='page_URL1' name='page_URL' value="<?= $page_link ?>" placeholder='Page URL'
+                                       required>
+                                <label for="page_name1">Name of page:</label>
+                                <input type="text" ID='page_name1' name='page_name' value="<?= $page_name ?>">
+                            </div>
+
+                            <input class="submit btn" type="submit" value="save">
+                        </form>
+                        <?php if($page_link):?>
+                        <form action="del_page" method="POST">
+                            <input type="hidden" name='page_for_delete' value="<?= $page_link ?>">
+                            <input type="submit" class="btn del_btn" value="DELETE THIS PAGE">
+                        </form>
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="footer clearfix">
+        <div class="container">
+            <ul class="social">
+                <li><a class="social_icon icon-linkedin" href="#"></a></li>
+                <li><a class="social_icon icon-facebook" href="#"></a></li>
+                <li><a class="social_icon icon-twitter" href="#"></a></li>
+                <li><a class="social_icon icon-gplus" href="#"></a></li>
+                <li><a class="social_icon icon-youtube" href="#"></a></li>
+            </ul>
+            <div class="copyright">
+                <p>Copyright @ 2017 <a href="#">Tyndall Capital</a> All rights reserved </p>
+            </div>
+        </div>
+    </section>
+</div>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+
+<script src="libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="libs/animate_number/jquery.animateNumber.min.js"></script>
+
+
+<script src="libs/asrange/jquery-asRange.min.js"></script>
+
+<script src="js/common.js"></script>
+
+</body>
+</html>
