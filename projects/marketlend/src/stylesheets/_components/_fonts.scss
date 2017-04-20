@@ -59,3 +59,19 @@ $font-path: '../fonts/';
   url('#{$font-path}RobotoCondensedBold/robotocondensed-bold-webfont.woff') format('woff'),
   url('#{$font-path}RobotoCondensedBold/robotocondensed-bold-webfont.ttf') format('ttf');
 }
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoRegular/roboto-regular.woff2') format('woff2'),
+  url('#{$font-path}RobotoRegular/roboto-regular.woff') format('woff'),
+  url('#{$font-path}RobotoRegular/roboto-regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}RobotoBold/roboto-bold.woff2') format('woff2'),
+  url('#{$font-path}RobotoBold/roboto-bold.woff') format('woff'),
+  url('#{$font-path}RobotoBold/roboto-bold.ttf') format('ttf');
+}

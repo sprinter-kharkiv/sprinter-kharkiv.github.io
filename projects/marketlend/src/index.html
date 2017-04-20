@@ -17,6 +17,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
     <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="libs/asrange/asRange.min.css">
     <link rel="stylesheet" href="css/main.min.css">
@@ -27,7 +28,7 @@
     <div class="content">
         //= template/_header.html
         //= template/_banner.html
-        <a href="indexedit.html">indexedit.html</a>
+        <a href="indexedit.html">indexedit555.html</a>
         <section class="conditions">
             <div class="container clearfix">
                 <div class="conditions_item">
@@ -45,7 +46,6 @@
 
                     <p class="item_describe">Approval and funding<br>within 24 hours</p>
                 </div>
-
             </div>
         </section>
         <section class="credit_form">
@@ -96,7 +96,8 @@
                         </div>
                     </div>
                     <div class="btn_wrap">
-                        <input type="submit" class="btn form_btn" value="apply now" disabled>
+                        <button class="c-btn form_btn" disabled>get a quote</button>
+                        <div class="c-btn j-modal-toggle" style="display: none;" data-toggle="modal" data-target="#myModal">send</div>
                     </div>
                 </form>
 
@@ -104,54 +105,55 @@
         </section>
         <section class="how_to clearfix">
             <div class="container">
-            <div>
-                <h2 class="section_title">How to get a business loan</h2>
+                <div class="clearfix">
+                    <h2 class="section_title">How to get a business loan</h2>
 
-                <h3 class="section_sub-title">3 quick steps</h3>
+                    <h3 class="section_sub-title">3 quick steps</h3>
 
-                <div class="how_to__item">
-                    <div class="how_to_icon__wrap">
-                        <div class="item_number">1</div>
-                        <div class="how_to__icon">
-                            <img src="img/step_icon_1.png" alt="">
+                    <div class="how_to__item">
+                        <div class="how_to_icon__wrap">
+                            <div class="item_number">1</div>
+                            <div class="how_to__icon">
+                                <img src="img/step_icon_1.png" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <h3 class="item_title">Online Application</h3>
+                        <h3 class="item_title">Online Application</h3>
 
-                    <p class="item_describe">You complete an online application</p>
+                        <p class="item_describe">You complete an online application</p>
+                    </div>
+
+                    <div class="how_to__item">
+                        <div class="how_to_icon__wrap">
+                            <div class="item_number">2</div>
+                            <div class="how_to__icon">
+                                <img src="img/step_icon_2.png" alt="">
+                            </div>
+                        </div>
+                        <h3 class="item_title">Marketlend support</h3>
+
+                        <p class="item_describe">Your application is risk assessed and supported by Marketlend</p>
+                        <span class="arrow"></span>
+
+                    </div>
+
+                    <div class="how_to__item">
+                        <div class="how_to_icon__wrap">
+                            <div class="item_number">3</div>
+                            <div class="how_to__icon">
+                                <img src="img/step_icon_3.png" alt="">
+                            </div>
+                        </div>
+                        <h3 class="item_title">Access to Marketplace</h3>
+
+                        <p class="item_describe">Your application is listed in the marketplace for bidding</p>
+                        <span class="arrow"></span>
+
+                    </div>
                 </div>
 
-                <div class="how_to__item">
-                    <div class="how_to_icon__wrap">
-                        <div class="item_number">2</div>
-                        <div class="how_to__icon">
-                            <img src="img/step_icon_2.png" alt="">
-                        </div>
-                    </div>
-                    <h3 class="item_title">Marketlend support</h3>
-
-                    <p class="item_describe">Your application is risk assessed and supported by Marketlend</p>
-                    <span class="arrow"></span>
-
+                <div class="btn_wrap">
+                    <a class="c-btn" href="#">apply now</a>
                 </div>
-
-                <div class="how_to__item">
-                    <div class="how_to_icon__wrap">
-                        <div class="item_number">3</div>
-                        <div class="how_to__icon">
-                            <img src="img/step_icon_3.png" alt="">
-                        </div>
-                    </div>
-                    <h3 class="item_title">Access to Marketplace</h3>
-
-                    <p class="item_describe">Your application is listed in the marketplace for bidding</p>
-                    <span class="arrow"></span>
-
-                </div>
-            </div>
-
-            <div class="btn_wrap">
-                <a class="btn" href="#">apply now</a>
             </div>
         </section>
         <section class="invest_count">
@@ -166,7 +168,7 @@
 
                         <p>investors registered<br>and ready to invest</p>
                     </div>
-                    <a class="btn" href="#">apply now</a>
+                    <a class="c-btn" href="#">apply now</a>
                 </div>
             </div>
         </section>
@@ -235,10 +237,50 @@
         <section class="get_approval">
             <div class="container">
                 <h2 class="section-title">Get instant approval for up to $250,000</h2>
-                <a class="btn" href="#">apply now</a>
+                <a class="c-btn" href="#">apply now</a>
             </div>
         </section>
     </div>
+
+    <div class="j-modal-catalog modal">
+        <div class="j-modal-close modal-close">
+            <span></span>
+        </div>
+
+
+    </div>
+    <div class="j-overlay overlay"></div>
+
+    <!-- Modal -->
+    <div class="modal fade modal-borrower in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Get a personalised quote</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form" action="#" method="post">
+
+                        <label for="modal-name">Your Name (required):</label>
+                        <input class="" id="modal-name" name="modal-name" type="text" required>
+
+                        <label for="modal-email">Your Email (required):</label>
+                        <input id="modal-email" type="email" name="email" required/>
+
+                        <label for="modal-phone">Your Phone Number (required):</label>
+                        <input class="text_input" id="modal-phone" type="text"  required>
+
+                        <div class="btn_wrap">
+                            <input type="submit" class="c-btn modal_btn" value="send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     //= template/_footer.html
 
@@ -257,7 +299,7 @@
 
 
 <script src="libs/asrange/jquery-asRange.min.js"></script>
-
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

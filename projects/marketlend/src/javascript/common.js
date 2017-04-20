@@ -66,16 +66,23 @@ $(document).ready(function () {
 
     var email = $('#email');
     var phone = $('#phone');
+    var modal_email = $('#modal-email');
+    var modal_phone = $('#modal-phone');
     var input = $('.text_input');
     var fbtn =  $('.form_btn');
+    var mbtn =  $('.modal_btn');
 
-    function check_phone(phone) {
+
+
+
+    function check_phone(phone, modPhone) {
         var re = /^\d[\d\(\)\ -]{4,14}\d$/;
         var myPhone = phone.val();
         var valid = re.test(myPhone);
         if (valid) {
             phone.addClass('checked');
             phone.removeClass('has_error');
+            modPhone.val(myPhone);
         } else {
             phone.removeClass('checked');
             phone.addClass('has_error');
@@ -86,13 +93,14 @@ $(document).ready(function () {
         }
     }
 
-    function check_mail(email) {
+    function check_mail(email, modEmail) {
         var re = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
         var myMail = email.val();
         var valid = re.test(myMail);
         if (valid) {
             email.addClass('checked');
             email.removeClass('has_error');
+            modEmail.val(myMail);
         } else {
             email.removeClass('checked');
             email.addClass('has_error');
@@ -104,25 +112,24 @@ $(document).ready(function () {
     }
     function hidd_message() {
         if (email.hasClass('checked') && phone.hasClass('checked')) {
-            $('.calculation_message').css('display', 'block');
             fbtn.prop('disabled', false);
         }else{
             fbtn.prop('disabled', 'disabled');
         }
-
     }
 
+
     email.blur (function() {
-        check_mail(email);
+        check_mail(email, modal_email);
     });
     email.mouseleave (function() {
-        check_mail(email);
+        check_mail(email, modal_email);
     });
     phone.blur (function() {
-        check_phone(phone);
+        check_phone(phone, modal_phone);
     });
     phone.mouseleave (function() {
-        check_phone(phone);
+        check_phone(phone, modal_phone);
     });
     input.mouseleave(function () {
         hidd_message();
@@ -131,6 +138,12 @@ $(document).ready(function () {
         hidd_message();
     });
 
+    fbtn.on('click', function(event){
+        event.preventDefault();
+        $('.calculation_message').css('display', 'block');
+        fbtn.css('display', 'none');
+        $('.j-modal-toggle').css('display', 'inline-block');
+    });
 
     $(".credit_form").submit(function () {
         var form = $(this);
@@ -144,7 +157,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: data,
                 beforeSend: function (data) {
-                    fbtn.attr('disabled', 'disabled');
+                    mbtn.attr('disabled', 'disabled');
                 },
                 success: function (data) {
                     if (data['error']) {
@@ -159,7 +172,7 @@ $(document).ready(function () {
                     $('.calculator_text').addClass('hidden');
                 },
                 complete: function (data) {
-                    fbtn.prop('disabled', false);
+                    mbtn.prop('disabled', false);
                 }
 
             });
@@ -177,5 +190,7 @@ $(document).ready(function () {
             } else console.log('is not image mime type');
         } else console.log('not isset files data or files API not supordet');
     });
+
+
 
 });
