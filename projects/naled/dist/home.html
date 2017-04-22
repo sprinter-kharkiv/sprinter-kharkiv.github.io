@@ -47,8 +47,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="about.html">about us</a></li>
                 <li><a href="services.html">servises</a></li>
-                <li class="active"><a href="home.html">our studio</a></li>
-                <li><a  href="contact.html">contact us</a></li>
+                <li><a href="home.html">our studio</a></li>
+                <li class="active"><a  href="contact.html">contact us</a></li>
             </ul><!-- navbar-nav -->
         </div><!-- /.navbar-collapse -->
 
@@ -170,9 +170,11 @@
 
 
     <section class="studio">
+    <div id="instafeed"></div>
         <div class="section-title">Get naled studio</div>
         <div class="studio_wrap">
             <div class="container">
+    
                 <div class="studio_item">
                     <img src="assets/images/studios/studios_1.jpg" alt="">
                 </div>
@@ -245,10 +247,12 @@
         <div class="add-margin clearfix">
             <div class="contact_block__wrap">
                 <div class="clearfix">
-                    <div class="contact_block__map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41038.026069204905!2d36.24153606671177!3d49.9949224115113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1488708284136"
-                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div id="map" class="contact_block__map">
+                        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d41038.026069204905!2d36.24153606671177!3d49.9949224115113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1488708284136"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>-->
                     </div>
+
+
                     <div class="contact-info">
                         <p>Barcelona, Spain<br>
                             Get Directions<br>
@@ -302,12 +306,30 @@
         </div>
     </div><!-- container -->
 </footer>
+<script>
+    function initMap() {
+        var uluru = {lat: 41.409162, lng: 2.182802};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+
+
+</script>
 <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
 <script src="assets/vendors/ScrollTrigger/ScrollTrigger.min.js"></script>
 <script src="assets/vendors/slick-carousel/slick/slick.min.js"></script>
 <script src="assets/vendors/masonry/dist/masonry.pkgd.min.js"></script>
 <script src="assets/vendors/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+<script src="assets/javascript/instafeed.min.js"></script>
 <script src="assets/javascript/scripts.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt4OJbv9MGtbHjNIoDL4V3rR2d6YL_TBw&callback=initMap"
+        async defer></script>
 
 
 </body>
