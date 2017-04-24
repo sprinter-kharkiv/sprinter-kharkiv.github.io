@@ -103,11 +103,20 @@
     font-size: 17px;
     margin-bottom: 15px;
     span {
-      //font-family: 'Roboto-bold';
-      //font-size: 17px;
-      font-weight: bold;
+       font-family: 'RobotoCondensedBold';
+       font-size: 18px;
     }
   }
+ .calculator-title.condensend {
+     span {
+        //font-family: 'RobotoCondensedBold';
+    }
+}
+.calculator-title.bold {
+     span {
+        //font-family: $font-bold;
+    }
+}
   .calculator {
     width: 47%;
     float: right;
@@ -228,6 +237,7 @@
   height: 22px;
   margin-left: -30px;
   font-size: 16px;
+  font-weight: bold;
   line-height: 20px;
   background-color: $main-light;
   border: 1px solid $main-light;
@@ -428,6 +438,8 @@ $pb: 69%;
   }
   .invest_text__count {
     margin-top: 20px;
+    text-align: left;
+    margin-left: 30px;
     color: $main-light;
     font-size: 64px;
     @include respond-to(xs) {
