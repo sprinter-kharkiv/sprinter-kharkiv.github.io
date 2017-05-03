@@ -14,12 +14,14 @@
           href="img/favicon/apple-touch-icon-114x114.png">
 
 
-    <link rel="stylesheet" href="libs/bxslider/jquery.bxslider.css">
 
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="libs/bxslider/jquery.bxslider.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-
+    
 
 
 </head>
@@ -36,7 +38,7 @@
                 <a class="logo" href="#" style="background-image: url(img/logo.png)"></a>
             </div>
             <ul class="top_menu center-block">
-                <li class="top_menu__item"><a href="#Home" class="j-go-to">Home</a></li>
+                <li class="top_menu__item"><a href="#Home" class="active j-go-to">Home</a></li>
                 <li class="top_menu__item"><a href="#about" class="j-go-to">about us</a></li>
                 <li class="top_menu__item"><a href="#services" class="j-go-to">services</a></li>
                 <li class="top_menu__item"><a href="#portfolio" class="j-go-to">gallery</a></li>
@@ -98,29 +100,188 @@
     <div class="works_wrap clearfix">
         <div class="col">
             <div class="work_block" style="background-image: url(img/our_works/3.jpg)">
-                <a class="" href="#">Project Name</a>          
+                <!-- Button trigger modal -->
+                <span class="work_mask" data-toggle="modal" data-target="#Project_1">Project Name_1</span>
+                <!-- Modal -->
+                <div class="modal fade" id="Project_1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 1</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/1.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/2.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="work_block" style="background-image: url(img/our_works/4.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_2">Project Name_2</span>
+                <!-- Modal -->
+                <div class="modal fade" id="Project_2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 2</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/4.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/5.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col">
             <div class="work_block short" style="background-image: url(img/our_works/5.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_3">Project Name_3</span>
+                <!-- Modal -->
+                <div class="modal fade" id="Project_3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 3</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/7.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/6.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/5.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="work_block" style="background-image: url(img/our_works/6.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_4">Project Name_4</span><!-- Modal -->
+                <div class="modal fade" id="Project_4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 4</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/1.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/2.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="work_block short" style="background-image: url(img/our_works/7.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_5">Project Name_5</span><!-- Modal -->
+                <div class="modal fade" id="Project_5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 5</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/1.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/2.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col">
             <div class="work_block" style="background-image: url(img/our_works/2.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_6">Project Name_6</span><!-- Modal -->
+                <div class="modal fade" id="Project_6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 6</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/1.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/2.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="work_block" style="background-image: url(img/our_works/1.jpg)">
-                <a class="" href="#">Project Name</a>
+                <span class="work_mask" data-toggle="modal" data-target="#Project_7">Project Name_7</span><!-- Modal -->
+                <div class="modal fade" id="Project_7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+                                <h2>Project Name 7</h2>
+                            </div>
+                            <div class="modal-body">
+                                <div class="portfolio_gallery">
+                                    <div class="portfolio_slider">
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/1.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/2.jpg" alt=""></div>
+                                        <div class="portfolio_gallery__item"><img src="img/our_works/3.jpg" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -173,9 +334,11 @@
 <script src="<?php bloginfo('template_url'); ?>/libs/respond/respond.min.js"></script>
 <![endif]-->
 
-<script src="libs/jquery/jquery-2.1.3.min.js"></script>
-<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script type="text/javascript" src="libs/jquery/jquery-2.1.3.min.js"></script>
+<script src="libs/bootstrap/bootstrap.min.js"></script>
 <script src="libs/bxslider/jquery.bxslider.js"></script>
+<script src="libs/slick/slick.min.js"></script>
 <script src="js/common.js"></script>
 
 

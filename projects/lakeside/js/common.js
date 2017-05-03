@@ -75,3 +75,21 @@ $(document).ready(function () {
     });
 
 });
+
+/*
+function slackInit(elem) {;
+    elem.slick({
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
+    });
+}
+
+
+$('.work_mask').on('click', function () {
+    var slide = $('.portfolio_slider');
+        setTimeout(slackInit(slide), 190);    
+    });
+
+    */

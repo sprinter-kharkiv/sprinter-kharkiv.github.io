@@ -10,7 +10,6 @@ body,
   font: normal 14px/22px "Lato", sans-serif
   -webkit-font-smoothing: antialiased
 
-
 //     1. common styles
 
 .clearfix:before,
@@ -23,7 +22,6 @@ body,
 
 *
   box-sizing: border-box
-
 
 $mask_color: rgba(36, 80, 146, 0.69)
 $main_blue: #0b4a92
@@ -52,12 +50,11 @@ $main_blue_transparent: rgba(35, 62, 134, 0.87)
     background-repeat: no-repeat
     background-size: cover
 
-
 .scroll-bg
   background-repeat: no-repeat
   background-position: 50% 0
   background-size: cover
-  //height: auto
+//height: auto
 
 .top_menu
   list-style: none
@@ -87,13 +84,12 @@ $main_blue_transparent: rgba(35, 62, 134, 0.87)
       background: transparent
       visibility: hidden
       pointer-events: none
-    &:hover
-      color: lighten($main_blue,55%)
+    &:hover, &.active
+      color: lighten($main_blue, 55%)
       &:after
         visibility: visible
         bottom: 2px
         background: $main_blue
-
 
 //----   visibility mobyle menu
 .vis-menu .top_menu
@@ -106,17 +102,14 @@ $main_blue_transparent: rgba(35, 62, 134, 0.87)
   background: $main_blue_transparent
   z-index: 20
 
-
 .vis-menu .top_menu li
   display: block
   background: $main_blue
   border-bottom: 1px solid #ccc
   text-align: center
 
-
 .vis-menu .top_menu li:first-child
   border-top: 1px solid #ccc
-
 
 .vis-menu .top_menu .header_nav a:active
   background: #7e7cbb
@@ -135,8 +128,6 @@ $trig_color: #fff
   z-index: 22
   background: $main_blue_transparent
   border-radius: 6px
-
-
 
 .menu-trigger span
   display: block
@@ -172,7 +163,6 @@ $trig_color: #fff
   transform: translateY(8px) rotateZ(-225deg)
   background: inherit
 
-
 .vis-menu .menu-trigger span:after
   -webkit-transform: translateY(-8px) rotateZ(225deg)
   transform: translateY(-8px) rotateZ(225deg)
@@ -191,15 +181,15 @@ $trig_color: #fff
 .fade_1
   font: bold 80px/90px "Lato", sans-serif
   opacity: 1
-  //-webkit-animation: fade 2s 2s ease forwards
-  //animation: fade 2s 2s ease forwards
+//-webkit-animation: fade 2s 2s ease forwards
+//animation: fade 2s 2s ease forwards
 .fade_2
   font: normal 60px/80px "Lato", sans-serif
   opacity: 1
   position: relative
-  //bottom: -1px
-  //-webkit-animation: fade 2s 3s ease forwards
-  //animation: fade 2s 3s ease forwards
+//bottom: -1px
+//-webkit-animation: fade 2s 3s ease forwards
+//animation: fade 2s 3s ease forwards
 
 
 @-webkit-keyframes fade
@@ -225,6 +215,7 @@ $trig_color: #fff
   margin-top: 40px
   img
     width: 100%
+    height: auto;
     display: block
 
 .about_text
@@ -235,7 +226,7 @@ $trig_color: #fff
   .section_title
     margin-bottom: 50px
   p
-    padding: 0 10px 15px 0
+    padding: 0 10px 8px 0
     text-align: justify
     font-size: 16px
 
@@ -306,6 +297,7 @@ $trig_color: #fff
     .logo
       width: 55px
       height: 52px
+
 @media screen and (max-width: 481px)
   .fade_1
     font-size: 30px
@@ -344,7 +336,7 @@ $slider_height: 500px
   width: 100% !important
   height: $slider_height !important
   background-size: cover
-  background-repeat: no-repeat 
+  background-repeat: no-repeat
   background-position: 50% 50%
 
 .bx-viewport, .bx-wrapper
@@ -380,7 +372,7 @@ $slider_height: 500px
       margin-bottom: 4%
       background-position: 50% 50%
       background-size: cover
-      a
+      .work_mask
         position: absolute
         width: 100%
         height: 100%
@@ -393,16 +385,15 @@ $slider_height: 500px
         text-decoration: none
         transition: opacity .4s ease
       &:hover
-        a
+        .work_mask
           opacity: .8
           transition: opacity .4s ease
     &:last-child
       margin-bottom: 0
     .short
       padding-bottom: 53%
-      a
+      .work_mask
         padding-top: 23%
-
 
 @media screen and (max-width: 561px)
   #portfolio.container
@@ -413,10 +404,8 @@ $slider_height: 500px
       margin-right: 0
       .short
         padding-bottom: 110%
-        a
+        .work_mask
           padding-top: 52%
-
-
 
 //-------  contacts
 
@@ -461,16 +450,14 @@ $input_color: #fff
   background-color: $input_color
   border-radius: 2px
   border: 1px solid #ccc
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
   -webkit-appearance: none
   -moz-appearance: none
-
 
 .form-control:focus
   box-shadow: none
   outline: 0
   border-color: $main_blue
-
 
 .form-control::-ms-expand
   border: 0
@@ -490,7 +477,6 @@ $input_color: #fff
   transform: translateY(-50%)
   font-size: 12px
 
-
 .label-floated
   padding: 5px
   font-size: 14px
@@ -503,10 +489,10 @@ $input_color: #fff
   text-transform: uppercase
   transition: 250ms
 
-
 .btn
   display: block
   margin: 0 auto
+  padding: 0 10px
   width: 180px
   height: 48px
   font-size: 16px
@@ -514,7 +500,6 @@ $input_color: #fff
   text-align: center
   color: #fff
   background: $main_blue
-  vertical-align: middle
   -ms-touch-action: manipulation
   touch-action: manipulation
   cursor: pointer
@@ -533,7 +518,6 @@ $input_color: #fff
   &:active
     transform: translate(1px, 1px)
 
-
 @media screen and (max-width: 761px)
   .form_wrap
     width: 100%
@@ -543,6 +527,7 @@ $input_color: #fff
     margin-right: 15%
   .form-control
     width: 100%
+
 @media screen and (max-width: 561px)
   #contacts
     .contact_container
@@ -572,7 +557,6 @@ $footer_height: 90px
     width: 55px
     height: 52px
     background-size: cover
-
 
 $social_color: #fff
 $social_color_hover: #010267
@@ -647,7 +631,6 @@ $social_color_hover: #010267
 .fa-pinterest:before
   content: "\f0d2"
 
-
 @media screen and (max-width: 761px)
   .copyright_wrap
     top: auto
@@ -660,3 +643,89 @@ $social_color_hover: #010267
       height: 38px
   .f_social
     margin-top: 25px
+
+
+
+//--------------------
+//  modal-slider owerride
+//--------------------
+.portfolio_gallery__item img
+  //height: 380px
+  min-width: 100%;
+  max-width: 100%;
+  
+
+.modal
+  h2
+    font-size: 16px
+    font-weight: bold
+    margin: 15px 0 0 0
+
+
+.portfolio_gallery__describe
+  height: 100%
+  background: #fff
+  font-size: 18px 
+  line-height: 32px
+  padding: 25px 70px
+  text-align: justify
+
+
+.slick-slide 
+  height: 380px
+  overflow: hidden
+  
+
+$slider-arrow-color: blue
+$slider-arrow-hover-color: lighten($slider-arrow-color, 20%)
+.slick-arrow 
+    position: absolute
+    top: 50%
+    margin-top: -65px
+    height: 90px
+    width: 60px
+    color: transparent
+    background-color: transparent
+    border-color: transparent
+    z-index: 5
+    &:before, &:after 
+      content: ''
+      position: absolute
+      top: 36px
+      left: 16px
+      width: 50px
+      height: 6px
+      border-radius: 3px
+      background: $slider-arrow-color
+      transform-origin: 0 100%
+      transform: rotateZ(60deg)
+    
+    &:hover:before 
+      background: $slider-arrow-hover-color
+      transform: rotateZ(50deg)
+    
+    &:after 
+      top: 43px
+      transform-origin: 0 0;
+      transform: rotateZ(-60deg)
+    
+    &:hover:after 
+      background: $slider-arrow-hover-color
+      transform: rotateZ(-50deg)
+    
+    &.slick-prev 
+      left: 0
+    
+    &.slick-next 
+      right: 0
+      &:before 
+        transform-origin: 100% 0
+        top: 43px
+        left: -4px
+      
+      &:after 
+        transform-origin: 100% 100%
+        top: 36px
+        left: -4px
+      
+    
