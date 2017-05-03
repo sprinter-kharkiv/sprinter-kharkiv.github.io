@@ -22,7 +22,7 @@ $(document).ready(function () {
                     number: value,
                     numberStep: comma_separator_number_step
                 },
-                7000
+                5000
             );
         }
     });
@@ -57,8 +57,6 @@ $(document).ready(function () {
             total_payable_sum = ((invoice_value * risk_band_interest_rate) + ((limit - invoice_value) * facility_fee)) * term;
         var arg1 = monthly_repaymant_sum.toFixed(0);
         var arg2 = total_payable_sum.toFixed(0);
-            console.log(arg1);
-            console.log(arg2);
             arg1 = arg1.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
             arg2 = arg2.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
         monthly_repaymant.html('$' + arg1);
