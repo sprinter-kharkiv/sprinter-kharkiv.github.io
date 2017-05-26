@@ -273,7 +273,24 @@ header .util-contact h2 {margin: 0;color: #006171;}
 .banner-form .input-row {
     margin-left: 20px;
 }
-
+.or-div {
+    position: relative;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.or-div:before, .or-div:after {
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 13px;
+    width: 125px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.or-div:after {
+    left: auto;
+    right: 30px;
+}
 .banner-form .cta-phone {
     font-size: 1.2em;
 }
