@@ -20,16 +20,24 @@ header .logo img {
     margin-top: 30px;
     max-width: 220px;
 }
+@media (max-width: 767px) {
+    header {
+        height: 70px;
+    }
 
+    header .logo img {
+        margin-top: 20px;
+        max-width: 170px;
+    }
+}
 /*
  * -- BANNER Backdrop -- 
  */
 
 .banner-title {
-    color: #fff;
     text-align: center;
     width: 60%;
-    margin: 20px auto;
+    margin: 40px auto;
     font-size: 1.8em;
     line-height: 1.2em;
     text-shadow: #000000 0 2px;
@@ -51,7 +59,6 @@ header .logo img {
     float: left;
     width: 60%;
     padding: 0 30px;
-    color: #fff;
 }
 .right-panel {
     float: left;
@@ -62,6 +69,9 @@ header .logo img {
 
 
 @media (max-width: 992px){
+    .banner-title {
+        width: 80%;
+    }
     .left-panel {
         width: 55%;
     }
@@ -70,22 +80,35 @@ header .logo img {
     }
 }
 @media (max-width: 767px){
+    .banner-title {
+        font-size: 1.4em;
+        width: 90%;
+    }
     .left-panel {
         float: none;
         width: 100%;
     }
     .right-panel {
         float: none;
-        width: 100%;
-        max-width: 365px;
+        width: 90%;
+        padding: 0;
         margin: 30px auto;
         border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.78);
     }
     .banner-form .but-submit {
         width: 100%!important;
     }
     .banner-form .input-row {
         margin-left: 0;
+    }
+    .right-panel .ctatext {
+        max-width: 365px;
+        margin: 30px auto 15px;
+    }
+    .right-panel.banner-form .form-signup {
+        max-width: 365px;
+        margin: 0 auto;
     }
 }
 .video-quote {
@@ -110,60 +133,37 @@ header .logo img {
     width: 100%;
     height: 100%;
 }
-/*
-.video-pane img {
-    width: 100%;
-}
-.banner-video  {
-    color: #fff;
-}
-*/
 
-.lp-wrapper {
-    padding: 30px;
-    background: url(../img/back.png);
-}
-.banner-video-content h3{
-    text-align: left;
-    font-style: italic;
-}
-.banner-video-content h3 i{
-    margin-right: 15px;
-}
+
 /*
  * -- BANNER Form -- 
  */
-/*
-.banner-form .ctatext {
-    width: 0%;
-    margin: 0 auto;
-}
-*/
-.banner-form .ctatext h2, .ctatext p {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-}
 
+.ctatext {
+    margin: 0 0 15px 0;
+}
 .banner-form .ctatext h2 {
-    display: inline-block;
+    float: left;
+    width: 30%;
     text-align: left;
     font-weight: bold;
     font-size: 2.5em;
-    margin-right: 10px;
+    margin: 0 2% 0 0;
 }
 
 .banner-form .ctatext p {
-    display: inline-block;
+    float: left;
+    width: 68%;
+    margin: 4px 0 0 0;
     line-height: 1.1;
     text-align: left;
     vertical-align: middle;
 }
-
+/*
 .banner-form {
     color: #fff;
 }
-
+*/
 .banner-form .form-signup {
     margin: 0px;
 }
@@ -184,7 +184,7 @@ header .logo img {
     font-weight: normal;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px; /*behavior: url(js/pie/PIE.htc);*/
+    border-radius: 5px;
     line-height: 2em;
 }
 
@@ -207,54 +207,6 @@ header .logo img {
     border: 2px solid #51a251;
 }
 
-.banner-form .checkbox-row {
-    line-height: 1.3em;
-}
-
-.banner-form .checkbox-row p {
-    line-height: 1.4em;
-    text-align: left;
-    vertical-align: top;
-    float: left;
-    width: 85%;
-    margin: 0;
-}
-
-.banner-form .checkbox-row .ckbox {
-    width: 25px;
-    height: 24px;
-    padding: 0px;
-    display: block !important;
-    clear: left;
-    float: left;
-    margin: 0px 5px 0px 0px;
-}
-
-.banner-form .checkbox-row .ckbox.checked {
-    background-position: 0px -70px;
-}
-
-.banner-form .checkbox-row .ckbox.clicked {
-    background-position: 0px -70px;
-}
-
-.banner-form .checkbox-row .ckbox.clicked.checked {
-    background-position: 0px -70px;
-}
-
-.banner-form h1 {
-    font-size: 2.8em;
-    text-align: left;
-    color: #004fa5;
-    margin: 0;
-    font-size: 3.5em;
-    font-weight: normal;
-}
-
-.banner-form h3 a {
-    color: #fff;
-    text-decoration: none;
-}
 
 .banner-form input.error {
     border-color: #ee371c;
@@ -271,17 +223,7 @@ header .logo img {
     font-weight: bold;
     color: #ee371c;
 }
-/*
-.banner-form .form-fields {
-    margin: 0 10px 0 30px;
-}
 
-@media (max-width: 767px){
-    .banner-form .form-fields {
-        margin: 0 20px;
-    }
-}
-*/
 
 .or-div {
     position: relative;
@@ -301,7 +243,8 @@ header .logo img {
     left: auto;
     right: 30px;
 }
-.banner-form .cta-phone {
+.banner-form .cta-phone a{
+    color: #fff;
     font-size: 1.2em;
 }
 
@@ -341,36 +284,7 @@ header .logo img {
 
 
 
-/*
- * -- Keypoints -- 
- */
-.keypoints-wrapper {
-    background-color: #e6eef1;
-    padding: 50px 0 30px;
-}
 
-.keypoints .key-block {
-    margin: 0px 20px 20px 0px;
-}
-
-.keypoints .key-block img {
-    float: left;
-    margin-right: 10px;
-}
-
-.keypoints .key-text {
-    font-size: .8em;
-    color: #707070;
-    float: left;
-    width: 65%;
-}
-
-.keypoints .key-text h3 {
-    color: #666;
-    font-size: 1.6em;
-    margin: 0;
-    font-weight: normal;
-}
 
 /*
 * -- error msg --
@@ -406,6 +320,7 @@ label.error {
 */
 /* footer styles - new 03072014 */
 /* ======= Base ======= */
+
 body {
     font-family: 'Roboto', arial, sans-serif;
     color: #444444;
@@ -613,6 +528,7 @@ input[type="button"] {
 }
 /* ======= Footer ======= */
 .footer {
+    min-width: 360px;
     background: #253340;
     color: #fff;
     padding-top: 40px;
