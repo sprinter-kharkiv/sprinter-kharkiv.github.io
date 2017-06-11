@@ -2,6 +2,7 @@ $(document).ready(function () {
 
 
     $(window).on('scroll', function () {
+
         var scrTop = $(window).scrollTop();
         var elem = $('#invest_count');
         var value = elem.attr('data-value');
@@ -13,14 +14,15 @@ $(document).ready(function () {
         } else {
             $('.header').removeClass('fixed');
         }
+        
         // counter
-        if (scrTop > elem.offset().top - $(window).height() + 50) {
+        if (elem.length != 0 && scrTop > elem.offset().top - $(window).height() + 50) {
             elem.animateNumber(
                 {
                     number: value,
                     numberStep: comma_separator_number_step
                 },
-                1000
+                5000
             );
         }
     });
@@ -28,7 +30,17 @@ $(document).ready(function () {
 
     $(".range_summ").asRange({
         keyboard: true,
-        tip: true
+        tip: true,
+        format: function(value) {
+            //return value.toLocaleString();
+
+            value = value.toString();
+            var pattern = /(-?\d+)(\d{3})/;
+            while (pattern.test(value))
+                value = value.replace(pattern, "$1 $2");
+
+            return value;
+        }
     });
     // when the value is changed
 
@@ -43,24 +55,34 @@ $(document).ready(function () {
 
             monthly_repaymant_sum = (invoice_value * risk_band_interest_rate) + (limit - invoice_value) * facility_fee,
             total_payable_sum = ((invoice_value * risk_band_interest_rate) + ((limit - invoice_value) * facility_fee)) * term;
-
-        monthly_repaymant.html('$' + monthly_repaymant_sum.toFixed(2));
-        total_payable.html('$' + total_payable_sum.toFixed(2));
+        var arg1 = monthly_repaymant_sum.toFixed(0);
+        var arg2 = total_payable_sum.toFixed(0);
+            arg1 = arg1.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
+            arg2 = arg2.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1,');
+        monthly_repaymant.html('$' + arg1);
+        total_payable.html('$' + arg2);
     });
 
 
     var email = $('#email');
     var phone = $('#phone');
+    var modal_email = $('#modal-email');
+    var modal_phone = $('#modal-phone');
     var input = $('.text_input');
     var fbtn =  $('.form_btn');
+    var mbtn =  $('.modal_btn');
 
-    function check_phone(phone) {
+
+
+
+    function check_phone(phone, modPhone) {
         var re = /^\d[\d\(\)\ -]{4,14}\d$/;
         var myPhone = phone.val();
         var valid = re.test(myPhone);
         if (valid) {
             phone.addClass('checked');
             phone.removeClass('has_error');
+            modPhone.val(myPhone);
         } else {
             phone.removeClass('checked');
             phone.addClass('has_error');
@@ -69,15 +91,16 @@ $(document).ready(function () {
             phone.removeClass('checked');
             phone.removeClass('has_error');
         }
-    };
+    }
 
-    function check_mail(email) {
+    function check_mail(email, modEmail) {
         var re = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
         var myMail = email.val();
         var valid = re.test(myMail);
         if (valid) {
             email.addClass('checked');
             email.removeClass('has_error');
+            modEmail.val(myMail);
         } else {
             email.removeClass('checked');
             email.addClass('has_error');
@@ -86,28 +109,27 @@ $(document).ready(function () {
             email.removeClass('checked');
             email.removeClass('has_error');
         }
-    };
+    }
     function hidd_message() {
         if (email.hasClass('checked') && phone.hasClass('checked')) {
-            $('.calculation_message').css('display', 'block');
             fbtn.prop('disabled', false);
         }else{
             fbtn.prop('disabled', 'disabled');
         }
-
     }
 
+
     email.blur (function() {
-        check_mail(email);
+        check_mail(email, modal_email);
     });
     email.mouseleave (function() {
-        check_mail(email);
+        check_mail(email, modal_email);
     });
     phone.blur (function() {
-        check_phone(phone);
+        check_phone(phone, modal_phone);
     });
     phone.mouseleave (function() {
-        check_phone(phone);
+        check_phone(phone, modal_phone);
     });
     input.mouseleave(function () {
         hidd_message();
@@ -116,6 +138,12 @@ $(document).ready(function () {
         hidd_message();
     });
 
+    fbtn.on('click', function(event){
+        event.preventDefault();
+        $('.calculation_message').css('display', 'block');
+        fbtn.css('display', 'none');
+        $('.j-modal-toggle').css('display', 'inline-block');
+    });
 
     $(".credit_form").submit(function () {
         var form = $(this);
@@ -129,7 +157,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 data: data,
                 beforeSend: function (data) {
-                    fbtn.attr('disabled', 'disabled');
+                    mbtn.attr('disabled', 'disabled');
                 },
                 success: function (data) {
                     if (data['error']) {
@@ -144,12 +172,25 @@ $(document).ready(function () {
                     $('.calculator_text').addClass('hidden');
                 },
                 complete: function (data) {
-                    fbtn.prop('disabled', false);
+                    mbtn.prop('disabled', false);
                 }
 
             });
         }
         return false;
     });
+
+    $('#main_bg_img').change(function() {
+        var input = $(this)[0];
+        if ( input.files && input.files[0] ) {
+            if ( input.files[0].type.match('image.*') ) {
+                var reader = new FileReader();
+                reader.onload = function(e) { $('#image_preview').attr('src', e.target.result); }
+                reader.readAsDataURL(input.files[0]);
+            } else console.log('is not image mime type');
+        } else console.log('not isset files data or files API not supordet');
+    });
+
+
 
 });
