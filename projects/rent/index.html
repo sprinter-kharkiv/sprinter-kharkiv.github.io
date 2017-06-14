@@ -48,7 +48,21 @@
 
 <!-- Здесь пишем код -->
 
-
+<div class="back-call">
+    <div class="back-call_trigger">
+        <img class="back-call_bg" src="img/back-call_icon.png" alt="">
+        <div class="back-call_iner" style="background-image: url(img/back-call_icon.png)"></div>
+    </div>
+    <form class="back-call_form" action="">
+        <div class="message-block hidden"></div>
+        <button type="button" class="back-call_close close"><span aria-hidden="true">&times;</span></button>
+        <label for="re-call-number">Type your number</label>
+        <span class="text">And our managar to call you NOW!</span>
+        <input id="re-call-number" name="re-call-number" type="tel">
+        <input class="btn" type="submit" value="call me!">
+    </form>
+    <div class="overlay"></div>
+</div>
 <section class="header">
     <div class="container">
         <div class="logo-wrap">
@@ -57,7 +71,7 @@
         <div class="menu-trigger j-menu-trig" id="trig">
             <span></span>
         </div>
-        <div class="header-nav----">
+        <div>
             <nav class="header-nav" role="navigation">
                 <div class="header-nav__item" role="menuitem"><a href="#perfectrent">Perfect rent</a></div>
                 <div class="header-nav__item active" role="menuitem"><a href="#autoflat">Autoflat 24</a></div>
@@ -105,229 +119,293 @@
                 <li role="presentation"><a href="#model" aria-controls="model" role="tab" data-toggle="tab">Choose
                     model</a>
                 </li>
-                <li role="presentation"><a href="#extras" aria-controls="extras" role="tab" data-toggle="tab">Select
+                <li role="presentation" class="hidd-mobile"><a href="#extras" aria-controls="extras" role="tab"
+                                                               data-toggle="tab">Select
                     extras</a>
                 </li>
-                <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Your
+                <li role="presentation" class="hidd-mobile"><a href="#price" aria-controls="price" role="tab"
+                                                               data-toggle="tab">Your
                     price</a>
                 </li>
             </ul>
             <!-- Tab panes -->
             <div class="tab-content clearfix">
                 <div role="tabpanel" class="tab-pane active" id="brand">
-                    <div class="tab-slider">
-                        <div class="brand-list">
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
+                    <form id="choose_brand" action="">
+                        <div class="brand-slider">
+                            <div class="brand-list">
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                            </div>
+                            <div class="brand-list">
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                            </div>
+                            <div class="brand-list">
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                            </div>
+                            <div class="brand-list">
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mersedes.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_nissan.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                    <span class="marker"></span>
+                                </label>
+                                <label style="background-image:url(img/brands/logo_mazda.jpg)">
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                    <span class="marker"></span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="brand-list">
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                        </div>
-                        <div class="brand-list">
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                        </div>
-                        <div class="brand-list">
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mersedes.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_nissan.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                <span class="marker"></span>
-                            </label>
-                            <label style="background-image:url(img/brands/logo_mazda.jpg)">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                <span class="marker"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="btn submit-button disabled">Confirm</div>
+                        <input type="submit" class="btn submit-button disabled" value="Confirm">
+                    </form>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="model">
-                    <ul class="tabpanel_list">
-                        <li>
-                            <div class="radio">
+                    <form id="choose_model" action="">
+                        <div class="model-slider">
+                            <div class="model-list">
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
-                                           checked>
-                                    Option one is this and that&mdash;be sure to include why it's great
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda6
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda3
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    CX-5
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    MX-5
                                 </label>
                             </div>
-                        </li>
-                        <li>
-                            <div class="radio">
+                            <div class="model-list">
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                    Option two can be something else and selecting it will deselect option one
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda6
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda3
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    CX-5
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    MX-5
                                 </label>
                             </div>
-                        </li>
-                        <li>
-                            <div class="radio disabled">
+                            <div class="model-list">
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3"
-                                           disabled>
-                                    Option three is disabled
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda6
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    Mazda3
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    CX-5
+                                </label>
+                                <label>
+                                    <input type="radio" name="optionsRadios" value="option1">
+                                    MX-5
                                 </label>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                        <input type="submit" class="btn submit-button disabled" value="Confirm">
+                    </form>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="extras">
-                    <ul class="tabpanel_list ">
-                        <li>extras-1</li>
-                        <li>extras-2</li>
-                    </ul>
+                    <form id="choose_options" action="">
+                        <div class="options-slider">
+                            <div class="options-list">
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    ABS
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    ESP
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    Conditioner
+                                </label>
+                            </div>
+                            <div class="options-list">
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    ABS
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    ESP
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="optionsRadios" value="option1">
+                                    Conditioner
+                                </label>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn submit-button disabled" value="Confirm">
+                    </form>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="price">
-                    <ul class="tabpanel_list clearfix">
-                        <li>price-1</li>
-                        <li>price-2</li>
-                    </ul>
+                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad enim illum magnam nemo non quae
+                        recusandae suscipit tempora tenetur totam. Architecto cum cupiditate iure nobis obcaecati
+                        officiis quae suscipit. Ducimus.</p>
                 </div>
             </div>
         </div>
@@ -658,6 +736,7 @@
             <form class="subscribe-form" action="">
                 <input type="text" name="first-name" placeholder="Your Name">
                 <input type="email" name="email" placeholder="Email Adress">
+                <div class="subscribe_message-block hidden"><h3>Thank you, request was successfully sent!</h3></div>
                 <div class="btn">Senden</div>
             </form>
         </div>
