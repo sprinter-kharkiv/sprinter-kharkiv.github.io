@@ -68,7 +68,15 @@ $(function(){
     if($('.banner_slider').length) {
         $('.banner_slider').slick({
             dots: true,
-            speed: 300
+            speed: 300,
+			responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        dots: false
+                    }
+                }
+			]
         });
     }
 	
