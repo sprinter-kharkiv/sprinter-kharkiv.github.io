@@ -53,16 +53,34 @@ $(function(){
     });
 
 	/* catalog SUBmenu*/
-    $('.has_submenu').on('click', function () {
-        $(this).toggleClass('vis-submenu');
-        console.log('555')
-        return false;
+
+    $('.has_submenu').click(function(){
+        if(!$(this).hasClass('vis-submenu')){
+            $('.has_submenu').removeClass('vis-submenu');
+            $(this).addClass('vis-submenu');
+        } else {
+            $(this).removeClass('vis-submenu');
+        }
+    });
+
+	/* hidd catalog*/
+
+    $(document).mouseup(function (e){
+        var cat = $(".header_nav__catalog");
+        if (!cat.is(e.target) && cat.has(e.target).length === 0) {
+            console.log('mouseup');
+            cat.parent().removeClass('vis-catalog');
+        }
+    });
+    $(document).keydown(function(e) {
+        if( e.keyCode === 27 ) {
+            $(".header_nav__catalog").parent().removeClass('vis-catalog');
+            return false;
+        }
     });
 
 
-
-
-	/* components */
+    /* components */
 
 
     if($('.banner_slider').length) {
