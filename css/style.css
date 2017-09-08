@@ -45,29 +45,30 @@ body {
     min-width: 320px;
     margin: 0 auto;
     padding: 0 12px;
-    background: #fff;
 }
-
 
 .hidden {
     display: none;
 }
+
 .section-title {
     margin-bottom: 20px;
     font-size: 26px;
-    line-height: 26px;
+    line-height: 32px;
     font-family: OpenSans-Bold, sans-serif;
 }
+
 .about {
     padding-top: 40px;
     padding-bottom: 30px;
+    background: #fff;
 }
+
 .about .text-block {
     width: 70%;
     float: right;
     padding-right: 20px;
 }
-
 
 .about p {
     font-size: 18px;
@@ -75,13 +76,16 @@ body {
     text-align: justify;
 }
 
-
-
+.projects.container {
+    background: #fff;
+}
 .project-block {
     position: relative;
     padding-top: 60px;
     overflow: hidden;
+    background: #fff;
 }
+
 .project-block:after {
     content: '';
     position: absolute;
@@ -92,32 +96,33 @@ body {
     margin-left: -150px;
     background: #91f561;
 }
+
 .project-block:last-child:after {
     display: none;
 }
+
 .project-block__img {
     width: 40%;
 }
+
 .project-block__img.to-left {
     margin-left: 10%;
 }
+
 .project-block__img.to-right {
     margin-right: 10%;
 }
 
-.project-block__img img{
+.project-block__img img {
     width: 100%;
     display: block;
 }
+
 .project-block__text {
     width: 46%;
-}
-
-.project-block__text.to-right {
-    margin-right: 4%;
-}
-.project-block__text.to-left {
-    margin-left: 4%;
+    padding-bottom: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .project-block__titile {
@@ -125,36 +130,70 @@ body {
     font-size: 22px;
     line-height: 22px;
     font-family: OpenSans-Bold, sans-serif;
+    text-align: left;
 }
+
 .project-block__describe {
     margin-bottom: 25px;
     font-size: 16px;
     line-height: 30px;
+    text-align: justify;
 }
 
-
-
-
-
-
-.contact-section {
-    border-top: 1px solid #F0EEEE;
+.to-all-projects {
+    background: #fff;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 30px;
 }
 
-.contact-section__title {
+.sometext {
+    background-image: url("../images/NoteBookAir.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 16px;
+    line-height: 30px;
+    color: #F0EEEE;
+}
+
+.sometext .mask {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.sometext .section-title {
+    margin-top: 40px;
+    color: #F0EEEE;
+}
+.sometext p {
+    text-align: justify;
+}
+.sometext ul {
+    margin-left: 30px;
+    list-style: circle;
+}
+.contact-section {
+    border-top: 1px solid #F0EEEE;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background: #fff;
+}
+
+.large__title {
     font-size: 30px;
     line-height: 45px;
     margin-bottom: 20px;
 }
+
 .to-left {
     float: left;
 }
+
 .to-right {
     float: right;
 }
+
 .arrow-right {
     padding-left: 10px;
 }
@@ -197,4 +236,29 @@ section.footer {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 30px;
+    background: #fff;
+}
+
+@media screen and (max-width: 721px) {
+    .about .text-block {
+        width: 100%;
+        padding-right: 0;
+    }
+    .project-block .project-block__img {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-block .project-block__text {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .contact-section__title {
+        font-size: 24px;
+    }
+
 }
