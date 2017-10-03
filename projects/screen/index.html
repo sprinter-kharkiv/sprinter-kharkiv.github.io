@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>screen interactive</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!--header start-->
+<section class="header container">
+    <h1 class="main-title">Тестовое задание</h1>
+    <div class="header-nav">
+        <div class="header-nav_trigger j-trigger">
+            <span class="header-nav_trigger__icon"></span>
+        </div>
+        <ul class="header-nav_list">
+            <li class="header-nav_list__item"><a class="header-nav_list__link" href="#">Завтрак</a></li>
+            <li class="header-nav_list__item"><a class="header-nav_list__link" href="#">Поздний завтрак</a></li>
+            <li class="header-nav_list__item"><a class="header-nav_list__link" href="#">Обед</a></li>
+            <li class="header-nav_list__item"><a class="header-nav_list__link" href="#">Ужин</a></li>
+            <li class="header-nav_list__item"><a class="header-nav_list__link" href="#">Я на диете</a></li>
+        </ul>
+    </div>
+</section>
+<!--header end-->
+
+
+<!--content strart-->
+<section class="main-content container clearfix">
+    <div class="content-wrap">
+        <div class="main-content_text clearfix ">
+            <p>Предыдущая лента Мартина Скорсезе «Хранитель времени» (оригинальное название — «Hugo») оказалась для
+                кинематографиста довольно нетипичной. Не то чтобы у него получилась совсем детская лента — но это кино о
+                детях, открывающих мир
+                и заражающих своей увлеченностью разочарованных в жизни взрослых; кино, способное заинтересовать и
+                совсем юных зрителей (не в последнюю очередь благодаря 3D-спецэффектам).
+            </p>
+            <p>
+                Новая работа Скорсезе «Волк с Уолл-стрит» — в каком-то смысле полная противоположность: ленту о выходках
+                финансиста Джордана Белфорта точно не стоит показывать детям, да они, в общем-то, и сами вряд ли захотят
+                ее смотреть.
+            </p>
+            <p>
+                Сам Белфорт существует в действительности, так что его история, какой бы дикой она
+                ни казалась, более-менее близка к реальности. Сценаристы поменяли некоторые имена (например, жен
+                финансиста звали Дениз и Надин, а не Тереза и Наоми). Общий же ход событий, по всей видимости, передан в
+                картине достаточно точно. Белфорт с юных лет интересовался деньгами и их распределением, в двадцать с
+                небольшим пошел
+                на работу в финансовую фирму, а чуть позже создал собственную компанию. </p>
+        </div>
+        <img class="main-content_image" src="img/img-1.jpg" alt="">
+    </div>
+    <div class="additional-info">
+        <h3 class="additional-info_title">Смотрите также:</h3>
+        <div class="additional-info_item"><i class="additional-icon icon-calendar"></i><a href="#"
+                                                                                          class="additional-info_link">Наш
+            календарь</a></div>
+        <div class="j-contact additional-info_item"><i class="additional-icon icon-mail"></i><a href="#"
+                                                                                                class="additional-info_link">Связаться
+            с нами</a></div>
+    </div>
+
+</section>
+<!--content end-->
+
+<!--footer start-->
+
+<section class="footer-wrap container">
+    <div class="footer">
+        <p>© 2014 <a class="copyright-link" href="#">Screen Interactive</a>
+        </p>
+    </div>
+</section>
+<!-- footer end-->
+
+<!-- modal start-->
+<div class="j-modal-contact modal">
+    <div class="j-modal-close modal-close">
+        <span></span>
+    </div>
+
+    <form id="form" action="#" method="post">
+        <h3 class="modal-title">Связаться с нами</h3>
+        <label for="title">Тема</label>
+        <input id="title" type="text" name="title" placeholder="" required/>
+        <label for="message">Сообщение</label>
+        <textarea name="message" id="message"></textarea>
+        <input type="submit" value="Отправить" class=""/>
+    </form>
+</div>
+<div class="j-overlay overlay"></div>
+<!-- modal end-->
+
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
+
+
+
+
