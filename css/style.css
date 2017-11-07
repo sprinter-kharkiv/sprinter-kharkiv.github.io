@@ -81,7 +81,9 @@ body {
 .navigation_item {
     display: inline-block;
 }
-
+.navigation_link.active {
+    color: #91f561;
+}
 .navigation_link {
     position: relative;
     display: inline-block;
@@ -469,6 +471,36 @@ section.footer {
     animation-name: hover-icon-skype;
 }
 
+
+.all-projects {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.all-projects_link {
+    display: inline-block;
+    width: 29%;
+    margin: 3% 1.5% 1%;
+    box-shadow: 10px 10px 14px 6px rgba(0,0,0,.6);
+    transition: all .3s ease 0s;
+}
+.all-projects_link:hover {
+    transform: translateY(-4px);
+    box-shadow: 25px 25px 35px 7px rgba(0,0,0,.6);
+}
+.all-projects_link img {
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 @keyframes hover-icon-mail {
     0% {
         transform: translateY(0px);
@@ -559,6 +591,7 @@ section.footer {
         text-align: center;
         cursor: pointer;
         z-index: 11;
+        user-select: none;
     }
 
     .menu-trigger:before {
@@ -615,13 +648,13 @@ section.footer {
 
     .header.vis-menu .menu-trigger-inner {
         width: 0;
-        transition: width 1s ease;
+        transition: width .6s ease;
     }
 
     .header.vis-menu .menu-trigger-inner:before, .header.vis-menu .menu-trigger-inner:after {
         top: 0;
         transition: top .5s ease;
-        animation-duration: 1.4s;
+        animation-duration: 0.6s;
         animation-delay: .5s;
         animation-fill-mode: forwards;
         transform-origin: 50% 50%;
@@ -745,6 +778,17 @@ section.footer {
 
     .contact-section__title {
         font-size: 24px;
+    }
+
+    .all-projects {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .all-projects_link {
+        width: 45%;
+        margin: 3% 2% 4%;
+        box-shadow: 10px 10px 14px 6px rgba(0,0,0,.6);
+        transition: all .3s ease 0s;
     }
 
 }

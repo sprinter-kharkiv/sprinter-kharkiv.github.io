@@ -2,13 +2,7 @@
  * Created by Admin on 25.11.2015.
  */
 $(document).ready(function () {
-    $("#portfolio_grid").mixItUp();
 
-    $(".popup").magnificPopup({type:"image"});
-    $(".popup_content").magnificPopup({
-        type:"inline",
-        midClick: true
-    });
     $(".portfolio_item").each(function(i) {
         $(this).find("a").attr("href", "#work_" + i);
         $(this).find(".podrt_descr").attr("id", "work_" + i);
