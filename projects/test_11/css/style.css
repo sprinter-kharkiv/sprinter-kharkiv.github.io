@@ -36,13 +36,14 @@ body {
     min-width: 320px;
     padding: 0 20px;
     margin: 0 auto;
-    //background: #ccc;
 }
 .section_title {
     font-size: 50px;
     line-height: 50px;
     text-transform: uppercase;
     font-family: nerisblack;
+    padding-left: 10px;
+    padding-right: 10px; 
 }
 
 
@@ -134,7 +135,6 @@ body {
     width: 50%;
     float: left;
     padding-bottom: 40%;
-    //background: #bddfc2;
 }
 .tabs_content__img {
     position: absolute;
@@ -158,10 +158,10 @@ body {
     transition: all .4s ease;
 }
 .slide-tabs_describe.active {
-    border-color: #434149;
+    border-color: #B0AEB6;
 }
 .slide-tabs_describe:hover {
-    border-color: #434149;
+    border-color: #B0AEB6;
     background: rgba(255,255,255, 0.6);
 }
 .slide-tabs_describe:active {
@@ -289,6 +289,9 @@ body {
 }
 .range-devider_item:last-child {
     margin-right: -4px;
+}
+label[for='range-summ'] {
+    display: none;
 }
 
 

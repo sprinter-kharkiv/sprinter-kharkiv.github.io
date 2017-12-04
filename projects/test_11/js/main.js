@@ -69,6 +69,7 @@
     });
 
 
+    /*  init asRange slider */
     $('.range').asRange({
         scale: true,
         format: function (value) {
@@ -78,7 +79,14 @@
         }
     });
 
+    $(function() {
+        var devider = "<span class='range-devider_item'></span>";
+        for(let i=0; i<10; i++){
+            $('.range-devider').append(devider);
+        }
+    });
+
+
 
 });
-
 
