@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="no-js" lang="ru">
+<html class="" lang="ru">
 
 <head>
 
     <meta charset="utf-8">
 
-    <title>Checkout</title>
+    <title>Checkout page</title>
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,20 +30,23 @@
 
 
     <!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-    <style></style>
+    <style>
 
+    </style>
+    <link rel="stylesheet" href="css/header.min.css">
     <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
     <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
     <!-- Load CSS Start -->
-    <script>loadLocalStorageCSS("webfonts", "css/fonts.min.css?ver=1.0.0");</script>
-    <script>loadCSS("css/header.min.css?ver=1.0.0", false, "all");</script>
     <script>loadCSS("css/main.min.css?ver=1.0.0", false, "all");</script>
+
+
     <!-- Load CSS End -->
 
     <!-- Load CSS Compiled without JS -->
+
     <noscript>
-        <link rel="stylesheet" href="css/fonts.min.css">
+        <link rel="stylesheet" href="css/header.min.css">
         <link rel="stylesheet" href="css/main.min.css">
     </noscript>
 
@@ -377,45 +380,43 @@
                     </ul>
                 </div>
                 <div class="main__content">
-                    <div class="step" data-step="contact_information">
+                    <div class="step">
 
                         <form novalidate="novalidate" class="edit_checkout" action="/" method="post">
                             <div class="step__sections">
 
                                 <div class="section">
                                     <div class="section__header">
-                                        <h2 class="section__title contact-title">Contact information</h2>
+                                        <div class="layout-flex layout-flex--tight-vertical layout-flex--loose-horizontal layout-flex--wrap">
+                                            <h2 class="section__title layout-flex__item layout-flex__item--stretch">Contact information</h2>
 
-                                        <p class="section__header-login">
-                                            <span aria-hidden="true">Already have an account?</span>
-                                            <a href="#">Log in</a>
-                                        </p>
+                                            <p class="layout-flex__item">
+                                                <span>Already have an account?</span>
+                                                <a href="#">Log in</a>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="section__content" data-section="customer-information"
-                                         data-shopify-pay-validate-on-load="false">
+
+                                    <div class="section__content">
                                         <div class="fieldset">
                                             <div class="field field--required">
                                                 <label class="field__label" for="checkout_email">Email</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="Email" autocapitalize="off" spellcheck="false"
-                                                           autocomplete="shipping email" autofocus="true"
-                                                           data-backup="customer_email" class="field__input"
-                                                           aria-required="true" size="30" type="email"
+                                                    <input placeholder="Email" class="field__input"                                                       size="30" type="email"
                                                            name="checkout[email]" id="checkout_email"/>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="fieldset-description" data-buyer-accepts-marketing="">
+                                        <div class="fieldset-description">
                                             <div class="section__content">
                                                 <div class="checkbox-wrapper">
                                                     <div class="checkbox__input">
-                                                        <input name="checkout[buyer_accepts_marketing]" type="hidden" value="0"><input class="input-checkbox" data-backup="buyer_accepts_marketing" type="checkbox" value="1" checked="checked" name="checkout[buyer_accepts_marketing]" id="checkout_buyer_accepts_marketing">
+                                                        <input class="input-checkbox" type="checkbox" value="1" checked="checked" name="checkout[buyer_accepts_marketing]" id="checkout_buyer_accepts_marketing">
                                                     </div>
                                                     <label class="checkbox__label" for="checkout_buyer_accepts_marketing">
                                                         Keep me up to date on news and exclusive offers
                                                     </label></div>
-
                                             </div>
                                         </div>
 
@@ -432,83 +433,65 @@
                                 
                                     <div class="section__content">
                                 
-                                        <div class="fieldset" data-address-fields>
+                                        <div class="fieldset">
                                 
-                                            <div class="field--half field field--required"
-                                                 data-address-field="first_name">
+                                            <div class="field--half field field--required">
                                                 <label class="field__label" for="checkout_shipping_address_first_name">First
                                                     name</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="First name" autocomplete="shipping given-name"
-                                                           data-backup="first_name" class="field__input"
-                                                           aria-required="true" size="30" type="text"
+                                                    <input placeholder="First name" class="field__input"
+                                                           size="30" type="text"
                                                            name="checkout[shipping_address][first_name]"
                                                            id="checkout_shipping_address_first_name"/>
                                                 </div>
                                             </div>
-                                            <div class="field--half field field--required"
-                                                 data-address-field="last_name">
+                                            <div class="field--half field field--required">
                                                 <label class="field__label" for="checkout_shipping_address_last_name">Last
                                                     name</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="Last name" autocomplete="shipping family-name"
-                                                           data-backup="last_name" class="field__input"
-                                                           aria-required="true"
+                                                    <input placeholder="Last name" class="field__input"
                                                            size="30" type="text"
                                                            name="checkout[shipping_address][last_name]"
                                                            id="checkout_shipping_address_last_name"/>
                                                 </div>
                                             </div>
                                 
-                                            <div class="field--two-thirds field field--required"
-                                                 data-address-field="address1" data-google-places="true">
+                                            <div class="field--two-thirds field field--required">
                                                 <label class="field__label"
                                                        for="checkout_shipping_address_address1">Address</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="Address" autocomplete="shipping address-line1"
-                                                           autocorrect="off" data-backup="address1"
-                                                           data-google-autocomplete="true"
-                                                           data-google-autocomplete-title="Suggestions"
-                                                           class="field__input"
-                                                           aria-required="true" size="30" type="text"
+                                                    <input placeholder="Address" class="field__input"
+                                                           size="30" type="text"
                                                            name="checkout[shipping_address][address1]"
                                                            id="checkout_shipping_address_address1"/>
                                                 </div>
                                             </div>
-                                            <div class="field--third field field--optional" data-google-places="true"
-                                                 data-address-field="address2">
+                                            <div class="field--third field field--optional">
                                                 <label class="field__label" for="checkout_shipping_address_address2">Apt,
                                                     suite, etc. (optional)</label>
                                                 <div class="field__input-wrapper">
                                                     <input placeholder="Apt, suite, etc. (optional)"
-                                                           autocomplete="shipping address-line2" autocorrect="off"
-                                                           data-backup="address2" class="field__input" size="30"
+                                                           class="field__input" size="30"
                                                            type="text"
                                                            name="checkout[shipping_address][address2]"
                                                            id="checkout_shipping_address_address2"/>
                                                 </div>
                                             </div>
-                                            <div data-address-field="city" data-google-places="true"
-                                                 class="field field--required">
+                                            <div class="field field--required">
                                                 <label class="field__label"
                                                        for="checkout_shipping_address_city">City</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="City" autocomplete="shipping address-level2"
-                                                           autocorrect="off" data-backup="city" class="field__input"
-                                                           aria-required="true" size="30" type="text"
+                                                    <input placeholder="City" class="field__input"
+                                                           size="30" type="text"
                                                            name="checkout[shipping_address][city]"
                                                            id="checkout_shipping_address_city"/>
                                                 </div>
                                             </div>
-                                            <div class="field--half field field--required" data-address-field="country"
-                                                 data-google-places="true">
+                                            <div class="field--half field field--required">
                                                 <label class="field__label"
                                                        for="checkout_shipping_address_country">Country</label>
                                                 <div class="field__input-wrapper field__input-wrapper--select">
-                                                    <select size="1" autocomplete="shipping country"
-                                                            data-backup="country"
-                                                            class="field__input field__input--select"
-                                                            aria-required="true"
+                                                    <select size="1" class="field__input field__input--select"
                                                             name="checkout[shipping_address][country]"
                                                             id="checkout_shipping_address_country">
                                                         <option data-code="US" value="United States">United States
@@ -652,36 +635,26 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="field--half field field--required" data-address-field="zip"
-                                                 data-google-places="true">
+                                            <div class="field--half field field--required">
                                                 <label class="field__label" for="checkout_shipping_address_zip">Postal
                                                     code</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="Postal code" autocomplete="shipping postal-code"
-                                                           data-backup="zip" data-google-autocomplete="true"
-                                                           data-google-autocomplete-title="Suggestions"
-                                                           class="field__input field__input--zip" aria-required="true"
-                                                           size="30" type="text" name="checkout[shipping_address][zip]"
+                                                    <input placeholder="Postal code" class="field__input field__input--zip" size="30" type="text" name="checkout[shipping_address][zip]"
                                                            id="checkout_shipping_address_zip"/>
                                                 </div>
                                             </div>
-                                            <div data-address-field="phone" class="field field--required">
+                                            <div class="field field--required">
                                                 <label class="field__label"
                                                        for="checkout_shipping_address_phone">Phone</label>
                                                 <div class="field__input-wrapper">
-                                                    <input placeholder="Phone" autocomplete="shipping tel"
-                                                           data-backup="phone" data-phone-formatter="true"
-                                                           data-phone-formatter-country-select="[name=&#39;checkout[shipping_address][country]&#39;]"
+                                                    <input placeholder="Phone"
                                                            class="field__input field__input--numeric"
-                                                           aria-required="true"
                                                            size="30" type="tel" name="checkout[shipping_address][phone]"
                                                            id="checkout_shipping_address_phone"/>
                                                 </div>
                                             </div>
                                 
-                                
                                         </div>
-                                
                                     </div>
                                 </div>
 
@@ -900,9 +873,7 @@
                                     <div class="section__content">
                                         <div class="checkbox-wrapper">
                                             <div class="checkbox__input">
-                                                <input size="30" type="hidden" name="checkout[remember_me]"/>
-                                                <input name="checkout[remember_me]" type="hidden" value="0"/><input
-                                                    class="input-checkbox" data-backup="remember_me" type="checkbox"
+                                                <input class="input-checkbox"  type="checkbox"
                                                     value="1" name="checkout[remember_me]" id="checkout_remember_me"/>
                                             </div>
                                             <label class="checkbox__label" for="checkout_remember_me">
