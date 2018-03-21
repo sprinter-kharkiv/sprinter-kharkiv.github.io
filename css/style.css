@@ -110,6 +110,7 @@ body {
     visibility: hidden;
     -webkit-filter: blur(8px);
     filter: blur(8px);
+    will-change: filter;
 }
 
 .navigation_link:hover:before {
