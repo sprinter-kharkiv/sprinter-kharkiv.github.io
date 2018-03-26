@@ -24,15 +24,14 @@ $(document).ready(function () {
 
 });
 
-$(window).bind('mousewheel', function(event) {
-	var st = $(this).scrollTop();
-if (event.originalEvent.wheelDelta >= 0 && st >= 600) {
-	$('.scroll-top').addClass('visible');
-}
-else {
-    $('.scroll-top').removeClass('visible');
-};
+var scrollTop = $(window).scrollTop();
+
+$(window).scroll(function() {
+    if($(window).scrollTop() < scrollTop && $(window).scrollTop() >= 500){
+        $('.scroll-top').addClass('visible');
+        scrollTop = $(window).scrollTop();
+    } else{
+        $('.scroll-top').removeClass('visible');
+        scrollTop = $(window).scrollTop();
+    }
 });
-$('.scroll-top').on('click', function(){
-	$('.scroll-top').removeClass('visible');
-})
