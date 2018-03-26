@@ -516,13 +516,55 @@ section.footer {
     width: 100%;
 }
 
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #91f561;
+    z-index: 20;
+    transition: opacity .6s 2s ease, box-shadow .6s ease;
+
+}
+
+.scroll-top:before {
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    cursor: pointer;
+    animation: rotete-scroll-arrow 1.4s infinite;
+}
+.scroll-top:hover {
+    box-shadow: 0 0 18px 6px rgba(0, 0, 0, .3);
+}
+.scroll-top:active {
+    box-shadow: 0 0 18px 1px rgba(0, 0, 0, .3);
+}
+.scroll-top.visible{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s .3s ease;
+}
 
 
 
-
-
-
-
+@keyframes rotete-scroll-arrow {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
 
 @keyframes hover-icon-mail {
     0% {
