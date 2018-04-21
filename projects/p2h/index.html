@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>test page</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+    <!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+    <style></style>
+    <link rel="stylesheet" href="css/header.min.css">
+    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+
+    <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
+
+    <!-- Load CSS Start -->
+    <script>loadCSS("css/main.min.css?ver=1.0.0", false, "all");</script>
+    <!-- Load CSS End -->
+
+    <!-- Load CSS Compiled without JS -->
+    <noscript>
+        <link rel="stylesheet" href="css/main.min.css">
+    </noscript>
+
+</head>
+
+<body>
+<div class="g-wrapper">
+
+    <header class="header-page">
+        <div class="container header-wrap">
+            <a href="/" class="g-logo">
+                <img src="img/logo.png" alt="test page for p2h">
+            </a>
+            <div class="hamburger" id="hamburger-6">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <nav class="nav-wrap">
+                <ul class="main-navigation ">
+                    <li class="main-navigation__item"><a href="#">Apps</a></li>
+                    <li class="main-navigation__item active"><a href="#">Gadgets</a></li>
+                    <li class="main-navigation__item"><a href="#">Science</a></li>
+                    <li class="main-navigation__item"><a href="#">Nature</a></li>
+                    <li class="main-navigation__item"><a href="#">Creative</a></li>
+                </ul>
+                <form action="" class="main-search combined-input">
+                    <label for="search" aria-hidden="true" class="visibility-hidden">search</label>
+                    <input class="form-input" id="search" type="search" name="search" placeholder="Search">
+                    <button class="form-btn" type="submit"><i class="icon-search" aria-hidden="true"></i></button>
+                </form>
+            
+            </nav>
+        </div>
+    </header>
+    <div class="g-content">
+
+        <section class="banner">
+            <div class="slick-slider">
+                <div class="slide_item">
+                    <picture>
+                        <source srcset="img/bg_slider/slide_1_mob.jpg"
+                                media="(max-width: 540px)">
+                        <img src="img/bg_slider/slide_1.jpg" alt="...">
+                    </picture>
+                </div>
+                <div class="slide_item">
+                    <picture>
+                        <source srcset="img/bg_slider/slide_2_mob.jpg"
+                                media="(max-width: 540px)">
+                        <img src="img/bg_slider/slide_2.jpg" alt="...">
+                    </picture>
+                </div>
+                <div class="slide_item">
+                    <picture>
+                        <source srcset="img/bg_slider/slide_3_mob.jpg"
+                                media="(max-width: 540px)">
+                        <img src="img/bg_slider/slide_3.jpg" alt="...">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team">
+            <div class="container">
+                <h3 class="section_title">The Team</h3>
+                <p class="section_description">Yes, we’re looking like a super hot models, but, I swear, we are cool
+                    architecture bureu.</p>
+                <ul class="team_list">
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-02.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Alexey Rybin</h4>
+                            <h4 class="card_position">Creative Direction</h4>
+                            <p class="card_description">Passionately focused on content creation and strategy with many
+                                years</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-03.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Yuliya Petrova</h4>
+                            <h4 class="card_position">Concept & Service Design</h4>
+                            <p class="card_description">Long name, short hair. Experienced concept developer and service
+                                designer always looking for the best</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-04.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Yuri Yasyuk</h4>
+                            <h4 class="card_position">User Experience Design</h4>
+                            <p class="card_description">Passionately focused on content creation and strategy with many
+                                years</p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-05.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Artem Tarasov</h4>
+                            <h4 class="card_position">Creative Direction & Design</h4>
+                            <p class="card_description">Passionately focused on content creation and strategy with many
+                                years of experience building web </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-06.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Nikita Markov</h4>
+                            <h4 class="card_position">Direction & Production</h4>
+                            <p class="card_description">Long name, short hair. Experienced concept developer and
+                                service </p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="card_image">
+                            <img src="img/team/img-07.jpg" alt="...">
+                            <a class="card_social" href="#"><i class="icon-twitter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="card_text">
+                            <h4 class="card_name">Oleg De Saint Alexandrov</h4>
+                            <h4 class="card_position">UI Design, Illustration</h4>
+                            <p class="card_description">We're building a better way for teams to share ideas and design
+                                products</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="subscribe-section section">
+            <div class="container">
+                <h3 class="section_title">Let’s Stay In Touch</h3>
+                <p class="section_description">All our latest content for email marketing pros delivered to your inbox a
+                    few
+                    times a month</p>
+                <form action="" class="subscribe-form combined-input">
+                    <label for="e-mail" aria-hidden="true" class="visibility-hidden">Enter your e-mail here</label>
+                    <input class="form-input" id="e-mail" type="email" name="e-mail"
+                           placeholder="Enter your e-mail here">
+                    <button class="form-btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="g-footer ">
+        <div class="container">
+            <a href="#" class="f-logo">
+                <img src="img/logo-small.png" alt="p2h">
+            </a>
+            <p class="footer-copyright">
+                © 2016 <a href="#">Great Simple </a>. All rights reserved
+            </p>
+            <p class="footer-contact"><a href="tel:+390236740912">+39 02 367 409 12</a>, 560 Mission St, San Francisco CA 94105, USA</p>
+            <ul class="footer-social">
+                <li><a href="#"><i class="icon-google-plus" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="icon-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="icon-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="icon-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="icon-behance" aria-hidden="true"></i></a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Load Scripts Start -->
+
+<script>var scr = {"scripts":[
+    {"src" : "js/libs.min.js", "async" : false},
+    {"src" : "js/common.min.js", "async" : false}
+]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+</script>
+<!-- Load Scripts End -->
+
+</body>
+</html>
