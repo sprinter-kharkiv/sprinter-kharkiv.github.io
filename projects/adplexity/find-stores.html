@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html class="" lang="en">
 
@@ -45,17 +44,23 @@
                     <!-- registered user -->
                 </div>
             
-                <ul class="user-nav">
-                    <li class="user-nav_item">
-                        <a href="#" class="user-nav_item__link">Logout</a>
-                    </li>
-                    <li class="user-nav_item">
-                        <a href="#" class="user-nav_item__link">settings</a>
-                    </li>
-                    <li class="user-nav_item">
-                        <a href="#" class="user-nav_item__link">info</a>
-                    </li>
-                </ul>
+                <div class="user-nav">
+                    <ul class="user-nav_list">
+                        <li class="user-nav_item">
+                            <a href="#" class="user-nav_item__link">Logout</a>
+                        </li>
+                        <li class="user-nav_item">
+                            <a href="#" class="user-nav_item__link">settings</a>
+                        </li>
+                        <li class="user-nav_item">
+                            <a href="#" class="user-nav_item__link">info</a>
+                        </li>
+                    </ul>
+                    <div class="user-nav_buttons">
+                        <button type="button" class="btn">button-1</button>
+                        <button type="button" class="btn">button-2</button>
+                    </div>
+                </div>
             </div>
             
             <ul class="nav">
@@ -103,9 +108,9 @@
             </div>
             <div class="sidebar-group">
                 <h3 class="sidebar-group_title">store Properties</h3>
-                <div class="sidebar-group_item">
+                <form class="sidebar-group_item" action="">
                     <div class="item_header">
-                        <h4 class="title">Added new products beween</h4>
+                        <label class="title" for="reportrange-02">Added new products beween</label>
                     </div>
                     <div class="current-date">
                         <div class="current-date_value" id="reportrange-02">
@@ -113,19 +118,91 @@
                             <span></span>
                         </div>
                     </div>
-                </div>
-                <div class="sidebar-group_item">
+                </form>
+
+                <form class="sidebar-group_item" action="">
                     <div class="item_header">
-                        <h4 class="title">Number of products</h4>
+                        <label class="title" for="keyword">Has products width keyword</label>
+                    </div>
+                    <select class="custom_select" name="" id="">
+                        <option value="">In product description</option>
+                        <option value="">In product name</option>
+                        <option value="">In product ...</option>
+                    </select>
+                    <div class="custom-input-wrap">
+                        <input id="keyword" class="custom-input" type="text" placeholder="Enter a keyword here">
+                    </div>
+
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="category">Has products from category</label>
+                    </div>
+                    <div class="custom-input-wrap">
+                        <input id="category" class="custom-input" type="text" placeholder="Enter a category here">
+                    </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="NumberOfProducts">Number of products</label>
                         <div class="value">
                             <span class="min-val"></span><span class="max-val">50</span>
                         </div>
                     </div>
-                    <input class="c-range StorePrice" type="text" min="1" max="1000" value="155,450" name="Price"
+                    <input id="NumberOfProducts" class="c-range NumberOfProducts" type="text" min="1" max="1000" value="0,450" name="NumberOfProducts"
                            step="5"/>
-                </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="PriceOfProduct">Product price</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">50</span>
+                        </div>
+                    </div>
+                    <input id="PriceOfProduct" class="c-range PriceOfProduct" type="text" min="1" max="1000" value="0,150" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="AveragePriceOfProducts">Average product price</label>
+                        <div class="value">
+                            <span class="min-val"></span><span class="max-val">50</span>
+                        </div>
+                    </div>
+                    <input id="AveragePriceOfProducts" class="c-range AveragePriceOfProducts" type="text" min="1" max="1000" value="0,450" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="CheapestOfProduct">Cheapest product</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">950</span>
+                        </div>
+                    </div>
+                    <input id="CheapestOfProduct" class="c-range CheapestOfProduct" type="text" min="1" max="1000" value="0,150" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="MostExpensiveProduct">Most expensive product</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">5450</span>
+                        </div>
+                    </div>
+                    <input id="MostExpensiveProduct" class="c-range MostExpensiveProduct" type="text" min="1" max="7000" value="0,5450" name="NumberOfProducts"
+                           step="10"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="UsedApp">App used</label>
+                    </div>
+                    <select class="custom_select" name="" id="UsedApp">
+                        <option value="">Shopify app</option>
+                        <option value="">Another app</option>
+                        <option value="">Something else ...</option>
+                    </select>
+                </form>
             </div>
-
 
 
         </div>
