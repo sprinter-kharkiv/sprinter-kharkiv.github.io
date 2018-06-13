@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-group_item">
+                <form class="sidebar-group_item" action="">
                     <div class="item_header">
                         <h4 class="title">Price</h4>
                         <div class="value">
@@ -129,7 +129,23 @@
                     </div>
                     <input class="c-range StorePrice" type="text" min="1" max="1000" value="155,450" name="Price"
                            step="5"/>
-                </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="store-category">Category</label>
+                    </div>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="store-category" class="custom-input j-c-input" type="text" placeholder="Enter a store category here">
+                    </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="store-name">Store</label>
+                    </div>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="store-name" class="custom-input j-c-input" type="text" placeholder="Enter a store name here">
+                    </div>
+                </form>
             </div>
 
 
@@ -140,29 +156,34 @@
 
             <div class="search-bar">
                 <form class="search-form" action="">
-                    <label class="keyword-label" for="keyword">Only products with:</label>
-                    <div class="custom-input-wrap">
-                        <span class="icon_search"></span>
-                        <input id="keyword" class="custom-input" type="text" placeholder="Enter a keyword here">
-                    </div>
-                    <div class="select-keyword-wrap">
-                        <select class="custom_select" name="" id="">
-                            <option value="">In product description</option>
-                            <option value="">In product name</option>
-                            <option value="">In product ...</option>
-                        </select>
+                    <div class="form-group">
+                        <label class="keyword-label" for="keyword">Only products with:</label>
+                        <div class="custom-input-wrap j-c-wrap">
+                            <span class="icon_search"></span>
+                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter a keyword here">
+                        </div>
+                
+                        <div class="select-keyword-wrap">
+                            <select class="custom_select" name="" id="">
+                                <option value="">In product description</option>
+                                <option value="">In product name</option>
+                                <option value="">In product ...</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
                 <div class="select-order-wrap">
                     <form action="">
-                        <label class="display-order-label" for="display-order">Sorted products:</label>
-                        <select class="custom_select" name="display-order" id="display-order">
-                            <option value="">By product strength</option>
-                            <option value="">Last seen</option>
-                            <option value="">Last added</option>
-                            <option value="">Price descending</option>
-                            <option value="">Price ascending</option>
-                        </select>
+                        <div class="form-group">
+                            <label class="display-order-label" for="display-order">Sorted products:</label>
+                            <select class="custom_select" name="display-order" id="display-order">
+                                <option value="">By product strength</option>
+                                <option value="">Last seen</option>
+                                <option value="">Last added</option>
+                                <option value="">Price descending</option>
+                                <option value="">Price ascending</option>
+                            </select>
+                        </div>
                     </form>
                 </div>
             </div>

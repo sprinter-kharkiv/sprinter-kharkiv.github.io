@@ -81,7 +81,7 @@
             <i class="icon-sliders sidebar-toggler_icon"></i>
              filter</span>
         <div class="sidebar">
-            <div class="sidebar-group">
+            <div class="sidebar-group disabled">
                 <h3 class="sidebar-group_title">store Popularity</h3>
                 <div class="sidebar-group_item">
                     <div class="item_header">
@@ -129,8 +129,8 @@
                         <option value="">In product name</option>
                         <option value="">In product ...</option>
                     </select>
-                    <div class="custom-input-wrap">
-                        <input id="keyword" class="custom-input" type="text" placeholder="Enter a keyword here">
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter a keyword here">
                     </div>
 
                 </form>
@@ -138,8 +138,8 @@
                     <div class="item_header">
                         <label class="title" for="category">Has products from category</label>
                     </div>
-                    <div class="custom-input-wrap">
-                        <input id="category" class="custom-input" type="text" placeholder="Enter a category here">
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="category" class="custom-input j-c-input" type="text" placeholder="Enter a category here">
                     </div>
                 </form>
                 <form class="sidebar-group_item" action="">
@@ -210,23 +210,27 @@
         <div class="content">
 
             <div class="search-bar">
-                <form class="search-form" action="">
-                    <label class="keyword-label" for="keyword">Enter store URL</label>
-                    <div class="custom-input-wrap">
-                        <span class="icon-link icons"></span>
-                        <input id="keyword" class="custom-input" type="text" placeholder="Enter a store URL here">
+                <form class="search-form search-stores" action="">
+                    <div class="form-group ">
+                        <label class="keyword-label" for="keyword">Enter store URL</label>
+                        <div class="custom-input-wrap search-stores j-c-wrap">
+                            <span class="icon-link icons"></span>
+                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter in-store URL, store title or store description">
+                        </div>
                     </div>
                 </form>
                 <div class="select-order-wrap">
                     <form action="">
-                        <label class="display-order-label" for="display-order">Sorted stores:</label>
-                        <select class="custom_select" name="display-order" id="display-order">
-                            <option value="">Most promoted</option>
-                            <option value="">Last seen</option>
-                            <option value="">Last added</option>
-                            <option value="">Price descending</option>
-                            <option value="">Price ascending</option>
-                        </select>
+                        <div class="form-group">
+                            <label class="display-order-label" for="display-order">Sorted stores:</label>
+                            <select class="custom_select" name="display-order" id="display-order">
+                                <option value="">Most promoted</option>
+                                <option value="">Last seen</option>
+                                <option value="">Last added</option>
+                                <option value="">Price descending</option>
+                                <option value="">Price ascending</option>
+                            </select>
+                        </div>
                     </form>
                 </div>
             </div>

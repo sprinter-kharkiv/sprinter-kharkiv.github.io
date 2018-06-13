@@ -110,12 +110,31 @@
                         <button class="c-btn" data-toggle="modal" data-target="#modal-p-description">View Product Description</button>
                     </div>
                 </div>
-                <div class="information-card chart-container">
-                    <canvas id="myChart" width="400" height="280"></canvas>
+                <div class="information-card chart-container product-strength">
                     <h3 class="information-card_title">Product<br>
                         Strength</h3>
+                    <canvas id="myChart" width="400" height="200"></canvas>
+                    <ul class="product-chart_nav chart-nav">
+                        <li>
+                            <button class="information-card_nav__button active">1d</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1w</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1m</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1y</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">all</button>
+                        </li>
+                    </ul>
                 </div>
-                <div class="information-card table-container">
+                <div class="information-card table-container product-price-changes">
+                    <h3 class="information-card_title">Historical<br>
+                        Price Changes</h3>
                     <div>
                         <table class="information-card_table colored">
                             <thead>
@@ -164,8 +183,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <h3 class="information-card_title">Historical<br>
-                        Price Changes</h3>
+
                 </div>
             </div>
             <!-- product page -->
