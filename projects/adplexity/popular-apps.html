@@ -28,42 +28,44 @@
 <div class="wrapper !has-sidebar">
     <div class="l-content">
         <header class="main-header">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt=""></a>
-            </div>
-            <div class="user-info">
-                <div class="user-nav-btn" class="j-toggle-userMenu">
-                    <!-- UNregistered user  -->
-                    <img class="user-photo visually-hidden" src="img/user-unreg.png">
-                    <!-- UNregistered user -->
-                    <!-- registered user -->
-                    <!-- registered user width photo-->
-                    <span class="user-first-letter ">A</span>
-                    <!-- registered user widthOUT photo-->
-                    <img class="user-photo visually-hidden" src="img/user.jpg">
-                    <!-- registered user -->
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
                 </div>
+                <div class="h-gamburger" >
+                    <span class="center-line"></span>
+                </div>
+                <div class="user-info">
+                    <div class="user-nav-btn" class="j-toggle-userMenu">
+                        <!-- UNregistered user  -->
+                        <span class="unregistered-user visually-hidden" style="background-image: url(img/user-unreg.png)"></span>
+                        <!-- UNregistered user -->
+                        <!-- registered user -->
+                        <span class="registered-user " style="background-image: url(img/user.jpg)"></span>
+                        <!-- registered user -->
+                    </div>
             
-                <div class="user-nav">
-                    <ul class="user-nav_list">
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">Logout</a>
-                        </li>
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">settings</a>
-                        </li>
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">info</a>
-                        </li>
-                    </ul>
-                    <div class="user-nav_buttons">
-                        <button type="button" class="btn">button-1</button>
-                        <button type="button" class="btn">button-2</button>
+                    <div class="user-nav">
+                        <ul class="user-nav_list">
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">Logout</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">settings</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">info</a>
+                            </li>
+                        </ul>
+                        <div class="user-nav_buttons">
+                            <button type="button" class="btn">button-1</button>
+                            <button type="button" class="btn">button-2</button>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <ul class="nav">
+            <ul class="nav j-hidd-mobile">
                 <li class="nav_item ">
                     <a href="#" class="nav_item__link">find products</a>
                 </li>

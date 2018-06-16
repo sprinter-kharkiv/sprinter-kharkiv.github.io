@@ -29,42 +29,44 @@
 <div class="wrapper !has-sidebar">
     <div class="l-content">
         <header class="main-header">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt=""></a>
-            </div>
-            <div class="user-info">
-                <div class="user-nav-btn" class="j-toggle-userMenu">
-                    <!-- UNregistered user  -->
-                    <img class="user-photo visually-hidden" src="img/user-unreg.png">
-                    <!-- UNregistered user -->
-                    <!-- registered user -->
-                    <!-- registered user width photo-->
-                    <span class="user-first-letter ">A</span>
-                    <!-- registered user widthOUT photo-->
-                    <img class="user-photo visually-hidden" src="img/user.jpg">
-                    <!-- registered user -->
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
                 </div>
+                <div class="h-gamburger" >
+                    <span class="center-line"></span>
+                </div>
+                <div class="user-info">
+                    <div class="user-nav-btn" class="j-toggle-userMenu">
+                        <!-- UNregistered user  -->
+                        <span class="unregistered-user visually-hidden" style="background-image: url(img/user-unreg.png)"></span>
+                        <!-- UNregistered user -->
+                        <!-- registered user -->
+                        <span class="registered-user " style="background-image: url(img/user.jpg)"></span>
+                        <!-- registered user -->
+                    </div>
             
-                <div class="user-nav">
-                    <ul class="user-nav_list">
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">Logout</a>
-                        </li>
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">settings</a>
-                        </li>
-                        <li class="user-nav_item">
-                            <a href="#" class="user-nav_item__link">info</a>
-                        </li>
-                    </ul>
-                    <div class="user-nav_buttons">
-                        <button type="button" class="btn">button-1</button>
-                        <button type="button" class="btn">button-2</button>
+                    <div class="user-nav">
+                        <ul class="user-nav_list">
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">Logout</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">settings</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">info</a>
+                            </li>
+                        </ul>
+                        <div class="user-nav_buttons">
+                            <button type="button" class="btn">button-1</button>
+                            <button type="button" class="btn">button-2</button>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <ul class="nav">
+            <ul class="nav j-hidd-mobile">
                 <li class="nav_item ">
                     <a href="#" class="nav_item__link">find products</a>
                 </li>
@@ -79,7 +81,7 @@
         <div class="content">
             <!-- product page -->
             <div class="flex-container">
-                <div class="product-info">
+                <div class="product-info order-xl-1">
                     <div class="image-wrap">
                         <img src="img/product_preview__detail.jpg" alt="">
                     </div>
@@ -106,36 +108,18 @@
                                 <span class="key">Link:</span>
                                 <a href="#" class="value">http://adventurestore.com</a>
                             </li>
+                            <li>
+                                <span class="key">Product category:</span>
+                                <span class="value">Books > Arts & Photography > Music > Instruments > Guitar > Even More Categories In Here > Hello</span>
+                            </li>
                         </ul>
-                        <button class="c-btn" data-toggle="modal" data-target="#modal-p-description">View Product Description</button>
+                        <button class="c-btn-link" data-toggle="modal" data-target="#modal-p-description">View Product Description</button>
                     </div>
                 </div>
-                <div class="information-card chart-container product-strength">
-                    <h3 class="information-card_title">Product<br>
-                        Strength</h3>
-                    <canvas id="myChart" width="400" height="200"></canvas>
-                    <ul class="product-chart_nav chart-nav">
-                        <li>
-                            <button class="information-card_nav__button active">1d</button>
-                        </li>
-                        <li>
-                            <button class="information-card_nav__button">1w</button>
-                        </li>
-                        <li>
-                            <button class="information-card_nav__button">1m</button>
-                        </li>
-                        <li>
-                            <button class="information-card_nav__button">1y</button>
-                        </li>
-                        <li>
-                            <button class="information-card_nav__button">all</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="information-card table-container product-price-changes">
+                <div class="information-card table-container product-price-changes order-xl-3">
                     <h3 class="information-card_title">Historical<br>
                         Price Changes</h3>
-                    <div>
+                    <div class="ProductTableScrollbar">
                         <table class="information-card_table colored">
                             <thead>
                             <tr>
@@ -185,6 +169,29 @@
                     </div>
 
                 </div>
+                <div class="information-card chart-container product-strength order-xl-2">
+                    <h3 class="information-card_title">Product<br>
+                        Strength</h3>
+                    <canvas id="myChart" width="400" height="200"></canvas>
+                    <ul class="product-chart_nav chart-nav">
+                        <li>
+                            <button class="information-card_nav__button active">1d</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1w</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1m</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">1y</button>
+                        </li>
+                        <li>
+                            <button class="information-card_nav__button">all</button>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
             <!-- product page -->
 
@@ -1023,6 +1030,7 @@
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
 <script src="js/chart.js"></script>
+<script src="js/jquery.mCustomScrollbar.js"></script>
 
 <script src="js/common.min.js"></script>
 
