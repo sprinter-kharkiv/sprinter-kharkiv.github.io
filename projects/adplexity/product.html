@@ -80,8 +80,8 @@
         </header>
         <div class="content">
             <!-- product page -->
-            <div class="flex-container">
-                <div class="product-info order-xl-1">
+            <div class="flex-container product-page">
+                <div class="product-info !order-xl-1">
                     <div class="image-wrap">
                         <img src="img/product_preview__detail.jpg" alt="">
                     </div>
@@ -116,9 +116,11 @@
                         <button class="c-btn-link" data-toggle="modal" data-target="#modal-p-description">View Product Description</button>
                     </div>
                 </div>
-                <div class="information-card table-container product-price-changes order-xl-3">
+                <div class="information-card table-container product-price-changes !order-xl-3">
 
                     <div class="ProductTableScrollbar">
+                        <h3 class="information-card_title">Historical<br>
+                            Price Changes</h3>
                         <table class="information-card_table colored">
                             <thead>
                             <tr>
@@ -166,10 +168,10 @@
                             </tbody>
                         </table>
                     </div>
-                    <h3 class="information-card_title">Historical<br>
-                        Price Changes</h3>
                 </div>
-                <div class="information-card chart-container product-strength order-xl-2">
+                <div class="information-card chart-container product-strength !order-xl-2">
+                    <h3 class="information-card_title">Product<br>
+                        Strength</h3>
                     <canvas id="myChart" width="400" height="200"></canvas>
                     <ul class="product-chart_nav chart-nav">
                         <li>
@@ -188,8 +190,6 @@
                             <button class="information-card_nav__button">all</button>
                         </li>
                     </ul>
-                    <h3 class="information-card_title">Product<br>
-                        Strength</h3>
                 </div>
 
             </div>

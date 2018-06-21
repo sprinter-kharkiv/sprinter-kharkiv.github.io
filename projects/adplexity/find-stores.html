@@ -221,21 +221,30 @@
             </div>
 
             <div class="search-bar j-hidd-content">
-                <form class="search-form search-stores" action="">
-                    <div class="form-group ">
-                        <label class="keyword-label" for="keyword">Enter store URL</label>
+                
+                <form class="search-form" action="">
+                    <div class="form-group">
+                        <label class="keyword-label" for="keyword">Enter store URL:</label>
                         <div class="custom-input-wrap j-c-wrap">
-                            <span class="icon-link icons"></span>
-                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter in-store URL, store title or store description">
+                            <span class="icon_search"></span>
+                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter a store URL here">
+                        </div>
+                
+                        <div class="select-keyword-wrap">
+                            <select class="custom_select" name="" id="">
+                                <option value="">In product description</option>
+                                <option value="">In product name</option>
+                                <option value="">In product ...</option>
+                            </select>
                         </div>
                     </div>
                 </form>
                 <div class="select-order-wrap">
                     <form action="">
                         <div class="form-group">
-                            <label class="display-order-label" for="display-order">Sorted stores:</label>
+                            <label class="display-order-label" for="display-order">Sorted products:</label>
                             <select class="custom_select" name="display-order" id="display-order">
-                                <option value="">Most promoted</option>
+                                <option value="">By product strength</option>
                                 <option value="">Last seen</option>
                                 <option value="">Last added</option>
                                 <option value="">Price descending</option>
