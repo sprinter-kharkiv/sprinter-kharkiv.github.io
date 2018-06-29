@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Adplexity</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="wrapper has-sidebar">
+    <div class="l-content">
+        <header class="main-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="h-gamburger" >
+                    <span class="center-line"></span>
+                </div>
+                <div class="user-info">
+                    <div class="user-nav-btn" class="j-toggle-userMenu">
+                        <!-- UNregistered user  -->
+                        <span class="unregistered-user visually-hidden" style="background-image: url(img/user-unreg.png)"></span>
+                        <!-- UNregistered user -->
+                        <!-- registered user -->
+                        <span class="registered-user " style="background-image: url(img/user.jpg)"></span>
+                        <!-- registered user -->
+                    </div>
+            
+                    <div class="user-nav">
+                        <ul class="user-nav_list">
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">Logout</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">settings</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">info</a>
+                            </li>
+                        </ul>
+                        <div class="user-nav_buttons">
+                            <button type="button" class="btn">button-1</button>
+                            <button type="button" class="btn">button-2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav j-hidd-mobile">
+                <li class="nav_item ">
+                    <a href="#" class="nav_item__link">find products</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item__link">find stores</a>
+                </li>
+                <li class="nav_item active">
+                    <a href="#" class="nav_item__link">popular apps</a>
+                </li>
+            </ul>
+        </header>
+
+        <!-- sidebar    -->
+        <div class="mobile-toggler j-hidd-mobile j-mobile-toggler" data-toggle="sidebar">
+            <i class="icon-sliders mobile-toggler_icon"></i>
+            <span class="mobile-toggler_title">product filters</span>
+        </div>
+        <div class="sidebar j-hidd-content">
+            <div class="sidebar-group">
+                <h3 class="sidebar-group_title">Product Popularity</h3>
+
+                <form action="" class="sidebar-group_item date-select">
+                    <div class="item_header">
+                        <label for="being_promoted_between" class="title">Being promoted between</label>
+                    </div>
+                    <div class="form-group">
+                        <i class="icon-calendar current-date_icon"></i>
+                        <select class="custom_select j-select" name="being_promoted_between" id="being_promoted_between">
+                            <option value="">05/26/2018 - 06/24/2018</option>
+                            <option value="">Today</option>
+                            <option value="">Yesterday</option>
+                            <option value="">Last 7 Days</option>
+                            <option value="">Last 30 Days</option>
+                            <option value="">This Month</option>
+                            <option value="">Last Month</option>
+                        </select>
+                    </div>
+                </form>
+                <!--
+                <form class="sidebar-group_item">
+                    <div class="item_header">
+                        <h4 class="title">Being promoted between</h4>
+                    </div>
+                    <div class="current-date">
+                        <div class="current-date_value" id="reportrange-01">
+                            <i class="icon-calendar current-date_icon"></i>&nbsp;
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+                -->
+                <form class="sidebar-group_item">
+                    <div class="item_header">
+                        <h4 class="title">Store strength</h4>
+                        <div class="value">
+                            <span class="min-val">1</span> - <span class="max-val">4</span>
+                        </div>
+                    </div>
+                    <input class="c-range StoreStrength" type="text" min="1" max="10" value="1,4"
+                           name="StoreStrength"
+                           step="1"/>
+                </form>
+            </div>
+            <div class="sidebar-group">
+                <h3 class="sidebar-group_title">Product Properties</h3>
+                <form action="" class="sidebar-group_item date-select">
+                    <div class="item_header">
+                        <label for="date_added_to_store" class="title">Date added to store</label>
+                    </div>
+                    <div class="form-group">
+                        <i class="icon-calendar current-date_icon"></i>
+                        <select class="custom_select j-select" name="being_promoted_between" id="date_added_to_store">
+                            <option value="">05/26/2018 - 06/24/2018</option>
+                            <option value="">Today</option>
+                            <option value="">Yesterday</option>
+                            <option value="">Last 7 Days</option>
+                            <option value="">Last 30 Days</option>
+                            <option value="">This Month</option>
+                            <option value="">Last Month</option>
+                        </select>
+                    </div>
+                </form>
+                <!--
+                <form class="sidebar-group_item">
+                    <div class="item_header">
+                        <h4 class="title">Date added to store</h4>
+                    </div>
+                    <div class="current-date">
+                        <div class="current-date_value" id="reportrange-02">
+                            <i class="icon-calendar current-date_icon"></i>&nbsp;
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+                -->
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <h4 class="title">Price</h4>
+                        <div class="value">
+                            <span class="min-val">$150</span> - <span class="max-val">$450</span>
+                        </div>
+                    </div>
+                    <input class="c-range StorePrice" type="text" min="1" max="1000" value="155,450" name="Price"
+                           step="5"/>
+                </form>
+
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="store-category">Category</label>
+                    </div>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="store-category" class="custom-input j-c-input" type="text"
+                               placeholder="Enter a store category here">
+                    </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="store-name">Store</label>
+                    </div>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="store-name" class="custom-input j-c-input" type="text"
+                               placeholder="Enter a store name here">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- sidebar   -->
+        <div class="content">
+            <div class="mobile-toggler j-hidd-mobile j-mobile-toggler" data-toggle="search-bar">
+                <i class="icon-search mobile-toggler_icon"></i>
+                <span class="mobile-toggler_title">product search</span>
+            </div>
+            <div class="search-bar j-hidd-content">
+                
+                <form class="search-form" action="">
+                    <div class="form-group">
+                        <label class="keyword-label" for="keyword">Only products with:</label>
+                        <div class="custom-input-wrap j-c-wrap">
+                            <span class="icon_search"></span>
+                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter a keyword here">
+                        </div>
+                
+                        <div class="select-keyword-wrap">
+                            <select class="custom_select j-select" name="" id="">
+                                <option value="">In product description</option>
+                                <option value="">In product name</option>
+                                <option value="">In product ...</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div class="select-order-wrap">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="display-order-label" for="display-order">Sorted products:</label>
+                            <select class="custom_select j-select" name="display-order" id="display-order">
+                                <option value="">By product strength</option>
+                                <option value="">Last seen</option>
+                                <option value="">Last added</option>
+                                <option value="">Price descending</option>
+                                <option value="">Price ascending</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="content-greed">
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+                <!-- PRODUCT CARD -->
+                <div class="product-card">
+                    <img class="product-card_preview" src="img/product_preview.jpg" alt="">
+                    <div class="text-wrap">
+                        <h3 class="product-card_title">Eyelid Tape Sticker Invisible Eyelid Paste</h3>
+                        <h4 class="product-card_category">StoresStores</h4>
+                        <span class="product-card_price">$4343.45</span>
+                        <span class="product-card_discount-price">$9943.45</span>
+                        <div class="product-card_created">Added 7 days ago</div>
+                        <div class="clearfix">
+                            <div class="product-card_strength has-c-tooltip">
+                                <div class="c-tooltip to-top">
+                                    <span>Product Strength:</span> <span class="strength-value">55</span>
+                                    <a href="#" class="to-detail-info">?</a>
+                                </div>
+                                <span class="product-card_index">5333333333333</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PRODUCT CARD -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">copyright</footer>
+</div>
+
+<script src="js/libs.min.js"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+-->
+
+<script src="js/chart.js"></script>
+
+
+<script src="js/common.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Adplexity</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+<div class="wrapper has-sidebar">
+    <div class="l-content">
+        <header class="main-header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="h-gamburger" >
+                    <span class="center-line"></span>
+                </div>
+                <div class="user-info">
+                    <div class="user-nav-btn" class="j-toggle-userMenu">
+                        <!-- UNregistered user  -->
+                        <span class="unregistered-user visually-hidden" style="background-image: url(img/user-unreg.png)"></span>
+                        <!-- UNregistered user -->
+                        <!-- registered user -->
+                        <span class="registered-user " style="background-image: url(img/user.jpg)"></span>
+                        <!-- registered user -->
+                    </div>
+            
+                    <div class="user-nav">
+                        <ul class="user-nav_list">
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">Logout</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">settings</a>
+                            </li>
+                            <li class="user-nav_item">
+                                <a href="#" class="user-nav_item__link">info</a>
+                            </li>
+                        </ul>
+                        <div class="user-nav_buttons">
+                            <button type="button" class="btn">button-1</button>
+                            <button type="button" class="btn">button-2</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav j-hidd-mobile">
+                <li class="nav_item ">
+                    <a href="#" class="nav_item__link">find products</a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item__link">find stores</a>
+                </li>
+                <li class="nav_item active">
+                    <a href="#" class="nav_item__link">popular apps</a>
+                </li>
+            </ul>
+        </header>
+
+        <!-- sidebar    -->
+        <div class="mobile-toggler j-hidd-mobile j-mobile-toggler" data-toggle="sidebar">
+            <i class="icon-sliders mobile-toggler_icon"></i>
+            <span class="mobile-toggler_title">product filters</span>
+        </div>
+        <div class="sidebar j-hidd-content">
+            <div class="sidebar-group disabled">
+                <header>
+                    <h3 class="sidebar-group_title">
+                        <span>Store Popularity</span>
+                        <span class="has-c-tooltip">
+                            <div class="c-tooltip to-bottom">
+                                <p class="c-tooltip_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Aliquid animi asperiores assumenda </p>
+                            </div>
+                            <span class="sidebar-group_title__tooltip">?</span>
+                        </span>
+                    </h3>
+                    <span class="sidebar-group_toggler j-sidebar-group"></span>
+                </header>
+                <form action="" class="sidebar-group_item date-select">
+                    <div class="item_header">
+                        <label class="title" for="being_promoted_between">Being promoted between</label>
+                    </div>
+                    <div class="form-group">
+                        <i class="icon-calendar current-date_icon"></i>
+                        <select class="custom_select j-select" name="being_promoted_between"
+                                id="being_promoted_between">
+                            <option value="">05/26/2018 - 06/24/2018</option>
+                            <option value="">Today</option>
+                            <option value="">Yesterday</option>
+                            <option value="">Last 7 Days</option>
+                            <option value="">Last 30 Days</option>
+                            <option value="">This Month</option>
+                            <option value="">Last Month</option>
+                        </select>
+                    </div>
+                </form>
+                <!--
+                <div class="sidebar-group_item">
+                    <div class="item_header">
+                        <h4 class="title">Being promoted between</h4>
+                    </div>
+                    <div class="current-date">
+                        <div class="current-date_value" id="reportrange-01">
+                            <i class="icon-calendar current-date_icon"></i>&nbsp;
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <div class="sidebar-group_item">
+                    <div class="item_header">
+                        <h4 class="title">Store strength</h4>
+                        <div class="value">
+                            <span class="min-val">1</span> - <span class="max-val">4</span>
+                        </div>
+                    </div>
+                    <input class="c-range StoreStrength" type="text" min="1" max="10" value="1,4"
+                           name="StoreStrength"
+                           step="1"/>
+                </div>
+            </div>
+            <div class="sidebar-group">
+                <h3 class="sidebar-group_title">store Properties</h3>
+                <form action="" class="sidebar-group_item date-select">
+                    <div class="item_header">
+                        <label class="title" for="added_new_products_beween">Added new products beween</label>
+                    </div>
+                    <div class="form-group">
+                        <i class="icon-calendar current-date_icon"></i>
+                        <select class="custom_select j-select" name="being_promoted_between"
+                                id="added_new_products_beween">
+                            <option value="">05/26/2018 - 06/24/2018</option>
+                            <option value="">Today</option>
+                            <option value="">Yesterday</option>
+                            <option value="">Last 7 Days</option>
+                            <option value="">Last 30 Days</option>
+                            <option value="">This Month</option>
+                            <option value="">Last Month</option>
+                        </select>
+                    </div>
+                </form>
+                <!--
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="reportrange-02">Added new products beween</label>
+                    </div>
+                    <div class="current-date">
+                        <div class="current-date_value" id="reportrange-02">
+                            <i class="icon-calendar current-date_icon"></i>&nbsp;
+                            <span></span>
+                        </div>
+                    </div>
+                </form>
+                -->
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="keyword">Has products width keyword</label>
+                    </div>
+                    <select class="custom_select j-select" name="" id="">
+                        <option value="">In product description</option>
+                        <option value="">In product name</option>
+                        <option value="">In product ...</option>
+                    </select>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="keyword" class="custom-input j-c-input" type="text"
+                               placeholder="Enter a keyword here">
+                    </div>
+
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="category">Has products from category</label>
+                    </div>
+                    <div class="custom-input-wrap j-c-wrap">
+                        <input id="category" class="custom-input j-c-input" type="text"
+                               placeholder="Enter a category here">
+                    </div>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="NumberOfProducts">Number of products</label>
+                        <div class="value">
+                            <span class="min-val"></span><span class="max-val">50</span>
+                        </div>
+                    </div>
+                    <input id="NumberOfProducts" class="c-range NumberOfProducts" type="text" min="1" max="1000"
+                           value="0,450" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="PriceOfProduct">Product price</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">50</span>
+                        </div>
+                    </div>
+                    <input id="PriceOfProduct" class="c-range PriceOfProduct" type="text" min="1" max="1000"
+                           value="0,150" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="AveragePriceOfProducts">Average product price</label>
+                        <div class="value">
+                            <span class="min-val"></span><span class="max-val">50</span>
+                        </div>
+                    </div>
+                    <input id="AveragePriceOfProducts" class="c-range AveragePriceOfProducts" type="text" min="1"
+                           max="1000" value="0,450" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="CheapestOfProduct">Cheapest product</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">950</span>
+                        </div>
+                    </div>
+                    <input id="CheapestOfProduct" class="c-range CheapestOfProduct" type="text" min="1" max="1000"
+                           value="0,150" name="NumberOfProducts"
+                           step="5"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="MostExpensiveProduct">Most expensive product</label>
+                        <div class="value">
+                            <span class="min-val"></span>$<span class="max-val">5450</span>
+                        </div>
+                    </div>
+                    <input id="MostExpensiveProduct" class="c-range MostExpensiveProduct" type="text" min="1" max="7000"
+                           value="0,5450" name="NumberOfProducts"
+                           step="10"/>
+                </form>
+                <form class="sidebar-group_item" action="">
+                    <div class="item_header">
+                        <label class="title" for="UsedApp">App used</label>
+                    </div>
+                    <select class="custom_select j-select" name="" id="UsedApp">
+                        <option value="">Shopify app</option>
+                        <option value="">Another app</option>
+                        <option value="">Something else ...</option>
+                    </select>
+                </form>
+            </div>
+
+
+        </div>
+        <!-- sidebar   -->
+        <div class="content">
+            <div class="mobile-toggler j-hidd-mobile j-mobile-toggler" data-toggle="search-bar">
+                <i class="icon-search mobile-toggler_icon"></i>
+                <span class="mobile-toggler_title">stores search</span>
+            </div>
+
+            <div class="search-bar j-hidd-content">
+                
+                <form class="search-form" action="">
+                    <div class="form-group">
+                        <label class="keyword-label" for="keyword">Enter store URL:</label>
+                        <div class="custom-input-wrap j-c-wrap">
+                            <span class="icon_search"></span>
+                            <input id="keyword" class="custom-input j-c-input" type="text" placeholder="Enter a store URL here">
+                        </div>
+                
+                        <div class="select-keyword-wrap">
+                            <select class="custom_select j-select" name="" id="">
+                                <option value="">In product description</option>
+                                <option value="">In product name</option>
+                                <option value="">In product ...</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+                <div class="select-order-wrap">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="display-order-label" for="display-order">Sorted products:</label>
+                            <select class="custom_select j-select" name="display-order" id="display-order">
+                                <option value="">By product strength</option>
+                                <option value="">Last seen</option>
+                                <option value="">Last added</option>
+                                <option value="">Price descending</option>
+                                <option value="">Price ascending</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="content-greed">
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+                <!-- STORE CARD -->
+                <div class="store-card">
+                    <div class="store-card_heading">
+                        <div>
+                            <h3 class="store-card_title">The Adventure Store - Hiking products</h3>
+                            <a href="#" class="store-card_link">http://theadventurestore54665456656/6565/65/6565656565/65656/565656565/65656565132/32.com</a>
+                        </div>
+                        <div class="store-card_preview--wrap">
+                            <img class="store-card_preview" src="img/store_preview.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="store-card_description">Here at Adventure store, we offer the biggest and best brands in outdoor gear,
+                        camping supplies and hiking
+                        clothes, to help you with all your adventures…</p>
+                    <table class="store-card_data">
+                        <tr>
+                            <td>
+                                <span class="key">Products</span>
+                                <div class="value"><span>37</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Cheapest</span>
+                                <div class="value"><span>$</span><span>758.99</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Most expensive</span>
+                                <div class="value"><span>$</span><span>3972.99</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="key">Avg Price</span>
+                                <div class="value"><span>$</span><span>161</span></div>
+                            </td>
+                            <td>
+                                <span class="key">apps</span>
+                                <div class="value"><span>17</span></div>
+                            </td>
+                            <td>
+                                <span class="key">Last Product Added</span>
+                                <div class="value"><span>7 days ago</span></div>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                <!-- STORE CARD -->
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">copyright</footer>
+</div>
+
+<script src="js/libs.min.js"></script>
+
+<!--<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>-->
+
+<script src="js/chart.js"></script>
+
+<script src="js/common.min.js"></script>
+
+</body>
+</html>
