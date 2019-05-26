@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AdspikesApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.491b532a7470b105a334.css"></head>
+<body>
+  <app-root></app-root>
+  <script>
+      (function (doc) {
+          var scripts = doc.getElementsByTagName('script');
+          var body = doc.getElementsByTagName('body')
+          var script = scripts[scripts.length - 1];
+          var xhr = new XMLHttpRequest();
+          xhr.onload = function () {
+              var div = doc.createElement('div');
+              div.innerHTML = this.responseText;
+              div.style.overflow = 'hidden';
+              div.style.position = 'absolute';
+              div.style.left = '-9999px';
+              script.parentNode.insertBefore(div, script)
+          };
+          xhr.open('get', 'assets/sprites/sprite.svg', true);
+          xhr.send()
+      })(document)
+  </script>
+<script type="text/javascript" src="runtime.6791c3c8b5b333f78a10.js"></script><script type="text/javascript" src="polyfills.bebee6a5ef0ece001bc6.js"></script><script type="text/javascript" src="main.797437a8044a3b4339fe.js"></script></body>
+</html>
