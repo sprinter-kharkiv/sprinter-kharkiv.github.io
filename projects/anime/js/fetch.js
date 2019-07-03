@@ -33,7 +33,7 @@ linkArray.forEach((eachLink) => {
 })
 
 function fetchPage(link, page) {
-	let baseURL = `${window.location.protocol}//${window.location.hostname}`;
+	let baseURL = `${window.location.protocol}//${window.location.hostname}/projects/anime`;
 
 	if (window.location.port) {
 		baseURL += `:${window.location.port}`;
