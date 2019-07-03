@@ -2,7 +2,7 @@
 Use .fetch() to load in new html snippets. A function then removes the old HTML and adds
 the new ones in the correct position in the DOM. Animate the whole thing in and out.
 */
-console.log('111' )
+
 let collectionsLink = document.querySelector('#collections-link');
 let newLink = document.querySelector('#new-link');
 let trendingLink = document.querySelector('#trending-link');
@@ -38,8 +38,7 @@ function fetchPage(link, page) {
 	if (window.location.port) {
 		baseURL += `:${window.location.port}`;
 	}
-console.log('baseURL', baseURL )
-console.log('page', page )
+
 	fetch(`${baseURL}/${page}`)
 		.then(function(response) {
 			return response.text()
