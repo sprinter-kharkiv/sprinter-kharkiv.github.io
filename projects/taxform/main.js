@@ -92,14 +92,13 @@ radioButtons.forEach(inp => {
 
         if (e.target.value === 'withoutTax') {
             calculateType = 'withTax';
-            withChargeInput.readonly = true;
-            withoutChargeInput.readonly = false;
-
+            withChargeInput.readOnly = true;
+            withoutChargeInput.readOnly = false;
         }
         if (e.target.value === 'withTax') {
             calculateType = 'withoutTax';
-            withChargeInput.readonly = false;
-            withoutChargeInput.readonly = true;
+            withChargeInput.readOnly = false;
+            withoutChargeInput.readOnly = true;
         }
 
         calculatePrice();
