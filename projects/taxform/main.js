@@ -1,13 +1,13 @@
 // controls
-let withoutChargeInput = $('#without_charge');
-let withChargeInput = $('#with_charge');
+let withoutChargeInput = document.getElementById('without_charge');
+let withChargeInput = document.getElementById('with_charge');
 
-let engineSlider = $('#slider_engine');
-let engineText = $('#text_engine')
+let engineSlider = document.getElementById('slider_engine');
+let engineText = document.getElementById('text_engine');
 
-let ageSelect = $('#age');
-let fuelSelect = $('#fuel');
-let calcButton = $('#btn');
+let ageSelect = document.getElementById('age');
+let fuelSelect = document.getElementById('fuel');
+
 
 // default values
 let calculateType = 'withTax';
@@ -17,80 +17,95 @@ let engineV = 2000;
 let age = 10;
 let fuelType = 'g';
 
+document.addEventListener('DOMContentLoaded', function () {
 
-$(document).ready(function() {
+    withoutChargeInput.value = basePrise;
+    withChargeInput.value = cargedPrise;
 
-    withoutChargeInput.attr('value', basePrise);
-    withChargeInput.attr('value', cargedPrise);
+    engineSlider.value = engineV / 1000;
+    engineText.innerHTML = engineV / 1000;
 
-    engineSlider.attr('value', engineV / 1000);
-    engineText.text(engineV / 1000);
+    ageSelect.value = age;
+    fuelSelect.value = fuelType;
 
-    ageSelect.val(age);
-    fuelSelect.val(fuelType);
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
 
-    $('select').formSelect();
     addListeners();
     calculatePrice();
+
 });
 
 function addListeners() {
-    engineSlider.on('change', function (e) {
-        engineText.text(e.target.value);
+    engineSlider.addEventListener('change', function (e) {
+        engineText.innerHTML = e.target.value;
         engineV = e.target.value * 1000;
-
         calculatePrice();
-        return;
     });
 
-    withChargeInput.on('change', function (e) {
+    withChargeInput.addEventListener('change', function (e) {
+        withChargeCallback(e);
+    });
+
+    withChargeInput.addEventListener('input', function (e) {
+        withChargeCallback(e);
+    });
+
+    withoutChargeInput.addEventListener('change', function (e) {
+        withoutChargeCallback(e);
+    });
+
+    withoutChargeInput.addEventListener('input', function (e) {
+        withoutChargeCallback(e);
+    });
+
+    function withChargeCallback(e) {
+        if (cargedPrise === +e.target.value) {
+            return false;
+        }
         cargedPrise = +e.target.value;
         calculatePrice();
-        return;
-    });
+    }
 
-    withoutChargeInput.on('change', function (e) {
+    function withoutChargeCallback(e) {
+        if (basePrise === +e.target.value) {
+            return false;
+        }
         basePrise = +e.target.value;
         calculatePrice();
-        return;
-    });
+    }
 
-    ageSelect.on('change', function (e) {
+    ageSelect.addEventListener('change', function (e) {
         age = +e.target.value;
         calculatePrice();
-        return;
     });
 
-    fuelSelect.on('change', function (e) {
+    fuelSelect.addEventListener('change', function (e) {
         fuelType = e.target.value;
         calculatePrice();
-        return;
     });
 }
 
-calcButton.on('click', function() {
-    // calculatePrice();
-    return;
-})
+var radioButtons = document.querySelectorAll('[name="group1"]');
+radioButtons.forEach(inp => {
+    inp.addEventListener('change', function (e) {
 
+        if (e.target.value === 'withoutTax') {
+            calculateType = 'withTax';
+            withChargeInput.readonly = true;
+            withoutChargeInput.readonly = false;
 
-$('[name="group1"]').on('change', function (e) {
+        }
+        if (e.target.value === 'withTax') {
+            calculateType = 'withoutTax';
+            withChargeInput.readonly = false;
+            withoutChargeInput.readonly = true;
+        }
 
-    if(e.target.value === 'withoutTax') {
-        calculateType = 'withTax';
-        withChargeInput.attr('readonly', true);
-        withoutChargeInput.attr('readonly', false);
+        calculatePrice();
+    });
+});
 
-    };
-    if(e.target.value === 'withTax') {
-        calculateType = 'withoutTax';
-        withChargeInput.attr('readonly', false);
-        withoutChargeInput.attr('readonly', true);
-    };
-
-    calculatePrice();
-    return;
-})
 
 function calculatePrice() {
     var obj = {
@@ -100,16 +115,16 @@ function calculatePrice() {
         engineV,
         age,
         fuelType,
-    }
+    };
 
     if (calculateType === 'withTax') {
         cargedPrise = calcWithTax();
-        withChargeInput.attr('value', cargedPrise);
-    } else {
-        basePrise = calcWithoutTax();
-        withoutChargeInput.attr('value', basePrise);
+        withChargeInput.value = cargedPrise;
     }
-    console.log('calculateOptions=', obj);
+    if (calculateType === 'withoutTax') {
+        basePrise = calcWithoutTax();
+        withoutChargeInput.value = basePrise;
+    }
 }
 
 function calculateTax() {
@@ -139,9 +154,9 @@ function kAge() {
 
 function calcWithTax() {
     let calculatedPriseBase = basePrise + basePrise * .1 + calculateTax();
-    return calculatedPriseBase + calculatedPriseBase * .2;
+    return Math.round((calculatedPriseBase + calculatedPriseBase * .2) * 100) / 100;
 }
 
 function calcWithoutTax() {
-    return Math.round((cargedPrise / 1.2 - calculateTax()) / 1.1);
+    return Math.round((cargedPrise / 1.2 - calculateTax()) * 100 / 1.1) / 100;
 }

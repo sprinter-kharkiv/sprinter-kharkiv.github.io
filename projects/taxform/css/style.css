@@ -25,7 +25,6 @@ body {
     bottom: -1rem;
     left: -1rem;
     right: -1rem;
-    background-image: url("../images/bg.jpg");
     filter: blur(.5rem);
     -webkit-filter: blur(.5rem);
     background-position: center;
@@ -144,9 +143,15 @@ input[type="number"]:read-only {
     html {
         font-size: 14px;
     }
+    .bg-image {
+        background-image: url("../images/bg_m.jpg");
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .bg-image {
+        background-image: url("../images/bg.jpg");
+    }
     .form {
         padding: 3rem;
     }
