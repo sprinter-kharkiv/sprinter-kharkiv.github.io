@@ -43,7 +43,7 @@ body {
 
 .main-title {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     font-weight: bold;
 }
@@ -52,7 +52,7 @@ body {
     position: relative;
     max-width: 30rem;
     margin: 0 auto;
-    padding: 1.4rem 2rem 2rem;
+    padding: 1.4rem 2rem;
     background-color: #fff;
     border-radius: .6rem;
     opacity: .8;
@@ -125,6 +125,18 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.text-small {
+    font-size: .9rem;
+}
+
+.text-default {
+    font-size: 1rem!important;
 }
 
 .hidden {

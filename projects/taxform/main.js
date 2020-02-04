@@ -8,6 +8,11 @@ let engineText = document.getElementById('text_engine');
 let ageSelect = document.getElementById('age');
 let fuelSelect = document.getElementById('fuel');
 
+let pfTax = document.getElementById('pf_tax');
+
+let additionalPaymentCheckbox = document.getElementById('additional_payment');
+let additionalPaymentInput = document.getElementById('additional_payment_input');
+
 
 // default values
 let calculateType = 'withTax';
@@ -16,11 +21,15 @@ let cargedPrise = 0;
 let engineV = 2000;
 let age = 10;
 let fuelType = 'g';
+let pfTaxStatus = true;
+let additionalPaymentStatus = false;
+let additionalPayment = 150;
 
 document.addEventListener('DOMContentLoaded', function () {
 
     withoutChargeInput.value = basePrise;
     withChargeInput.value = cargedPrise;
+    additionalPaymentInput.value = additionalPayment;
 
     engineSlider.value = engineV / 1000;
     engineText.innerHTML = engineV / 1000;
@@ -58,6 +67,30 @@ function addListeners() {
     withoutChargeInput.addEventListener('input', function (e) {
         withoutChargeCallback(e);
     });
+
+    additionalPaymentInput.addEventListener('change', function (e) {
+        additionalChangesCallback(e);
+    });
+
+    additionalPaymentInput.addEventListener('input', function (e) {
+        additionalChangesCallback(e);
+    });
+
+    pfTax.addEventListener('change', function (e) {
+        pfTaxStatus = e.target.checked;
+        calculatePrice();
+    });
+
+    additionalPaymentCheckbox.addEventListener('change', function (e) {
+        additionalPaymentStatus = e.target.checked;
+        console.log(additionalPaymentStatus);
+        calculatePrice();
+    });
+
+    function additionalChangesCallback(e) {
+        additionalPayment = +e.target.value;
+        calculatePrice();
+    }
 
     function withChargeCallback(e) {
         if (cargedPrise === +e.target.value) {
@@ -107,21 +140,23 @@ radioButtons.forEach(inp => {
 
 
 function calculatePrice() {
-    var obj = {
+    var options = {
         calculateType,
         basePrise,
         cargedPrise,
         engineV,
         age,
         fuelType,
+        pfTaxStatus,
+        additionalPaymentStatus
     };
 
     if (calculateType === 'withTax') {
-        cargedPrise = calcWithTax();
+        cargedPrise = calcWithTax(options);
         withChargeInput.value = cargedPrise;
     }
     if (calculateType === 'withoutTax') {
-        basePrise = calcWithoutTax();
+        basePrise = calcWithoutTax(options);
         withoutChargeInput.value = basePrise;
     }
 }
@@ -151,11 +186,25 @@ function kAge() {
 }
 
 
-function calcWithTax() {
+function calcWithTax(options) {
     let calculatedPriseBase = basePrise + basePrise * .1 + calculateTax();
-    return Math.round((calculatedPriseBase + calculatedPriseBase * .2) * 100) / 100;
+    let calculatedPrise = Math.round((calculatedPriseBase + calculatedPriseBase * .2) * 100) / 100;
+
+    if (options.pfTaxStatus) {
+        calculatedPrise *= 1.05;
+    }
+
+    if (options.additionalPaymentStatus && additionalPayment) {
+        calculatedPrise += additionalPayment;
+    }
+
+    return  calculatedPrise;
 }
 
-function calcWithoutTax() {
+function calcWithoutTax(options) {
+    if (options.additionalPaymentStatus && additionalPayment) {
+        cargedPrise -= additionalPayment;
+    }
+    cargedPrise = options.pfTaxStatus ? cargedPrise * 100 / 105 : cargedPrise;
     return Math.round((cargedPrise / 1.2 - calculateTax()) * 100 / 1.1) / 100;
 }

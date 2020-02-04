@@ -15,7 +15,7 @@
 <div class="container">
     <div class="content">
         <form class="form col s12 z-depth-4">
-            <h1 class="main-title">Онлайн калькулятор <br/>растаможки авто в Украине</h1>
+            <h1 class="main-title">Калькулятор растаможки<br/> авто в Украине</h1>
             <div class="row mb-0">
                 <div class="input-field col s6">
                     <label>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="input-field col s6 mb-0">
                     <div class="without_charge">
-                        <input placeholder="2000" id="without_charge" type="number" class="">
+                        <input placeholder="2000" id="without_charge" type="number">
                     </div>
                 </div>
             </div>
@@ -38,12 +38,28 @@
                     </label>
                 </div>
                 <div class="input-field col s6">
-                    <input placeholder="2000" id="with_charge" type="number" class="" readonly="readonly">
+                    <input placeholder="2000" id="with_charge" type="number" readonly="readonly">
+                </div>
+                <div class="col s12 mt-1">
+                    <label>
+                        <input type="checkbox" id="pf_tax" checked="checked" />
+                        <span class="text-default">Учесть платеж в ПФ (5%)</span>
+                    </label>
+                </div>
+                <div class="mt-1 col s9">
+                    <label>
+                        <input type="checkbox" id="additional_payment" disabled/>
+                        <span class="text-default">Прочие платежи (EUR):</span>
+                    </label>
+                </div>
+                <div class="!input-field col s3">
+                    <input disabled placeholder="150" id="additional_payment_input" type="number">
                 </div>
             </div>
 
+
             <div class="row">
-                <label for="with_charge">Рабочий объем двигателя:</label>
+                <label  for="with_charge">Рабочий объем двигателя:</label>
                 <div class="engine">
                     <p class="engine__value">
                         <b id="text_engine">-</b>
@@ -55,7 +71,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-0">
                 <div class="input-field col s6">
                     <select id="age">
                         <option value="1">1</option>
@@ -72,16 +88,16 @@
                         <option value="12">12</option>
                         <option value="13">13</option>
                         <option value="14">14</option>
-                        <option value="15">15</option>
+                        <option value="15">от 15</option>
                     </select>
-                    <label>Возраст автомобиля:</label>
+                    <label class="text-default">Возраст авто:</label>
                 </div>
                 <div class="input-field col s6">
                     <select id="fuel">
                         <option value="g">бензин</option>
                         <option value="d">дизель</option>
                     </select>
-                    <label>Топливо:</label>
+                    <label class="text-default">Топливо:</label>
                 </div>
             </div>
 
