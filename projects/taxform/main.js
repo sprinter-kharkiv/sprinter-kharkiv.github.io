@@ -207,5 +207,5 @@ function calcWithoutTax(options) {
         cargedPriseLoc -= additionalPayment;
     }
     cargedPriseLoc = options.pfTaxStatus ? cargedPriseLoc * 100 / 105 : cargedPriseLoc;
-    return Math.round((cargedPrise / 1.2 - calculateTax()) * 100 / 1.1) / 100;
+    return Math.round((cargedPriseLoc / 1.2 - calculateTax()) * 100 / 1.1) / 100;
 }
