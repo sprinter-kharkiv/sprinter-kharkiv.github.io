@@ -22,7 +22,7 @@ let engineV = 2000;
 let age = 10;
 let fuelType = 'g';
 let pfTaxStatus = true;
-let additionalPaymentStatus = false;
+let additionalPaymentStatus = true;
 let additionalPayment = 150;
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -188,7 +188,7 @@ function kAge() {
 
 function calcWithTax(options) {
     let calculatedPriseBase = basePrise + basePrise * .1 + calculateTax();
-    let calculatedPrise = Math.round((calculatedPriseBase + calculatedPriseBase * .2) * 100) / 100;
+    let calculatedPrise = calculatedPriseBase + calculatedPriseBase * .2;
 
     if (options.pfTaxStatus) {
         calculatedPrise *= 1.05;
@@ -198,13 +198,14 @@ function calcWithTax(options) {
         calculatedPrise += additionalPayment;
     }
 
-    return  calculatedPrise;
+    return  Math.round(calculatedPrise * 100) / 100;
 }
 
 function calcWithoutTax(options) {
+    let cargedPriseLoc = cargedPrise;
     if (options.additionalPaymentStatus && additionalPayment) {
-        cargedPrise -= additionalPayment;
+        cargedPriseLoc -= additionalPayment;
     }
-    cargedPrise = options.pfTaxStatus ? cargedPrise * 100 / 105 : cargedPrise;
-    return Math.round((cargedPrise / 1.2 - calculateTax()) * 100 / 1.1) / 100;
+    cargedPriseLoc = options.pfTaxStatus ? cargedPriseLoc * 100 / 105 : cargedPriseLoc;
+    return Math.round((cargedPriseLoc / 1.2 - calculateTax()) * 100 / 1.1) / 100;
 }
