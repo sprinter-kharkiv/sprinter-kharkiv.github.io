@@ -9,36 +9,62 @@
 </head>
 </html>
 <body>
-<div class="container start-screen">
-    <header class="header"><a class="header__logo"><img class="image" src="./assets/images/logo.jpg" alt="Aurox"></a>
-        <nav class="header__nav">
-            <ul class="nav-list gs-st">
-                <li>Advanced indicators</li>
-                <li>More features</li>
-                <li>Mobile support</li>
-                <li>Prising</li>
-            </ul>
-            <button class="btn gs-r"><b>Get Started</b></button>
-        </nav>
+<div class="start-screen">
+    <header class="gs-header">
+        <div class="container header"><a class="header__logo"><img class="image" src="./assets/images/logo_i.jpg"
+                                                                   alt="Aurox"><img class="text"
+                                                                                    src="./assets/images/logo_t.jpg"
+                                                                                    alt="Aurox"></a>
+            <nav class="header__nav">
+                <ul class="nav-list gs-st">
+                    <li class="has-sub-nav"><span class="nav-list__item">Advanced indicators</span>
+                        <ul class="sub-nav">
+                            <li><a class="j-link sub-nav__item" href="#aurox_indicator">Aurox Indicator</a></li>
+                            <li><a class="j-link sub-nav__item" href="#aurox_indicator">Fear & Greed</a></li>
+                            <li><a class="j-link sub-nav__item" href="#aurox_indicator">Volume Profile</a></li>
+                            <li><a class="j-link sub-nav__item" href="#aurox_indicator">TD Sequential Indicator</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-sub-nav"><span class="nav-list__item">More features</span>
+                        <ul class="sub-nav">
+                            <li><a class="j-link sub-nav__item" href="#workspace">Workspace</a></li>
+                            <li><a class="j-link sub-nav__item" href="#exchanges">Exchanges</a></li>
+                            <li><a class="j-link sub-nav__item" href="#w_else">Alerts, signals </br>& time filtering</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="j-link nav-list__item" href="#mobile">Mobile support</a></li>
+                    <li><a class="j-link nav-list__item" href="#prising">Prising</a></li>
+                </ul>
+                <div class="header-action-btn gs-r">
+                    <button class="btn"><b>Get Started</b></button>
+                </div>
+            </nav>
+            <button class="nav-toggler"><span>nav</span></button>
+        </div>
     </header>
-    <section class="promo"><h1 class="promo__title">Designed to help you make money</h1>
-        <p class="promo__text">Free trading terminal that allows to customize workspace, and includes tools to help you
-            maximize your profits.</p>
-        <button class="btn"><b>Try It Free</b></button>
-        <img class="promo__image" src="./assets/images/promo-bg.png" alt=""></section>
+    <section class="promo sm-promo">
+        <div class="container"><h1 class="promo__title">Designed to help you make money</h1>
+            <p class="promo__text">Free trading terminal that allows to customize workspace, and includes tools to help
+                you maximize your profits.</p>
+            <button class="btn"><b>Try It Free</b></button>
+            <img class="promo__image" src="./assets/images/promo-bg.png" alt=""></div>
+    </section>
 </div>
-<div class="container banner-down">
-    <div class="banner"><h2 class="banner__title">Start earning today -<span class="light"> it's free!</span></h2>
-        <button class="btn btn--white"><b>Get Started</b></button>
+<div class="section section--bg-g-bottom">
+    <div class="container">
+        <div class="banner"><h2 class="banner__title">Start earning today -<span class="light"> it's free!</span></h2>
+            <button class="btn btn--white"><b>Get Started</b></button>
+        </div>
     </div>
 </div>
-<div class="section section--bg-g pt-15">
+<div class="section section--bg-g">
     <div>
         <div class="container"><h2 class="section__title"> Advanced Indicators</h2>
             <p class="section__description">Metrics, that can be used by anyone to make successful trades.</p>
             <div class="relative">
-                <div class="indicators-group d-flex sm-indicators">
-                    <div class="gs-f1-t">
+                <div class="indicators-group sm-indicators" id="aurox_indicator">
+                    <div class="indicators-group__item gs-f1-t">
                         <div class="text-block"><h3 class="text-block__title"> Aurox Indicator</h3>
                             <p class="text-block__description"> Over 70% accurate at predicting price.</p>
                             <p class="text-block__content"> Whether you're a beginner or an advanced trader, this
@@ -47,8 +73,9 @@
                                 chart.</p>
                             <p class="hint">Allows you to quickly execute successful trades with<b>0 experience.</b></p>
                         </div>
+                        <div class="mob-img" style="background-image: url('/assets/images/ind_mob_1.jpg')"></div>
                     </div>
-                    <div class="gs-f1-t_2">
+                    <div class="indicators-group__item reversed gs-f1-t_2">
                         <div class="text-block"><h3 class="text-block__title"> Fear & Greed​</h3>
                             <p class="text-block__description"> Over 70% accurate at predicting market behavior.</p>
                             <p class="text-block__content"> A sentiment indicator which allows you to overlay crypto
@@ -56,8 +83,9 @@
                                 can tell whether people are becoming greedy, causing price to drop, or if the market is
                                 fearful.</p>
                             <p class="hint">Allows you to buy up <b>cheap crypto</b>.</p></div>
+                        <div class="mob-img" style="background-image: url('/assets/images/ind_mob_2.jpg')"></div>
                     </div>
-                    <div class="gs-f1-t_3">
+                    <div class="indicators-group__item gs-f1-t_3">
                         <div class="text-block"><h3 class="text-block__title"> Volume Profile​</h3>
                             <p class="text-block__description">One of the most powerful indicators out there.</p>
                             <p class="text-block__content"> Even if you're a beginner, with just 2 clicks, you'll be
@@ -65,8 +93,9 @@
                                 analysis, just point and click.</p>
                             <p class="hint">Allows you to find <b>the perfect areas</b> to set your stop losses.</p>
                         </div>
+                        <div class="mob-img" style="background-image: url('/assets/images/ind_mob_3.jpg')"></div>
                     </div>
-                    <div class="gs-f1-t_4">
+                    <div class="indicators-group__item reversed gs-f1-t_4">
                         <div class="text-block"><h3 class="text-block__title"> TD Sequential Indicator</h3>
                             <p class="text-block__description">Another indicator with proven accuracy.</p>
                             <p class="text-block__content"> This indicator works on even lower intervals to help you
@@ -74,12 +103,13 @@
                                 chart.</p>
                             <p class="hint">Allows you to quickly execute successful trades <b>with 0 experience</b>.
                             </p></div>
+                        <div class="mob-img" style="background-image: url('/assets/images/ind_mob_4.jpg')"></div>
                     </div>
                     <div class="indicators-group__img-wrapper gs-f1-img-wrap"><img class="gs-f1-img"
                                                                                    src="./assets/images/indicators_1.jpg"
                                                                                    alt="Advanced Indicators"></div>
                 </div>
-                <div class="d-flex workspace sm-wSpacce">
+                <div class="d-flex workspace sm-wSpacce" id="workspace">
                     <div class="workspace__img-wrapper gs-f2-img"><img src="./assets/images/f-2.png" alt=""></div>
                     <div>
                         <div class="text-block"><h3 class="text-block__title gs-wsp-t"> Workspace management</h3>
@@ -87,7 +117,9 @@
                             <p class="text-block__content gs-wsp-t"> Helps you stay organized eliminating the stress of
                                 switching browser tabs, and allowing you to focus on data so you don’t miss an important
                                 trade.</p>
-                            <button class="btn gs-wsp-t"><b>Try It Now</b></button>
+                            <div class="gs-wsp-t">
+                                <button class="btn"><b>Try It Now</b></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,113 +127,126 @@
         </div>
     </div>
 </div>
-<div class="section section--bg-g">
-    <div class="sm-tiles"><h2 class="section__title section__title--l section__title--accent">60+ Exchanges & <br> 10k+
-        Pairs Supported</h2>
+<div class="section section-exchange section--bg-g section section--bg-wawe-b" id="exchanges">
+    <div class="sm-exchange"><h2 class="section__title section__title--l section__title--accent">60+ Exchanges & <br>
+        10k+ Pairs Supported</h2>
         <div class="t-center">
             <button class="btn"><b>Get Started - It’s Free!</b></button>
         </div>
         <div class="tile">
             <ul class="tile__row gs-tile_1">
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">xrp</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">bcc</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">dash</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">btc</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">neo</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">wawes</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">xrp</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
-                <li class="tile-item"><span class="tile-item__icon tile-item__icon--orange tile-item__icon--top"></span>
-                    <p class="tile-item__title">btc</p>
-                    <p class="d-flex space-between m-0"><span class="tile-item__value">$444.05</span><span
-                            class="tile-item__score tile-item__score--positive"> +5%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #026CFF; background-image: url(assets/images/svg/logos/xrp.svg)"></span>
+                    <p class="tile-item__title mb-05">xrp</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>0.28</span></span><span
+                            class="tile-item__score positive">+4%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #F7931B; background-image: url(assets/images/svg/logos/bcc.svg)"></span>
+                    <p class="tile-item__title mb-05">bcc</p>
+                    <p class="d-flex space-between m-0"><span
+                            class="tile-item__value">$<span>444.055555555555</span></span><span
+                            class="tile-item__score negative">-5%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #026CFF; background-image: url(assets/images/svg/logos/dash.svg)"></span>
+                    <p class="tile-item__title mb-05">dash</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>444.05</span></span><span
+                            class="tile-item__score positive">+55555555555%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #F7931B; background-image: url(assets/images/svg/logos/btc.svg)"></span>
+                    <p class="tile-item__title mb-05">btc</p>
+                    <p class="d-flex space-between m-0"><span
+                            class="tile-item__value">$<span>985999999996.5</span></span><span
+                            class="tile-item__score positive">+9999999%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #5DC000; background-image: url(assets/images/svg/logos/neo.svg)"></span>
+                    <p class="tile-item__title mb-05">neo</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>222.5</span></span><span
+                            class="tile-item__score negative">-1%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #5DC000; background-image: url(assets/images/svg/logos/waves.svg)"></span>
+                    <p class="tile-item__title mb-05">waves</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>222.5</span></span><span
+                            class="tile-item__score negative">-1%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #026CFF; background-image: url(assets/images/svg/logos/xrp.svg)"></span>
+                    <p class="tile-item__title mb-05">xrp</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>0.28</span></span><span
+                            class="tile-item__score positive">+4%</span></p></li>
+                <li class="tile-item"><span class="tile-item__icon tile-item__icon--top"
+                                            style="background-color: #F7931B; background-image: url(assets/images/svg/logos/binance.svg)"></span>
+                    <p class="tile-item__title mb-05">bcc</p>
+                    <p class="d-flex space-between m-0"><span class="tile-item__value">$<span>444.05</span></span><span
+                            class="tile-item__score negative">-5%</span></p></li>
             </ul>
             <ul class="tile__row gs-tile_2">
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">coinbase</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitrex</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #5DC000; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitfinex</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitmex</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #5DC000; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitstamp</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #F7931B; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">binance</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">hitbtc</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
-                        class="tile-item__title">coinbase</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
+                        class="tile-item__title">kraken</span></li>
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #5DC000; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitrex</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #F7931B; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitfinex</span></li>
-                <li class="tile-item tile-item--small"><span
-                        class="tile-item__icon tile-item__icon--orange tile-item__icon--left"></span><span
+                <li class="tile-item tile-item--small"><span class="tile-item__icon tile-item__icon--left"
+                                                             style="background-color: #026CFF; background-image: url(assets/images/svg/logos/binance.svg)"></span><span
                         class="tile-item__title">bitmex</span></li>
             </ul>
         </div>
     </div>
 </div>
-<div class="section"><h2 class="section__title">What esle do you get?</h2>
-    <p class="section__description">Some more features to help you start earning with no previous knowledge at all.</p>
-    <div class="container">
-        <ul class="w-e-block">
-            <li class="w-e-block__item w-e-block__item--bg-1">
-                <div class="text-block text-block--s"><h3 class="text-block__title"> Alerts</h3>
-                    <p class="text-block__content"> You can set webhooks to send notifications to other applications and
-                        have them execute specific commands based on our alerts.</p></div>
-            </li>
-            <li class="w-e-block__item w-e-block__item--bg-2">
-                <div class="text-block text-block--s"><h3 class="text-block__title"> Signals</h3>
-                    <p class="text-block__content"> Displays data from multiple different sources and notifies you of
-                        Aurox indicator triggering, whale alerts, and much more.</p></div>
-            </li>
-            <li class="w-e-block__item w-e-block__item--size-l">
-                <div class="d-flex align-end space-between">
-                    <div class="text-block text-block--s"><h3 class="text-block__title"> Time & Sales Filtering</h3>
-                        <p class="text-block__content"> Allows you to filter out large order sizes and figure out where
-                            the whales are buying and selling on the market.</p></div>
-                    <button class="btn no-shrink"><b>Try It Now</b></button>
-                </div>
-            </li>
-        </ul>
+<div class="section">
+    <div class="sm-w-else" id="w_else"><h2 class="section__title">What esle do you get?</h2>
+        <p class="section__description">Some more features to help you start earning with no previous knowledge at
+            all.</p>
+        <div class="container">
+            <ul class="w-e-block">
+                <li class="w-e-block__item w-e-block__item--bg-1 gs-w-e-1">
+                    <div class="text-block text-block--s"><h3 class="text-block__title"> Alerts</h3>
+                        <p class="text-block__content"> You can set webhooks to send notifications to other applications
+                            and have them execute specific commands based on our alerts.</p></div>
+                </li>
+                <li class="w-e-block__item w-e-block__item--bg-2 gs-w-e-2">
+                    <div class="text-block text-block--s"><h3 class="text-block__title"> Signals</h3>
+                        <p class="text-block__content"> Displays data from multiple different sources and notifies you
+                            of Aurox indicator triggering, whale alerts, and much more.</p></div>
+                </li>
+                <li class="w-e-block__item w-e-block__item--size-l gs-w-e-3">
+                    <div class="d-flex align-end space-between">
+                        <div class="text-block text-block--s"><h3 class="text-block__title"> Time & Sales Filtering</h3>
+                            <p class="text-block__content"> Allows you to filter out large order sizes and figure out
+                                where the whales are buying and selling on the market.</p></div>
+                        <button class="btn no-shrink"><b>Try It Now</b></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="section">
-    <div class="container">
-        <div class="d-flex space-between sm-mob">
+    <div class="container" id="mobile">
+        <div class="mobile-wrap sm-mob">
             <div class="left">
                 <div class="text-block text-block--s text-block--b-bottom mt-5 mb-3 pb-3"><h3 class="text-block__title">
                     Mobile Support</h3>
@@ -218,7 +263,7 @@
     </div>
 </div>
 <div class="section section-plans">
-    <div class="sm-plans"><h2 class="section__title">Simple plans for everyone</h2>
+    <div class="sm-plans" id="prising"><h2 class="section__title">Simple plans for everyone</h2>
         <p class="section__description">Stay at free plan or get more with paid subscription of Aurox</p>
         <div class="container">
             <ul class="plans">
@@ -279,12 +324,14 @@
         </div>
     </div>
 </div>
-<footer class="section section--bg-g pt-0">
-    <div class="container banner-up">
+<div class="section section--bg-g-bottom">
+    <div class="container">
         <div class="banner"><h2 class="banner__title">Start earning today -<span class="light"> it's free!</span></h2>
             <button class="btn btn--white"><b>Get Started</b></button>
         </div>
     </div>
+</div>
+<footer class="section section--bg-g pt-0">
     <div class="container">
         <div class="footer">
             <div class="footer__copyright"><a class="logo"><img class="image" src="./assets/images/logo.jpg" alt="Aurox"></a>
