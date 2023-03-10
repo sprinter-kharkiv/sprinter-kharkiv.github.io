@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget demo</title>
+</head>
+<body style="height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #0043ff24">
+
+<div style="width: 600px; max-width: 80%;display: flex; flex-direction: column; background-color: white; align-items: center; justify-content: center; padding: 20px; border-radius: 10px;">
+  <h1>Widget demonstration</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquam asperiores consectetur dolores dolorum impedit officiis pariatur quam repellat voluptatibus. Accusantium adipisci eius excepturi praesentium quaerat reiciendis rerum, sequi. Corporis dolorem facilis maiores necessitatibus, nesciunt omnis optio quas quibusdam sint?</p>
+</div>
+
+<script>
+  (function (w,d,s,o,f,js,fjs) {
+    w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+  }(window, document, 'script', 'mw', 'https://dev.viewlabs.co/assets/widget/widget.js'));
+  mw('init', {
+    lang: 'en', // tr
+    showTimeout: '1000',
+    hideTimeout: '30000',
+    position: 'left', // right
+    video: 'https://dev.viewlabs.co/assets/widget/widget-demo.mp4',
+    imageUrl: 'https://dev.viewlabs.co/assets/widget/test-img.png',
+    appUrl: 'https://dev.viewlabs.co/capturing/c242d276',
+  });
+</script>
+</body>
+</html>
