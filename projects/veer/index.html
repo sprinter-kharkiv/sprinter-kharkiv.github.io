@@ -519,5 +519,22 @@
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 
+	<script>
+  (function (w,d,s,o,f,js,fjs) {
+    w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+  }(window, document, 'script', 'mw', 'https://dev.viewlabs.co/assets/widget/widget.js'));
+  mw('init', {
+    lang: 'en', // tr
+    showTimeout: '1000',
+    hideTimeout: '30000',
+    position: 'left', // right
+    video: 'https://dev.viewlabs.co/assets/widget/widget-demo.mp4',
+    imageUrl: 'https://dev.viewlabs.co/assets/widget/test-img.png',
+    appUrl: 'https://dev.viewlabs.co/capturing/c242d276',
+  });
+</script>
+	
 </body>
 </html>
